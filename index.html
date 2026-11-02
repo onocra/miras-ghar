@@ -2,248 +2,318 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MIRĀS GHĀR | The Heritage House</title>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-    content="MIRĀS GHĀR — The Heritage House. A heritage of trust, a legacy of preservation.">
+<title>MIRĀS GHĀR | The Heritage House</title>
 
-  <style>
-    :root {
-      --forest: #35432c;
-      --gold: #b49455;
-      --paper: #f5eedf;
-    }
+<meta name="description"
+ content="MIRĀS GHĀR — The Heritage House.
+ A heritage of trust. A legacy of preservation.">
 
-    * {
-      box-sizing: border-box;
-    }
+<style>
 
-    html, body {
-      min-height: 100%;
-      margin: 0;
-    }
+:root {
+  --ivory: #f5eedf;
+  --forest: #35432c;
+  --gold: #b49455;
+}
 
-    body {
-      display: grid;
-      place-items: center;
-      background: var(--paper);
-      font-family: Georgia, "Times New Roman", serif;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    .welcome {
-      width: min(100%, 1672px);
-      margin: auto;
-    }
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
 
-    .artwork {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 1672 / 941;
-    }
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(
+      ellipse at center,
+      #fffaf1,
+      var(--ivory)
+    );
+  font-family: Georgia, "Times New Roman", serif;
+}
 
-    .artwork > img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+/* MAIN LANDSCAPE COVER */
 
-    /* CLICKABLE DOOR */
+.welcome {
+  width: min(100%, 1672px);
+  margin: auto;
+  text-align: center;
+}
 
-    .entrance {
-      position: absolute;
+.cover {
+  width: 100%;
+  aspect-ratio: 1672 / 941;
+  position: relative;
+}
 
-      left: 8%;
-      top: 0.6%;
-      width: 35.5%;
-      height: 98%;
+/* APPROVED 3D ARTWORK */
 
-      clip-path: polygon(
-        50% 0%,
-        61% 5%,
-        80% 18%,
-        94% 30%,
-        97% 42%,
-        97% 100%,
-        0% 100%,
-        0% 42%,
-        4% 30%,
-        18% 18%,
-        39% 5%
-      );
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 
-      display: block;
-      cursor: pointer;
-      text-decoration: none;
-      -webkit-tap-highlight-color: transparent;
-    }
+/* CLICKABLE DOORWAY AREA */
 
-    .entrance::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(249, 213, 129, 0);
-      transition: background 0.25s ease;
-    }
+.enter-door {
 
-    .entrance:hover::before,
-    .entrance:focus-visible::before {
-      background: rgba(249, 213, 129, 0.10);
-    }
+  position: absolute;
 
-    /* GOLD ENTER ICON */
+  left: 8%;
+  top: 0.6%;
+  width: 35.5%;
+  height: 98%;
 
-    .enter-cue {
-      position: absolute;
+  clip-path: polygon(
+    50% 0%,
+    61% 5%,
+    80% 18%,
+    94% 30%,
+    97% 42%,
+    97% 100%,
+    0% 100%,
+    0% 42%,
+    4% 30%,
+    18% 18%,
+    39% 5%
+  );
 
-      left: 64%;
-      top: 60%;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  outline-offset: 4px;
 
-      transform: translate(-50%, -50%);
+}
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+/* GOLDEN LIGHT ON HOVER */
 
-      gap: 5px;
-      padding: 10px 14px;
-      min-width: 74px;
+.enter-door::before {
 
-      border: 1px solid var(--gold);
-      border-radius: 50px;
+  content: "";
+  position: absolute;
+  inset: 0;
 
-      color: var(--forest);
-      background: rgba(250, 240, 215, 0.9);
+  background: rgba(255, 211, 125, 0);
 
-      box-shadow:
-        0 3px 15px rgba(68, 49, 15, 0.17),
-        inset 0 0 0 2px rgba(255, 255, 255, 0.52);
+  transition: background 0.35s ease;
 
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background 0.2s ease;
-    }
+}
 
-    .enter-cue svg {
-      width: 21px;
-      height: 21px;
-      stroke: currentColor;
-      stroke-width: 1.7;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
+.enter-door:hover::before,
+.enter-door:focus-visible::before {
 
-    .enter-cue span {
-      font-size: 11px;
-      letter-spacing: 0.15em;
-      font-weight: bold;
-    }
+  background: rgba(255, 211, 125, 0.11);
 
-    .entrance:hover .enter-cue,
-    .entrance:focus-visible .enter-cue {
-      transform: translate(-50%, -50%) scale(1.09);
-      background: #fff1cc;
-      box-shadow: 0 4px 24px rgba(91, 62, 23, 0.30);
-    }
+}
 
-    /* MOBILE ENTER BUTTON */
+/* VISIBLE ENTER ICON */
 
-    .mobile-enter {
-      display: none;
+.enter-icon {
 
-      margin: 0 auto 20px;
-      width: max-content;
-      padding: 12px 22px;
+  position: absolute;
 
-      border: 1px solid var(--gold);
-      border-radius: 100px;
+  left: 64%;
+  top: 60%;
 
-      color: var(--forest);
-      text-decoration: none;
+  transform: translate(-50%, -50%);
 
-      letter-spacing: 0.10em;
-      font-size: 12px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    @media (max-width: 700px) {
+  gap: 5px;
 
-      .enter-cue {
-        padding: 5px 7px;
-        min-width: 36px;
-        gap: 1px;
-      }
+  padding: 10px 15px;
 
-      .enter-cue svg {
-        width: 14px;
-        height: 14px;
-      }
+  min-width: 78px;
 
-      .enter-cue span {
-        font-size: 7px;
-      }
+  background: rgba(255, 246, 225, 0.95);
 
-      .mobile-enter {
-        display: block;
-      }
-    }
+  border: 1px solid var(--gold);
+  border-radius: 35px;
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before {
-        transition: none !important;
-      }
-    }
+  color: var(--forest);
 
-  </style>
+  box-shadow:
+    0 4px 16px rgba(87, 60, 24, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+.enter-icon svg {
+
+  width: 23px;
+  height: 23px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+}
+
+.enter-icon span {
+
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+}
+
+/* HOVER EFFECT */
+
+.enter-door:hover .enter-icon,
+.enter-door:focus-visible .enter-icon {
+
+  transform:
+    translate(-50%, -50%) scale(1.12);
+
+  background: #fff0c8;
+
+  box-shadow:
+    0 6px 24px rgba(154, 105, 35, 0.38);
+
+}
+
+/* MOBILE ACCESSIBLE ENTER BUTTON */
+
+.mobile-enter {
+
+  display: none;
+
+  margin: 14px auto 25px;
+  padding: 13px 22px;
+
+  width: max-content;
+
+  background: var(--forest);
+  color: #fff8ea;
+
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  letter-spacing: 1px;
+  font-size: 12px;
+
+}
+
+.mobile-enter:hover {
+  background: #526a50;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .enter-icon {
+    padding: 5px;
+    min-width: 38px;
+    gap: 2px;
+  }
+
+  .enter-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .enter-icon span {
+    font-size: 7px;
+    letter-spacing: 0.5px;
+  }
+
+  .mobile-enter {
+    display: block;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <main class="welcome">
+<main class="welcome">
 
-    <div class="artwork">
+  <div class="cover">
 
-      <!-- APPROVED 3D COVER IMAGE -->
+    <!-- OFFICIAL APPROVED 3D COVER -->
 
-      <img
-        src="assets/miras-ghar-entrance-3d.png"
-        alt="MIRĀS GHĀR — The Heritage House"
-      >
+    <img
+      class="cover-image"
+      src="./assets/miras-ghar-entrance-3d.png"
+      alt="MIRĀS GHĀR — The Heritage House"
+    >
 
-      <!-- CLICKABLE DOORWAY -->
+    <!-- CLICKABLE DOOR: OPENS BP HOMEPAGE -->
 
-      <a
-        class="entrance"
-        href="/bp/"
-        aria-label="Enter MIRĀS GHĀR — The Heritage House"
-      >
+    <a
+      class="enter-door"
+      href="./bp/index.html"
+      aria-label="Enter MIRĀS GHĀR — The Heritage House"
+    >
 
-        <span class="enter-cue" aria-hidden="true">
+      <!-- GOLD ENTER ICON -->
 
-          <svg viewBox="0 0 24 24">
-            <path d="M4 12h15m-6-6 6 6-6 6"/>
-          </svg>
+      <span class="enter-icon" aria-hidden="true">
 
-          <span>ENTER</span>
+        <svg viewBox="0 0 24 24">
+          <path d="M4 12h15"/>
+          <path d="m13 6 6 6-6 6"/>
+        </svg>
 
-        </span>
+        <span>ENTER</span>
 
-      </a>
+      </span>
 
-    </div>
-
-    <!-- MOBILE ENTRANCE -->
-
-    <a class="mobile-enter" href="/bp/">
-      ENTER THE HERITAGE HOUSE →
     </a>
 
-  </main>
+  </div>
+
+  <!-- MOBILE ENTER BUTTON -->
+
+  <a
+    class="mobile-enter"
+    href="./bp/index.html"
+  >
+    ENTER THE HERITAGE HOUSE →
+  </a>
+
+</main>
 
 </body>
 </html>
