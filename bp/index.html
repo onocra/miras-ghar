@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- MG_IMAGE_DECODE_FIX_V5_20261103: INCLUDES CSS + JS; uses /assets/mg/... -->
+<!-- MG_HOME_V8_BRAND_HERO_RITUALS_20261103 : Standalone page; approved /assets/mg/ V5 images. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -37,6 +37,129 @@
 
 /* FINAL FAIL-VISIBLE: display all art regardless of animation scripts */
 [data-reveal] { opacity:1!important; visibility:visible!important; transform:none!important; }
+
+/* ===========================================================
+   MIRĀS GHĀR — HOME V8 POLISH
+   1. Compact top / hero join
+   2. Larger embossed brand + dimensional pelican emblem
+   3. Taller fully contained ritual artwork; no cropping
+   This standalone page needs no extra CSS or JS file.
+   =========================================================== */
+.topline { padding:4px 8px; font-size:9px; line-height:1.45; }
+.topline span { padding:0 10px; }
+.site-header { background:rgba(255,250,243,.98); box-shadow:0 5px 18px rgba(48,63,41,.075); }
+.nav-shell { width:min(1490px,96%); min-height:92px; padding:5px 0; gap:22px; }
+.brand { gap:15px; }
+.brand img {
+  width:69px; height:82px; object-fit:contain; flex-shrink:0;
+  filter:drop-shadow(0 2px 0 rgba(255,252,241,.96))
+         drop-shadow(0 4px 3px rgba(178,135,62,.45))
+         drop-shadow(0 9px 9px rgba(31,54,38,.22));
+  transform:perspective(450px) rotateY(-8deg);
+}
+.brand-type strong {
+  font-size:clamp(31px,2.7vw,42px);
+  font-weight:700;
+  letter-spacing:.018em;
+  line-height:1.02;
+  color:#284537;
+  text-shadow:0 -1px 0 rgba(255,255,255,.95),
+              1px 1px 0 #f5ebd1,
+              1px 2px 0 #c9b58d,
+              2px 4px 1px rgba(80,65,33,.14),
+              3px 7px 10px rgba(30,57,40,.21);
+}
+.brand-type small { font-size:10px; letter-spacing:.12em; margin-top:5px; color:#9b783c; }
+.primary-nav { gap:clamp(13px,1.65vw,25px); }
+.primary-nav a { font-size:11px; letter-spacing:.04em; }
+
+/* Hero begins immediately after the header; preserve full book artwork. */
+.hero-grid {
+  min-height:0;
+  padding:17px 0 26px;
+  grid-template-columns:.93fr 1.07fr;
+  gap:23px;
+}
+.hero-copy .eyebrow { margin-bottom:12px; }
+.hero-copy h1 { margin-bottom:12px; }
+.hero-subtitle { margin-bottom:16px; }
+.hero-description { line-height:1.77; }
+.hero-actions { margin-top:21px; gap:18px; }
+.hero-note { margin-top:21px; }
+.hero-art { min-height:410px; }
+.hero-art img { width:110%; }
+
+/* Room for every complete portrait bottle, including its cap and base. */
+.ritual-section .container { width:min(1410px,96%); }
+.ritual-cards { gap:22px; }
+.ritual-photo {
+  height:600px;
+  padding:30px 12px 18px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.ritual-photo img {
+  display:block;
+  width:100%; height:100%;
+  min-width:0; min-height:0;
+  max-width:100%; max-height:100%;
+  object-fit:contain;
+  object-position:center center;
+  filter:drop-shadow(0 12px 12px rgba(45,44,31,.20));
+}
+.ritual-number { top:13px; left:13px; }
+.ritual-body { padding:23px 25px 29px; }
+
+/* Keep the enlarged brand usable on laptops / tablet devices. */
+@media(max-width:1180px) {
+  .nav-shell { gap:12px; }
+  .brand img { width:61px; height:74px; }
+  .brand-type strong { font-size:clamp(27px,2.75vw,34px); }
+  .primary-nav { gap:12px; }
+  .primary-nav a { font-size:10px; letter-spacing:0; }
+  .ritual-photo { height:555px; }
+}
+@media(max-width:940px) {
+  .nav-shell { min-height:77px; padding:5px 0; }
+  .brand img { width:55px; height:65px; }
+  .brand-type strong { font-size:28px; }
+  .brand-type small { font-size:8px; }
+  .menu-toggle { display:block; }
+  .primary-nav {
+    display:none; position:absolute; top:100%; left:0; right:0;
+    background:#fffaf2; box-shadow:0 17px 25px #162f2120;
+    padding:12px 6%; flex-direction:column; align-items:stretch; gap:0;
+  }
+  .primary-nav.open { display:flex; }
+  .primary-nav a { font-size:13px; letter-spacing:.09em; padding:14px; border-bottom:1px solid #e2d6c0; }
+  .hero-grid { padding:16px 0 28px; }
+  .ritual-photo { height:490px; }
+}
+@media(max-width:820px) {
+  .hero-grid { min-height:0; padding:16px 0 28px; }
+  .hero-art { min-height:300px; }
+  .ritual-cards { grid-template-columns:1fr; }
+  .ritual-card { display:grid; grid-template-columns:1fr 1fr; }
+  .ritual-photo { height:510px; padding:24px 10px; }
+}
+@media(max-width:550px) {
+  .topline { font-size:8px; padding:5px 8px; letter-spacing:.05em; }
+  .nav-shell { width:94%; min-height:72px; padding:5px 0; }
+  .brand { gap:9px; }
+  .brand img { width:48px; height:61px; }
+  .brand-type strong { font-size:clamp(23px,6.6vw,29px); }
+  .brand-type small { font-size:8px; margin-top:3px; letter-spacing:.05em; }
+  .hero-grid { padding:12px 0 22px; gap:14px; }
+  .hero-art { min-height:0; }
+  .hero-art img { max-width:100%; width:100%; }
+  .ritual-section .container { width:94%; }
+  .ritual-card { display:flex; flex-direction:column; }
+  .ritual-photo { height:525px; padding:25px 10px 15px; }
+  .ritual-body { padding:21px 23px 26px; }
+}
+
 </style>
 </head>
 <body>
