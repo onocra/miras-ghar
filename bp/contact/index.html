@@ -1464,6 +1464,45 @@ body[data-theme="dark"] .ct-social-status{color:#efd3a0}
 @media(max-width:1050px){.ct-social-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:600px){.ct-social-section{padding:25px 0}.ct-social-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.ct-social-card{padding:10px 4px;min-height:121px;gap:6px}.ct-social-picture{height:56px;width:56px}.ct-social-letter{font-size:20px}.ct-social-card .ct-social-name{font-size:11px}.ct-social-card .ct-social-caption{font-size:10px}.ct-social-description{font-size:14px;margin-bottom:14px}.ct-footer-social-icons{gap:5px}.ct-social-mini{width:35px;height:35px}.ct-social-mini .ct-social-picture{width:29px;height:29px}}
 @media(max-width:350px){.ct-social-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* CONTACT V16 — YouTube height-only correction to social icons, 2026-11-03.
+   Main Contact icons: WhatsApp 1.15x; YouTube HEIGHT ONLY 2.00x; X 1.10x.
+   Footer icons are separate and always fit completely within their boxes. */
+.ct-social-grid .ct-social-card[aria-label^="WhatsApp"] .ct-social-picture {
+  width:82.8px; height:auto; aspect-ratio:1; max-width:100%;
+}
+.ct-social-grid .ct-social-card[data-social-coming="X"] .ct-social-picture {
+  width:79.2px; height:auto; aspect-ratio:1; max-width:100%;
+}
+.ct-social-grid .ct-social-card[data-social-coming="YouTube"] .ct-social-picture {
+  width:72px; height:144px; aspect-ratio:auto; max-width:100%;
+}
+/* Stretch YouTube artwork vertically only: original width, double height. */
+.ct-social-grid .ct-social-card[data-social-coming="YouTube"] .ct-social-picture img {
+  width:100%; height:100%; object-fit:fill;
+}
+.ct-social-grid .ct-social-picture img {width:100%; height:100%; object-fit:contain;}
+/* Footer: constrain both frame and artwork. Do not inherit larger main-card sizes. */
+.ct-footer-social-icons .ct-social-mini {
+  box-sizing:border-box; overflow:hidden; padding:4px; flex:0 0 auto;
+}
+.ct-footer-social-icons .ct-social-mini .ct-social-picture {
+  position:relative; box-sizing:border-box; width:100%; height:100%;
+  min-width:0; min-height:0; max-width:100%; max-height:100%;
+  aspect-ratio:1; overflow:hidden;
+}
+.ct-footer-social-icons .ct-social-mini .ct-social-picture img {
+  display:block; width:100%; height:100%; max-width:100%; max-height:100%;
+  object-fit:contain; object-position:center; transform:none!important;
+}
+.ct-footer-social-icons .ct-social-mini .ct-social-letter {inset:0;border-radius:5px;}
+@media(max-width:600px){
+  .ct-social-grid .ct-social-card[aria-label^="WhatsApp"] .ct-social-picture {width:64.4px;}
+  .ct-social-grid .ct-social-card[data-social-coming="X"] .ct-social-picture {width:61.6px;}
+  .ct-social-grid .ct-social-card[data-social-coming="YouTube"] .ct-social-picture {width:56px;height:112px;aspect-ratio:auto;max-width:100%;}
+  .ct-footer-social-icons .ct-social-mini {padding:3px;}
+}
+
 </style>
 </head><body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -1523,7 +1562,7 @@ body[data-theme="dark"] .ct-social-status{color:#efd3a0}
       <p class="ct-form-info">* Required to prepare a message. Clicking a button opens your chosen app; no information is stored or submitted by this website. Your message is sent only when you confirm it there. Please avoid including sensitive personal information.</p><p class="ct-status" id="ctStatus" role="status" aria-live="polite"></p>
     </form>
   </div></section>
-  <!-- CONTACT V14: social cards are rendered in HTML even if external JavaScript is unavailable -->
+  <!-- CONTACT V15: social cards are rendered in HTML even if external JavaScript is unavailable -->
   <section class="ct-social-section" aria-labelledby="ct-social-title">
     <div class="ct-wrap">
       <p class="ct-kicker">CONNECT WITH THE HERITAGE HOUSE</p>
@@ -1618,7 +1657,7 @@ document.getElementById('ctSendWhatsApp').addEventListener('click',()=>{const d=
 })();
 </script>
 <script>
-/* Contact V14 social controls: built-in cards + two allowed image locations. */
+/* Contact V15 social controls: built-in cards + two allowed image locations. */
 (function(){
   'use strict';
   document.querySelectorAll('[data-ct-social-img]').forEach(function(img){
