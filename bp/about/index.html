@@ -1254,6 +1254,111 @@ body[data-theme="dark"] .ab-quote-band{background:#13271c}
   .site-header .header-tool{width:29px;height:29px}
   .site-header .menu-toggle{min-width:34px;min-height:34px;padding:5px}
 }
+
+
+/* ============================================================
+   MIRĀS GHĀR ABOUT V11
+   - Framed first Royal Book image
+   - Tighter vertical spacing across the About page
+   ============================================================ */
+.ab-wrap{width:min(1260px,93%)}
+.ab-section{padding:clamp(28px,3.3vw,46px) 0}
+.ab-hero{padding:clamp(16px,2.2vw,28px) 0 18px}
+.ab-hero-grid{gap:clamp(18px,2.2vw,28px);align-items:center}
+.ab-lead{margin-bottom:14px}
+.ab-hero-note{margin:0 0 16px;line-height:1.62}
+.ab-actions{gap:12px}
+.ab-principle-strip .ab-wrap{padding:11px 0;gap:clamp(10px,1.8vw,22px)}
+
+/* First book image framed elegantly */
+.ab-hero-art{
+  min-height:0;
+  padding:14px;
+  background:linear-gradient(160deg,#fffaf1 0%,#f0eadf 100%);
+  border:1px solid #d8c6a3;
+  box-shadow:0 10px 30px rgba(40,70,56,.10), inset 0 0 0 1px rgba(255,255,255,.7);
+}
+.ab-hero-art::before{
+  content:'';
+  position:absolute;
+  inset:8px;
+  border:1px solid rgba(181,140,74,.48);
+  pointer-events:none;
+  z-index:0;
+}
+.ab-hero-glow{inset:10%;opacity:.85}
+.ab-hero-art img{
+  width:100%;
+  max-width:100%;
+  transform:none;
+  filter:drop-shadow(0 18px 16px rgba(40,70,56,.18));
+}
+.ab-image-label{bottom:12px;right:14px;background:rgba(255,250,240,.92);border:1px solid #d4be92;padding:7px 11px}
+
+.ab-vismis{padding-top:8px}
+.ab-vismis-grid{gap:16px}
+.ab-statement{padding:clamp(20px,2.2vw,28px)}
+.ab-statement-head{margin-bottom:12px}
+.ab-statement h2{margin:0 0 10px}
+.ab-statement p:not(.ab-kicker){font-size:15px;line-height:1.66;margin:0 0 12px}
+.ab-statement .ab-statement-end{padding-top:11px}
+.ab-quote-band{padding:28px 0 30px}
+.ab-quote-band blockquote{line-height:1.26}
+.ab-section-head{gap:18px;margin-bottom:16px}
+.ab-section-head p:not(.ab-kicker){font-size:15px;line-height:1.6}
+.ab-pipeline-grid{gap:16px}
+.ab-egypt-image,.ab-card-art{height:216px}
+.ab-collection-body{padding:18px 20px 20px}
+.ab-collection-body h3{margin:0 0 8px}
+.ab-collection-body p:not(.ab-mini){font-size:14px;line-height:1.62;margin:0 0 12px}
+.ab-pipeline-note{margin:14px 0 0;padding:12px 15px;line-height:1.62}
+.ab-global-grid{gap:clamp(20px,3.6vw,44px)}
+.ab-global-grid>div:first-child>p:not(.ab-kicker){font-size:15px;line-height:1.66}
+.ab-global-steps>div{padding:11px 0;gap:15px}
+.ab-global-steps h3{font-size:21px;margin:0 0 4px}
+.ab-global-steps p{font-size:14px;line-height:1.55}
+.ab-values-heading{margin:0 auto 18px}
+.ab-value-grid{gap:12px}
+.ab-value-grid>div{padding:19px 18px}
+.ab-value-grid h3{margin:6px 0;font-size:28px}
+.ab-value-grid p{font-size:14px;line-height:1.58}
+.ab-final{padding:clamp(28px,3vw,42px) 0}
+.ab-final>div>p:not(.ab-kicker){margin:0 auto 14px;line-height:1.6}
+
+body[data-theme="dark"] .ab-hero-art{background:linear-gradient(160deg,#284134 0%,#203529 100%);border-color:#8d754e;box-shadow:0 10px 30px rgba(0,0,0,.22), inset 0 0 0 1px rgba(255,255,255,.02)}
+body[data-theme="dark"] .ab-hero-art::before{border-color:rgba(233,195,139,.42)}
+body[data-theme="dark"] .ab-image-label{background:rgba(24,44,34,.9);border-color:#8d754e}
+
+@media(max-width:820px){
+  .ab-section{padding:34px 0}
+  .ab-hero{padding:18px 0 16px}
+  .ab-hero-grid{gap:16px}
+  .ab-hero-art{padding:10px}
+  .ab-hero-art::before{inset:6px}
+  .ab-image-label{right:10px;bottom:10px}
+  .ab-vismis-grid,.ab-pipeline-grid,.ab-value-grid{gap:12px}
+}
+@media(max-width:600px){
+  .ab-wrap{width:94%}
+  .ab-section{padding:26px 0}
+  .ab-hero{padding:14px 0 14px}
+  .ab-lead{margin-bottom:10px}
+  .ab-hero-note{margin-bottom:12px;font-size:14px}
+  .ab-principle-strip .ab-wrap{padding:9px 0;gap:8px}
+  .ab-hero-art{padding:8px}
+  .ab-hero-art::before{inset:5px}
+  .ab-image-label{position:static;margin-top:8px;display:inline-block;font-size:8px}
+  .ab-vismis{padding-top:2px}
+  .ab-statement{padding:18px}
+  .ab-statement h2{font-size:31px}
+  .ab-quote-band{padding:24px 0}
+  .ab-section-head{margin-bottom:12px}
+  .ab-egypt-image,.ab-card-art{height:194px}
+  .ab-collection-body{padding:16px 17px 17px}
+  .ab-value-grid>div{padding:15px}
+  .ab-final{padding:28px 0}
+}
+
 </style>
 </head><body>
 <a class="skip-link" href="#main">Skip to main content</a>
