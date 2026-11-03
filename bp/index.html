@@ -654,6 +654,82 @@ html{scroll-padding-top:112px}
   .ritual-number{font-size:9px;top:11px;left:11px}
 }
 
+
+
+/* ============================================================
+   MIRĀS GHĀR — V15 HEADER BOTANICAL REFINEMENT
+   1) Pelican emblem increased by ~15%
+   2) Botanical flourish softens the right-end termination of MIRĀS GHĀR
+   3) Elegant botanical ornament above and below navigation
+   ============================================================ */
+.site-header .entrance-matched-brand{
+  position:relative;
+  overflow:visible;
+  padding-right:clamp(28px,2.8vw,42px);
+}
+.site-header .entrance-matched-brand .entrance-emblem{
+  height:clamp(113px,10.2vw,160px);
+  filter:drop-shadow(0 2px 2px rgba(255,249,232,.95))
+         drop-shadow(0 4px 5px rgba(178,136,60,.34))
+         drop-shadow(0 10px 12px rgba(28,50,34,.16));
+}
+.site-header .entrance-matched-brand .entrance-wordmark{
+  position:relative;
+  z-index:1;
+}
+.site-header .entrance-matched-brand::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:50%;
+  width:clamp(76px,7.4vw,116px);
+  height:clamp(34px,3.7vw,54px);
+  transform:translateY(-44%);
+  pointer-events:none;
+  opacity:.96;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 84'%3E%3Cg fill='none' stroke='%23b58c4a' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 44c17-1 27-8 38-20 7-8 14-12 21-10 7 2 10 7 10 13 0 11-12 16-24 18'/%3E%3Cpath d='M47 21c6 2 10 6 13 11-7 1-14-2-18-7'/%3E%3Cpath d='M71 10c1 7 0 13-4 19-5-4-7-11-5-18'/%3E%3Cpath d='M72 48c18 0 33 6 47 18'/%3E%3Cpath d='M117 66c7-1 13-4 19-9-6-4-13-5-20-3'/%3E%3Cpath d='M127 30c15 1 27 7 44 18'/%3E%3Cpath d='M141 14c1 8-1 15-6 22-6-5-9-12-8-20'/%3E%3Cpath d='M149 41c9-1 17 1 24 6-7 4-15 6-24 4'/%3E%3C/g%3E%3Cg fill='%23d8bf88'%3E%3Ccircle cx='80' cy='39' r='3.3'/%3E%3Ccircle cx='117' cy='66' r='2.7'/%3E%3Ccircle cx='146' cy='41' r='2.8'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;
+  filter:drop-shadow(0 2px 2px rgba(181,140,74,.18));
+}
+.site-header .primary-nav{
+  position:relative;
+  align-items:center;
+  padding:18px 0 16px;
+  margin-top:2px;
+}
+.site-header .primary-nav a{
+  position:relative;
+  z-index:1;
+  padding:14px 0 12px;
+}
+.site-header .primary-nav::before,
+.site-header .primary-nav::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  height:16px;
+  pointer-events:none;
+  opacity:.9;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 40'%3E%3Cg fill='none' stroke='%23b58c4a' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 22c14 0 24-8 36-15 9-5 18-7 29-5 10 2 17 8 22 15'/%3E%3Cpath d='M46 12c5 2 9 5 12 10-6 1-12-2-15-6'/%3E%3Cpath d='M72 7c2 5 1 11-2 16-5-3-8-8-8-14'/%3E%3C/g%3E%3Cg fill='%23d6bd88'%3E%3Ccircle cx='88' cy='18' r='2.3'/%3E%3C/g%3E%3C/svg%3E") left center/auto 100% no-repeat,
+    linear-gradient(90deg,rgba(213,191,145,0) 0%,rgba(213,191,145,.45) 8%,rgba(213,191,145,.58) 50%,rgba(213,191,145,.45) 92%,rgba(213,191,145,0) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 40'%3E%3Cg fill='none' stroke='%23b58c4a' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M218 22c-14 0-24-8-36-15-9-5-18-7-29-5-10 2-17 8-22 15'/%3E%3Cpath d='M174 12c-5 2-9 5-12 10 6 1 12-2 15-6'/%3E%3Cpath d='M148 7c-2 5-1 11 2 16 5-3 8-8 8-14'/%3E%3C/g%3E%3Cg fill='%23d6bd88'%3E%3Ccircle cx='132' cy='18' r='2.3'/%3E%3C/g%3E%3C/svg%3E") right center/auto 100% no-repeat;
+}
+.site-header .primary-nav::before{ top:0; }
+.site-header .primary-nav::after{ bottom:0; transform:scaleY(-1); }
+@media(max-width:1130px){
+  .site-header .entrance-matched-brand{padding-right:clamp(18px,2.4vw,28px)}
+  .site-header .entrance-matched-brand .entrance-emblem{height:clamp(104px,11.5vw,146px)}
+  .site-header .entrance-matched-brand::after{width:clamp(62px,8vw,92px);height:clamp(28px,4.6vw,42px);right:-3px}
+  .site-header .primary-nav::before,
+  .site-header .primary-nav::after{display:none}
+}
+@media(max-width:650px){
+  .site-header .entrance-matched-brand{padding-right:12px}
+  .site-header .entrance-matched-brand .entrance-emblem{height:clamp(57px,17vw,88px)}
+  .site-header .entrance-matched-brand::after{width:48px;height:22px;right:-4px;transform:translateY(-40%)}
+}
+
 </style>
 </head>
 <body>
