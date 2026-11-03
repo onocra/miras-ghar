@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<!-- MG_ENTRANCE_INLINE_V7_20261103: the approved entrance artwork is embedded directly in this HTML, not loaded from any external file -->
+<!-- MG_ENTRANCE_V9_THRESHOLD_MAT_COMPACT_20261104 · Based on working V7 artwork: the approved entrance artwork is embedded directly in this HTML, not loaded from any external file -->
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Enter MIRĀS GHĀR | The Heritage House</title>
 <meta name="description" content="Enter MIRĀS GHĀR, the Heritage House. Trust, authenticity and preservation.">
 <style>
 :root{--forest:#283f31;--gold:#b7955a;--ivory:#faf6ed}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 55% 25%,#fffdf8,#f8f1e3 70%,#ece4d2);color:var(--forest);font-family:Georgia,'Times New Roman',serif}.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;z-index:9;padding:12px;background:#fff}.entry{width:min(1550px,100%);margin:0 auto;padding:clamp(15px,2.4vw,32px) clamp(8px,2vw,25px) 32px}.quote{max-width:1060px;margin:0 auto 15px;text-align:center;padding:13px 16px 7px}.quote:before{content:'✦';display:block;color:var(--gold);font-size:16px;letter-spacing:2px;margin-bottom:6px}.quote blockquote{font:italic clamp(17px,2.15vw,27px)/1.55 Georgia,serif;margin:5px 0;color:#3d5140}.quote .signature{color:#a18047;text-transform:uppercase;font:600 10px Arial,sans-serif;letter-spacing:.22em;margin:15px 0 4px}.visual{position:relative;width:100%;aspect-ratio:1672/941}.visual img{display:block;width:100%;height:100%;object-fit:contain}.door-hotspot{position:absolute;left:14.6%;top:20.5%;width:21%;height:73%;clip-path:polygon(50% 0%,73% 13%,91% 29%,100% 45%,100% 100%,0% 100%,0% 42%,8% 27%,30% 10%);cursor:pointer;outline-offset:4px}.door-hotspot:hover{background:rgba(255,221,141,.10)}.door-hotspot:focus-visible,.enter-mat:focus-visible,.mobile-cta:focus-visible{outline:3px solid #b38b46;outline-offset:4px}.brandline{margin:0 auto 10px;text-align:center;color:#876736;font:600 clamp(12px,1.35vw,15px)/1.5 Georgia,serif;letter-spacing:.06em}.brandline .urdu{font-size:1.08em;letter-spacing:0;margin-left:.35em}.enter-mat{position:absolute;left:24.8%;top:78.4%;transform:translate(-50%,-50%) perspective(900px) rotateX(62deg);width:min(17vw,250px);aspect-ratio:2.45/1;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#f7eed8;background:linear-gradient(180deg,#47624f 0%,#304739 55%,#213226 100%);border:1px solid rgba(192,163,103,.95);border-radius:18px;box-shadow:0 14px 32px rgba(33,40,28,.36), inset 0 2px 0 rgba(255,247,226,.18), inset 0 -9px 16px rgba(0,0,0,.22);transition:transform .22s ease, box-shadow .22s ease, filter .22s ease;z-index:2}.enter-mat:before{content:"";position:absolute;inset:8% 6%;border-radius:14px;border:1px solid rgba(207,179,120,.50);pointer-events:none}.enter-mat:after{content:"";position:absolute;left:6%;right:6%;bottom:-18%;height:28%;background:radial-gradient(ellipse at center, rgba(45,50,37,.28) 0%, rgba(45,50,37,.16) 45%, rgba(45,50,37,0) 78%);filter:blur(4px);pointer-events:none}.enter-mat:hover{transform:translate(-50%,-50%) perspective(900px) rotateX(62deg) scale(1.04);box-shadow:0 18px 36px rgba(33,40,28,.42), inset 0 2px 0 rgba(255,247,226,.18), inset 0 -9px 16px rgba(0,0,0,.22);filter:brightness(1.05)}.enter-mat .mat-inner{position:relative;display:flex;align-items:center;gap:10px;font:bold clamp(10px,0.95vw,13px)/1 Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase;text-shadow:0 1px 0 rgba(0,0,0,.25)}.enter-mat .mat-inner .arrow{font-size:1.3em;line-height:1;letter-spacing:0}.mobile-cta{display:none;margin:17px auto 8px;width:max-content;max-width:95%;padding:14px 21px;text-decoration:none;color:#fff;background:var(--forest);border:1px solid var(--gold);font:bold 12px Arial,sans-serif;letter-spacing:.15em;border-radius:50px}@media(max-width:700px){.quote{padding:9px 12px 2px}.quote blockquote{font-size:clamp(16px,3.5vw,20px)}.quote .signature{font-size:9px;letter-spacing:.09em}.brandline{font-size:12px;padding:0 12px}.enter-mat{width:min(23vw,145px);top:79.2%;border-radius:12px}.enter-mat:before{border-radius:10px}.enter-mat .mat-inner{font-size:8px;letter-spacing:.16em;gap:4px}.enter-mat .mat-inner .arrow{font-size:11px}.mobile-cta{display:block}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* V9 — Entrance: position the 3D rug on the floor at the threshold,
+   and fit the full doorway within the first desktop viewport. */
+.entry{padding-top:clamp(6px,1.05vw,14px);padding-bottom:clamp(8px,1.4vw,18px)}
+.quote{padding:4px 12px 0;margin-bottom:4px}
+.quote:before{margin-bottom:2px;font-size:12px}
+.quote blockquote{font-size:clamp(16px,1.85vw,23px);line-height:1.36;margin:2px 0}
+.quote .signature{margin:7px 0 2px;font-size:9px;letter-spacing:.15em}
+.brandline{margin:2px auto 5px;line-height:1.25}
+.visual{width:min(100%, calc((100svh - 160px) * 1.7768));margin:0 auto}
+.enter-mat{top:94.2%;left:24.8%;}
+/* Preserve the mobile full-width art and an obvious entry alternative. */
+@media(max-width:700px){
+  .entry{padding-top:7px;padding-bottom:10px}
+  .quote{padding:4px 8px 0;margin-bottom:4px}
+  .quote:before{margin-bottom:1px}
+  .quote blockquote{font-size:clamp(14px,3.65vw,18px);line-height:1.28}
+  .quote .signature{font-size:8px;margin:6px 0 1px;letter-spacing:.08em}
+  .brandline{font-size:11px;margin:3px auto 5px}
+  .visual{width:100%;max-width:100%;}
+  .enter-mat{top:94%;left:25.1%;}
+  .mobile-cta{margin:9px auto 4px;padding:10px 15px}
+}
 </style></head>
 <body><a class="skip" href="#entry">Skip to entrance</a><main class="entry" id="entry">
 <section class="quote" aria-label="The House philosophy">
