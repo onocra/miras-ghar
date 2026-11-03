@@ -1,4 +1,4 @@
-/* MIRĀS GHĀR | Social contact icons — V2, 2026-11-03
+/* MIRĀS GHĀR | Social contact icons — V3, 2026-11-03
    GitHub destination: assets/mg/social-links.js
 
    Every icon image is loaded from the exact filenames supplied by the owner.
@@ -13,11 +13,12 @@
 
   // If your files are physically in GitHub's /assets/ folder rather than
   // /assets/mg/, change only this one value to '/assets/'.
-  const LOGO_BASE = '/assets/mg/';
+  const LOGO_BASE = '/assets/';
+  const LOGO_FALLBACK = '/assets/mg/';
 
   const SOCIAL_URLS = {
     whatsapp: 'https://wa.me/923192844710',
-    facebook: '',
+    facebook: 'https://www.facebook.com/profile.php?id=61596364314205',
     x: '',
     youtube: '',
     pinterest: '',
@@ -93,6 +94,11 @@
   function picture(channel) {
     const image = document.createElement('img');
     image.src = LOGO_BASE + channel.filename;
+    let triedFallback = false;
+    image.addEventListener('error', function(){
+      if (!triedFallback) { triedFallback = true; image.src = LOGO_FALLBACK + channel.filename; }
+      else { image.style.display = 'none'; }
+    });
     image.alt = '';
     image.loading = 'lazy';
     image.decoding = 'async';
