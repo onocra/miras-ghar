@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- MIRĀS GHĀR — Contact V13 social placeholders, shared URL configuration 2026-11-03 -->
+<!-- MIRĀS GHĀR — Contact V14 embedded social icons, active Facebook and WhatsApp 2026-11-03 -->
 <!-- MG_CONTACT_V12_EMAIL_WHATSAPP_SINGLE_FILE_20261103 -->
 <!-- MG_PHILOSOPHY_V8_COMPACT_SPACING_20261103: hero-philosophy.png + cdf-philosophy.png, 4 House statements, matching Home header -->
 <html lang="en"><head>
@@ -1429,6 +1429,41 @@ body[data-theme="dark"] .ct-field input,body[data-theme="dark"] .ct-field textar
 @media(max-width:800px){.ct-hero-grid,.ct-form-grid{grid-template-columns:1fr}.ct-hero-motif{padding:22px}.ct-methods{gap:12px}.ct-section{padding:30px 0}}
 @media(max-width:590px){.ct-hero{padding:21px 0}.ct-hero-grid{gap:16px}.ct-methods,.ct-fieldrow{grid-template-columns:1fr}.ct-wrap{width:94%}.ct-section{padding:26px 0}.ct-heading{margin-bottom:15px}.ct-method{padding:18px}.ct-method h3{font-size:27px}.ct-field textarea{min-height:110px}.ct-hero-motif blockquote{font-size:25px}.ct-form-actions .ct-action{width:100%}}
 
+
+/* CONTACT V14 — built-in social image buttons, independent of social-links.js */
+.ct-social-section{padding:clamp(26px,3.1vw,40px) 0;background:linear-gradient(135deg,#eef1e6,#fff8eb);border-block:1px solid #d9c9a7;text-align:center}
+.ct-social-section h2{font:400 clamp(32px,3.8vw,49px)/1.12 Georgia,serif;color:#284838;margin:0 0 9px;letter-spacing:-.02em}
+.ct-social-section h2 em{color:#a47d44}
+.ct-social-description{max-width:790px;margin:0 auto 18px;font:15px/1.65 Arial,sans-serif;color:#607063}
+.ct-social-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:11px;align-items:stretch}
+.ct-social-card{appearance:none;-webkit-appearance:none;width:100%;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:145px;padding:12px 6px;border:1px solid #d5c19a;background:#fffcf5;color:#2b513d;text-decoration:none!important;box-shadow:0 5px 16px #2b48311b;border-radius:8px;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:Arial,sans-serif}
+.ct-social-card:hover{transform:translateY(-3px);box-shadow:0 11px 21px #2b48312b}
+.ct-social-card:focus-visible,.ct-social-mini:focus-visible{outline:3px solid #ba965d;outline-offset:4px}
+.ct-social-picture{width:72px;height:72px;display:grid;place-items:center;position:relative;flex:none}
+.ct-social-picture img{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:contain}
+.ct-social-letter{position:absolute;inset:8px;display:grid;place-items:center;border:1px solid #c3a572;border-radius:16px;background:linear-gradient(145deg,#f9f3e5,#dfebdc);box-shadow:0 4px 8px #2c4f3521;font:bold 25px Georgia,serif;color:#3c664b}
+.ct-social-name{display:block;font:700 12px/1.2 Arial,sans-serif;color:inherit}
+.ct-social-caption{display:block;font:11px/1.3 Arial,sans-serif;color:#857458;white-space:normal}
+.ct-social-coming{background:#f8f6ef}
+.ct-social-status{margin:12px auto 0;min-height:18px;font:13px/1.5 Arial,sans-serif;color:#8b6c3f}
+.ct-footer-social{margin-top:15px;padding-top:12px;border-top:1px solid #bfaa734f}
+.ct-footer-social-title{display:block;margin-bottom:9px;font:700 10px/1.3 Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e8c98f}
+.ct-footer-social-icons{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+.ct-social-mini{appearance:none;-webkit-appearance:none;display:inline-flex;align-items:center;justify-content:center;width:39px;height:39px;flex:none;margin:0!important;padding:2px;border-radius:10px;background:#fcf3db10;border:1px solid #bca26d82;cursor:pointer;text-decoration:none!important}
+.ct-social-mini .ct-social-picture{width:33px;height:33px}
+.ct-social-mini .ct-social-letter{inset:2px;font-size:14px;border-radius:7px}
+.ct-social-mini:hover{transform:translateY(-2px);background:#d6bc8233}
+body[data-theme="dark"] .ct-social-section{background:linear-gradient(135deg,#1e3629,#2b4737);border-color:#74694f}
+body[data-theme="dark"] .ct-social-section h2{color:#fff0dc}
+body[data-theme="dark"] .ct-social-section h2 em{color:#e0bc7e}
+body[data-theme="dark"] .ct-social-description{color:#e4e4d5}
+body[data-theme="dark"] .ct-social-card{background:#294435;color:#f8efdc;border-color:#8d7956}
+body[data-theme="dark"] .ct-social-coming{background:#213b2d}
+body[data-theme="dark"] .ct-social-caption{color:#dbc69f}
+body[data-theme="dark"] .ct-social-status{color:#efd3a0}
+@media(max-width:1050px){.ct-social-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:600px){.ct-social-section{padding:25px 0}.ct-social-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.ct-social-card{padding:10px 4px;min-height:121px;gap:6px}.ct-social-picture{height:56px;width:56px}.ct-social-letter{font-size:20px}.ct-social-card .ct-social-name{font-size:11px}.ct-social-card .ct-social-caption{font-size:10px}.ct-social-description{font-size:14px;margin-bottom:14px}.ct-footer-social-icons{gap:5px}.ct-social-mini{width:35px;height:35px}.ct-social-mini .ct-social-picture{width:29px;height:29px}}
+@media(max-width:350px){.ct-social-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head><body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -1488,10 +1523,41 @@ body[data-theme="dark"] .ct-field input,body[data-theme="dark"] .ct-field textar
       <p class="ct-form-info">* Required to prepare a message. Clicking a button opens your chosen app; no information is stored or submitted by this website. Your message is sent only when you confirm it there. Please avoid including sensitive personal information.</p><p class="ct-status" id="ctStatus" role="status" aria-live="polite"></p>
     </form>
   </div></section>
+  <!-- CONTACT V14: social cards are rendered in HTML even if external JavaScript is unavailable -->
+  <section class="ct-social-section" aria-labelledby="ct-social-title">
+    <div class="ct-wrap">
+      <p class="ct-kicker">CONNECT WITH THE HERITAGE HOUSE</p>
+      <h2 id="ct-social-title">Follow our <em>heritage journey.</em></h2>
+      <p class="ct-social-description">Our first official channels are taking shape. Connect with us on Facebook or WhatsApp today, and discover our other social destinations as they launch.</p>
+      <div class="ct-social-grid" aria-label="MIRĀS GHĀR social media channels">
+        <a class="ct-social-card" href="https://wa.me/923192844710" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp — Message us"><span class="ct-social-picture"><span class="ct-social-letter" aria-hidden="true">WA</span><img data-ct-social-img src="/assets/whatsapp-logo.png" data-alternate="/assets/mg/whatsapp-logo.png" alt="" width="74" height="74" loading="lazy" decoding="async"></span><span class="ct-social-name">WhatsApp</span><small class="ct-social-caption">Message us</small></a>
+        <a class="ct-social-card" href="https://www.facebook.com/profile.php?id=61596364314205" target="_blank" rel="noopener noreferrer" aria-label="Facebook — Official page"><span class="ct-social-picture"><span class="ct-social-letter" aria-hidden="true">f</span><img data-ct-social-img src="/assets/facebook-logo.png" data-alternate="/assets/mg/facebook-logo.png" alt="" width="74" height="74" loading="lazy" decoding="async"></span><span class="ct-social-name">Facebook</span><small class="ct-social-caption">Official page</small></a>
+        <button class="ct-social-card ct-social-coming" type="button" data-social-coming="X" aria-label="X — Coming soon"><span class="ct-social-picture"><span class="ct-social-letter" aria-hidden="true">X</span><img data-ct-social-img src="/assets/x-logo.png" data-alternate="/assets/mg/x-logo.png" alt="" width="74" height="74" loading="lazy" decoding="async"></span><span class="ct-social-name">X</span><small class="ct-social-caption">Coming soon</small></button>
+        <button class="ct-social-card ct-social-coming" type="button" data-social-coming="YouTube" aria-label="YouTube — Coming soon"><span class="ct-social-picture"><span class="ct-social-letter" aria-hidden="true">▶</span><img data-ct-social-img src="/assets/youtube-logo.png" data-alternate="/assets/mg/youtube-logo.png" alt="" width="74" height="74" loading="lazy" decoding="async"></span><span class="ct-social-name">YouTube</span><small class="ct-social-caption">Coming soon</small></button>
+        <button class="ct-social-card ct-social-coming" type="button" data-social-coming="Pinterest" aria-label="Pinterest — Coming soon"><span class="ct-social-picture"><span class="ct-social-letter" aria-hidden="true">P</span><img data-ct-social-img src="/assets/pinterest-logo.png" data-alternate="/assets/mg/pinterest-logo.png" alt="" width="74" height="74" loading="lazy" decoding="async"></span><span class="ct-social-name">Pinterest</span><small class="ct-social-caption">Coming soon</small></button>
+        <button class="ct-social-card ct-social-coming" type="button" data-social-coming="Instagram" aria-label="Instagram — Coming soon"><span class="ct-social-picture"><span class="ct-social-letter" aria-hidden="true">◎</span><img data-ct-social-img src="/assets/instragram-logo.png" data-alternate="/assets/mg/instragram-logo.png" alt="" width="74" height="74" loading="lazy" decoding="async"></span><span class="ct-social-name">Instagram</span><small class="ct-social-caption">Coming soon</small></button>
+        <button class="ct-social-card ct-social-coming" type="button" data-social-coming="TikTok" aria-label="TikTok — Coming soon"><span class="ct-social-picture"><span class="ct-social-letter" aria-hidden="true">♪</span><img data-ct-social-img src="/assets/tiktok-logo.png" data-alternate="/assets/mg/tiktok-logo.png" alt="" width="74" height="74" loading="lazy" decoding="async"></span><span class="ct-social-name">TikTok</span><small class="ct-social-caption">Coming soon</small></button>
+      </div>
+      <p class="ct-social-status" id="ctSocialStatus" aria-live="polite" role="status"></p>
+    </div>
+  </section>
   <section class="ct-bottom"><div class="ct-wrap"><p class="ct-kicker">TRUST · AUTHENTICITY · PRESERVATION</p><h2>Heritage connects us.</h2><p>Egyptian Volume I is our first chapter. Our wider vision invites research-led partnerships and thoughtful heritage collection development across cultures and markets.</p><a href="/bp/about/">Discover our vision and mission →</a></div></section>
 </main><footer class="site-footer">
 <div class="container footer-layout">
-  <div class="footer-identity"><div class="small-gold">THE HERITAGE HOUSE</div><div class="footer-logo">MIRĀS GHĀR</div><p>Trust · Authenticity · Preservation</p><p class="footer-motto">Ancient wisdom for a more balanced tomorrow.</p></div>
+  <div class="footer-identity"><div class="small-gold">THE HERITAGE HOUSE</div><div class="footer-logo">MIRĀS GHĀR</div><p>Trust · Authenticity · Preservation</p><p class="footer-motto">Ancient wisdom for a more balanced tomorrow.</p>
+    <div class="ct-footer-social" aria-label="MIRĀS GHĀR social media">
+      <span class="ct-footer-social-title">Follow our heritage journey</span>
+      <div class="ct-footer-social-icons">
+        <a class="ct-social-mini" href="https://wa.me/923192844710" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp — Message us"><span class="ct-social-picture"><span class="ct-social-letter" aria-hidden="true">WA</span><img data-ct-social-img src="/assets/whatsapp-logo.png" data-alternate="/assets/mg/whatsapp-logo.png" alt="" width="74" height="74" loading="lazy" decoding="async"></span></a>
+        <a class="ct-social-mini" href="https://www.facebook.com/profile.php?id=61596364314205" target="_blank" rel="noopener noreferrer" aria-label="Facebook — Official page"><span class="ct-social-picture"><span class="ct-social-letter" aria-hidden="true">f</span><img data-ct-social-img src="/assets/facebook-logo.png" data-alternate="/assets/mg/facebook-logo.png" alt="" width="74" height="74" loading="lazy" decoding="async"></span></a>
+        <button class="ct-social-mini ct-social-coming" type="button" data-social-coming="X" aria-label="X — Coming soon"><span class="ct-social-picture"><span class="ct-social-letter" aria-hidden="true">X</span><img data-ct-social-img src="/assets/x-logo.png" data-alternate="/assets/mg/x-logo.png" alt="" width="74" height="74" loading="lazy" decoding="async"></span></button>
+        <button class="ct-social-mini ct-social-coming" type="button" data-social-coming="YouTube" aria-label="YouTube — Coming soon"><span class="ct-social-picture"><span class="ct-social-letter" aria-hidden="true">▶</span><img data-ct-social-img src="/assets/youtube-logo.png" data-alternate="/assets/mg/youtube-logo.png" alt="" width="74" height="74" loading="lazy" decoding="async"></span></button>
+        <button class="ct-social-mini ct-social-coming" type="button" data-social-coming="Pinterest" aria-label="Pinterest — Coming soon"><span class="ct-social-picture"><span class="ct-social-letter" aria-hidden="true">P</span><img data-ct-social-img src="/assets/pinterest-logo.png" data-alternate="/assets/mg/pinterest-logo.png" alt="" width="74" height="74" loading="lazy" decoding="async"></span></button>
+        <button class="ct-social-mini ct-social-coming" type="button" data-social-coming="Instagram" aria-label="Instagram — Coming soon"><span class="ct-social-picture"><span class="ct-social-letter" aria-hidden="true">◎</span><img data-ct-social-img src="/assets/instragram-logo.png" data-alternate="/assets/mg/instragram-logo.png" alt="" width="74" height="74" loading="lazy" decoding="async"></span></button>
+        <button class="ct-social-mini ct-social-coming" type="button" data-social-coming="TikTok" aria-label="TikTok — Coming soon"><span class="ct-social-picture"><span class="ct-social-letter" aria-hidden="true">♪</span><img data-ct-social-img src="/assets/tiktok-logo.png" data-alternate="/assets/mg/tiktok-logo.png" alt="" width="74" height="74" loading="lazy" decoding="async"></span></button>
+      </div>
+    </div>
+</div>
   <div><h2>Explore</h2><a href="/bp/">Home</a><a href="/bp/philosophy/">Our Philosophy</a><a href="/bp/collections/">Egyptian Volume I</a><a href="/bp/about/">About the House</a></div>
   <div><h2>Information</h2><a href="/bp/policies/">Policies &amp; Disclosures</a><a href="/bp/contact/">Contact</a><a href="/">Return to Entrance</a></div>
 </div>
@@ -1551,5 +1617,25 @@ document.getElementById('ctSendEmail').addEventListener('click',()=>{const d=bui
 document.getElementById('ctSendWhatsApp').addEventListener('click',()=>{const d=build();if(!d)return;status.textContent='Opening WhatsApp. You must send the message there.';const u='https://wa.me/923192844710?text='+encodeURIComponent(d.body);window.open(u,'_blank','noopener,noreferrer')});
 })();
 </script>
-<script defer src="/assets/mg/social-links.js"></script>
+<script>
+/* Contact V14 social controls: built-in cards + two allowed image locations. */
+(function(){
+  'use strict';
+  document.querySelectorAll('[data-ct-social-img]').forEach(function(img){
+    var triedAlternate=false;
+    function error(){
+      if (!triedAlternate) {triedAlternate=true;img.src=img.getAttribute('data-alternate');}
+      else {img.hidden=true;img.style.display='none';}
+    }
+    img.addEventListener('error',error);
+    if(img.complete && img.naturalWidth===0) error();
+  });
+  document.querySelectorAll('[data-social-coming]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var status=document.getElementById('ctSocialStatus');
+      if(status){status.textContent='Our official '+btn.getAttribute('data-social-coming')+' account is coming soon.';}
+    });
+  });
+})();
+</script>
 </body></html>
