@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- MG_HOME_V16_LEAF_LOWER_ONLY_20261103 -->
+<!-- MG_HOME_V19_CONCEPT_VIDEOS_AND_FOOTER_SIGNATURE_20261104 -->
 <!-- MG_HOME_V18_FIVE_PRECISE_HOME_REFINEMENTS_20261104 -->
 <!-- MG_HOME_V17_DARK_MODE_CONTRAST_FIX_20261103 -->
 <!-- MG_HOME_V15_BOTANICAL_BRAND_SEARCH_THEME_20261103 -->
@@ -990,6 +991,86 @@ body[data-theme="dark"] .home-hero .hero-art .hero-book-frame{
   .home-hero .hero-art .hero-book-frame img{max-height:calc(330px * 1.05)}
 }
 
+
+/* ==============================================================
+   V19 — Four concept videos + footer identity only. All V18
+   typography, header, hero, cards, image widths and art untouched.
+   ============================================================== */
+.concept-video-wrap{
+  margin-top:14px;
+  border:1px solid rgba(177,146,87,.72);
+  background:linear-gradient(135deg,#f7f1e4,#e7ebe2);
+  padding:8px;
+  box-shadow:0 5px 17px rgba(31,52,36,.10);
+}
+.concept-video-media{
+  width:100%; aspect-ratio:16/9;position:relative;
+  background:#dfe7dd;overflow:hidden;isolation:isolate;
+  border:1px solid rgba(177,146,87,.35);
+}
+.concept-video-media video{
+  width:100%;height:100%;display:block;object-fit:contain;
+  background:#e6ebdf;
+}
+.concept-video-missing{
+  position:absolute;inset:auto 0 0;z-index:1;
+  margin:0;padding:9px 12px;
+  background:rgba(34,58,44,.91);
+  color:#fff2d8;font:600 11px/1.5 Arial,Helvetica,sans-serif;
+}
+.concept-video-missing[hidden]{display:none!important}
+.concept-video-toolbar{
+  display:flex;flex-wrap:wrap;gap:8px 11px;align-items:center;
+  justify-content:space-between;padding:9px 3px 1px;
+}
+.concept-video-caption{
+  font:700 10px/1.4 Arial,Helvetica,sans-serif;
+  letter-spacing:.12em;color:#7f6238;
+}
+.concept-video-actions{display:flex;align-items:center;gap:7px}
+.concept-video-actions button{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:32px;padding:6px 12px;border-radius:20px;
+  background:#284736;border:1px solid #bb9b62;
+  color:#fff5e0;font:700 11px Arial,Helvetica,sans-serif;
+  cursor:pointer;white-space:nowrap;
+}
+.concept-video-actions button:hover{background:#3a624b}
+.concept-video-actions button:focus-visible{outline:3px solid #cba762;outline-offset:3px}
+body[data-theme="dark"] .concept-video-wrap{
+  background:#203a2c;border-color:#bc9b65;
+}
+body[data-theme="dark"] .concept-video-caption{color:#e5c58c}
+body[data-theme="dark"] .concept-video-actions button{
+  background:#395844;border-color:#d3b678;color:#fff3dc;
+}
+/* The signature-styled brand and Virasat are confined to footer only. */
+.site-footer .footer-identity .footer-house-line{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:9px 13px;
+  color:#dfc58b;font:700 10px/1.5 Arial,Helvetica,sans-serif;
+  letter-spacing:.17em;
+}
+.site-footer .footer-identity .footer-virasat{
+  direction:rtl;unicode-bidi:isolate;
+  font:400 clamp(18px,1.75vw,24px)/1.65 'Noto Nastaliq Urdu','Urdu Typesetting','Noto Naskh Arabic',serif;
+  letter-spacing:0;color:#ead19e;
+}
+.site-footer .footer-identity .footer-logo.footer-signature{
+  margin:1px 0 6px;
+  font-family:'Segoe Script','Snell Roundhand','Brush Script MT','Apple Chancery',cursive;
+  font-style:italic;font-weight:500;
+  font-size:clamp(31px,3vw,45px);line-height:1.45;
+  letter-spacing:.015em;color:#fff0d7;
+  text-shadow:0 1px 0 rgba(222,191,127,.24),0 4px 12px rgba(3,21,11,.24);
+}
+@media(max-width:550px){
+  .concept-video-wrap{margin-top:10px;padding:6px}
+  .concept-video-toolbar{gap:7px;padding:8px 2px 1px}
+  .concept-video-caption{font-size:9px;letter-spacing:.07em}
+  .concept-video-actions button{font-size:10px;min-height:31px;padding:6px 10px}
+  .site-footer .footer-identity .footer-logo.footer-signature{font-size:34px}
+}
+
 </style>
 </head>
 <body>
@@ -1119,6 +1200,23 @@ body[data-theme="dark"] .home-hero .hero-art .hero-book-frame{
           </div>
         </div>
         <div class="step-foot"><span>Illustrative concept · Safety and performance under review</span><button type="button" data-step-next>Next step →</button></div>
+<div class="concept-video-wrap" aria-label="Ritual concept film">
+  <div class="concept-video-media">
+    <video id="conceptStepVideo" muted playsinline loop preload="none"
+      poster="/assets/mg/open-concept.png"
+      aria-label="Open the vessel concept film">
+      <p>Your browser does not support HTML5 video.</p>
+    </video>
+    <p class="concept-video-missing" data-concept-video-missing hidden role="status"></p>
+  </div>
+  <div class="concept-video-toolbar">
+    <span class="concept-video-caption" data-concept-video-caption>01 / OPEN · CONCEPT FILM</span>
+    <div class="concept-video-actions">
+      <button type="button" data-concept-video-play aria-label="Play concept film">Play ▶</button>
+      <button type="button" data-concept-video-mute aria-label="Unmute concept film">Unmute ♫</button>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   </div>
@@ -1136,8 +1234,8 @@ body[data-theme="dark"] .home-hero .hero-art .hero-book-frame{
 </main>
 <footer class="site-footer">
   <div class="container footer-layout">
-    <div class="footer-identity"><div class="small-gold">THE HERITAGE HOUSE</div><div class="footer-logo">MIRĀS GHĀR</div><p>Trust · Authenticity · Preservation</p><p class="footer-motto">Ancient wisdom for a more balanced tomorrow.</p></div>
-    <div><h2>Explore</h2><a href="index.html">Home</a><a href="philosophy/index.html">Our Philosophy</a><a href="collections/index.html">Egyptian Volume I</a><a href="about/index.html">About the House</a></div>
+    <div class="footer-identity"><div class="footer-house-line"><span>THE HERITAGE HOUSE</span><span class="footer-virasat" lang="ur" dir="rtl">وراثت</span></div><div class="footer-logo footer-signature">MIRĀS GHĀR</div><p>Trust · Authenticity · Preservation</p><p class="footer-motto">Ancient wisdom for a more balanced tomorrow.</p></div>
+    <div><h2>Explore</h2><a href="index.html">Home</a><a href="philosophy/index.html">Our Philosophy</a><a href="collections/index.html">Our Collections</a><a href="about/index.html">About the House</a></div>
     <div><h2>Information</h2><a href="policies/index.html">Policies & Disclosures</a><a href="contact/index.html">Contact</a><a href="../index.html">Return to Entrance</a></div>
   </div>
   <div class="container footer-bottom"><span>© <span data-year>2026</span> MIRĀS GHĀR. The Heritage House.</span><span>Visual prototypes and collection concepts; not currently offered for sale.</span></div>
@@ -1152,13 +1250,82 @@ document.querySelectorAll('[data-year]').forEach(el=>{el.textContent=String(new 
 const reveal=document.querySelectorAll('[data-reveal]');if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>{entries.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.08});reveal.forEach(el=>obs.observe(el))}else reveal.forEach(el=>el.classList.add('visible'));
 // Interactive concept walkthrough. No unverified quantities, durations, or medical claims.
 const steps=[
- {title:'Open the vessel',icon:'✧',image:'/assets/mg/open-concept.png',alt:'Concept image: opening the sacred aromatic vessel',text:'Lift the signature lotus cap to reveal the proposed precision applicator. The final closure and dispensing mechanism remain subject to prototype verification.'},
- {title:'Apply aromatic oil',icon:'◈',image:'/assets/mg/apply-concept.png',alt:'Concept image: applying oil to the diffuser disc',text:'The envisioned applicator transfers an appropriate amount of aromatic oil onto a separate porous ceramic disc. Final dose guidance will depend on formulation and safety testing.'},
- {title:'Fit the ceramic disc',icon:'◇',image:'/assets/mg/fit-concept.png',alt:'Concept image: fitting the diffuser disc into the pendant',text:'The removable disc is designed to fit inside the pendant housing. Retention, oil-contact materials and fit will require technical assessment.'},
- {title:'Carry the ritual',icon:'✦',image:'/assets/mg/wear-concept.png',alt:'Concept image: carrying the sacred aromatic pendant through the day',text:'The pendant concept carries an aromatic keepsake through the day. Wearability, diffusion characteristics and safe-use instructions remain to be validated.'}
+ {title:'Open the vessel',icon:'✧',image:'/assets/mg/open-concept.png',video:'/assets/mg/open.mp4',videoLabel:'OPEN',alt:'Concept image: opening the sacred aromatic vessel',text:'Lift the signature lotus cap to reveal the proposed precision applicator. The final closure and dispensing mechanism remain subject to prototype verification.'},
+ {title:'Apply aromatic oil',icon:'◈',image:'/assets/mg/apply-concept.png',video:'/assets/mg/apply.mp4',videoLabel:'APPLY',alt:'Concept image: applying oil to the diffuser disc',text:'The envisioned applicator transfers an appropriate amount of aromatic oil onto a separate porous ceramic disc. Final dose guidance will depend on formulation and safety testing.'},
+ {title:'Fit the ceramic disc',icon:'◇',image:'/assets/mg/fit-concept.png',video:'/assets/mg/fit.mp4',videoLabel:'FIT',alt:'Concept image: fitting the diffuser disc into the pendant',text:'The removable disc is designed to fit inside the pendant housing. Retention, oil-contact materials and fit will require technical assessment.'},
+ {title:'Carry the ritual',icon:'✦',image:'/assets/mg/wear-concept.png',video:'/assets/mg/wear.mp4',videoLabel:'WEAR',alt:'Concept image: carrying the sacred aromatic pendant through the day',text:'The pendant concept carries an aromatic keepsake through the day. Wearability, diffusion characteristics and safe-use instructions remain to be validated.'}
 ];
 const buttons=[...document.querySelectorAll('[data-step]')];const title=document.querySelector('[data-step-title]');let selected=0;
-function showStep(i){if(!title)return;selected=(i+steps.length)%steps.length;const step=steps[selected];title.textContent=step.title;const conceptImage=document.querySelector('[data-concept-image]');if(conceptImage){conceptImage.src=step.image;conceptImage.alt=step.alt;}document.querySelector('[data-step-icon]').textContent=step.icon;document.querySelector('[data-step-text]').textContent=step.text;document.querySelector('[data-step-number]').textContent=`CONCEPT STEP ${String(selected+1).padStart(2,'0')} / 04`;buttons.forEach((b,j)=>b.setAttribute('aria-pressed',String(j===selected)));}
+const conceptVideo=document.getElementById('conceptStepVideo');
+const conceptPlay=document.querySelector('[data-concept-video-play]');
+const conceptMute=document.querySelector('[data-concept-video-mute]');
+const conceptVideoCaption=document.querySelector('[data-concept-video-caption]');
+const conceptVideoMissing=document.querySelector('[data-concept-video-missing]');
+let conceptInView=false,conceptManuallyPaused=false;
+function syncConceptVideoButtons(){
+ if(!conceptVideo)return;
+ if(conceptPlay){conceptPlay.textContent=conceptVideo.paused?'Play ▶':'Pause Ⅱ';conceptPlay.setAttribute('aria-label',conceptVideo.paused?'Play concept film':'Pause concept film');}
+ if(conceptMute){conceptMute.textContent=conceptVideo.muted?'Unmute ♫':'Mute ♫';conceptMute.setAttribute('aria-label',conceptVideo.muted?'Unmute concept film':'Mute concept film');}
+}
+function playConceptIfReady(){
+ if(!conceptVideo || !conceptInView)return;
+ const step=steps[selected];
+ if(conceptVideo.getAttribute('src')!==step.video){
+   conceptVideo.poster=step.image;
+   conceptVideo.src=step.video;
+   conceptVideo.load();
+ }
+ const p=conceptVideo.play();
+ if(p && typeof p.catch==='function')p.catch(()=>syncConceptVideoButtons());
+ syncConceptVideoButtons();
+}
+function switchConceptVideo(){
+ if(!conceptVideo)return;
+ const step=steps[selected];
+ conceptManuallyPaused=false;
+ if(conceptVideoCaption)conceptVideoCaption.textContent=`${String(selected+1).padStart(2,'0')} / ${step.videoLabel} · CONCEPT FILM`;
+ conceptVideo.setAttribute('aria-label',step.title+' concept film');
+ conceptVideo.poster=step.image;
+ if(conceptVideoMissing)conceptVideoMissing.hidden=true;
+ // Do not fetch all four clips while the visitor is still in the hero.
+ if(conceptInView){conceptVideo.src=step.video;conceptVideo.load();playConceptIfReady();}
+ else {conceptVideo.pause();conceptVideo.preload='none';conceptVideo.src=step.video;}
+ syncConceptVideoButtons();
+}
+if(conceptVideo){
+ conceptVideo.muted=true;
+ conceptVideo.defaultMuted=true;
+ conceptVideo.addEventListener('play',syncConceptVideoButtons);
+ conceptVideo.addEventListener('pause',syncConceptVideoButtons);
+ conceptVideo.addEventListener('volumechange',syncConceptVideoButtons);
+ conceptVideo.addEventListener('loadeddata',()=>{if(conceptVideoMissing)conceptVideoMissing.hidden=true;});
+ conceptVideo.addEventListener('error',()=>{
+   if(conceptVideoMissing){conceptVideoMissing.hidden=false;conceptVideoMissing.textContent='Concept film will be available once '+steps[selected].video.split('/').pop()+' is uploaded.';}
+   syncConceptVideoButtons();
+ });
+ if(conceptPlay)conceptPlay.addEventListener('click',()=>{
+   if(conceptVideo.paused){conceptManuallyPaused=false;conceptInView=true;playConceptIfReady();}
+   else {conceptManuallyPaused=true;conceptVideo.pause();}
+   syncConceptVideoButtons();
+ });
+ if(conceptMute)conceptMute.addEventListener('click',()=>{
+   conceptVideo.muted=!conceptVideo.muted;
+   if(!conceptVideo.muted && conceptVideo.paused){conceptManuallyPaused=false;conceptInView=true;playConceptIfReady();}
+   syncConceptVideoButtons();
+ });
+ if('IntersectionObserver' in window){
+   const io=new IntersectionObserver(entries=>{
+     entries.forEach(entry=>{
+       if(entry.isIntersecting){conceptInView=true;if(!conceptManuallyPaused && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches))playConceptIfReady();}
+       else {conceptInView=false;conceptVideo.pause();}
+     });
+   },{rootMargin:'170px 0px',threshold:0});
+   io.observe(conceptVideo);
+ }else{conceptInView=true;playConceptIfReady();}
+ syncConceptVideoButtons();
+}
+
+function showStep(i){if(!title)return;selected=(i+steps.length)%steps.length;const step=steps[selected];title.textContent=step.title;const conceptImage=document.querySelector('[data-concept-image]');if(conceptImage){conceptImage.src=step.image;conceptImage.alt=step.alt;}document.querySelector('[data-step-icon]').textContent=step.icon;document.querySelector('[data-step-text]').textContent=step.text;document.querySelector('[data-step-number]').textContent=`CONCEPT STEP ${String(selected+1).padStart(2,'0')} / 04`;buttons.forEach((b,j)=>b.setAttribute('aria-pressed',String(j===selected)));switchConceptVideo();}
 buttons.forEach((b,i)=>b.addEventListener('click',()=>showStep(i)));const next=document.querySelector('[data-step-next]');if(next)next.addEventListener('click',()=>showStep(selected+1));
 // Contact intentionally has no fake submission. Copy an outline, with a visible fallback.
 const copy=document.querySelector('[data-copy-outline]');if(copy)copy.addEventListener('click',async()=>{const text=document.querySelector('#enquiry-outline').textContent;const feedback=document.querySelector('[data-copy-feedback]');try{await navigator.clipboard.writeText(text);feedback.textContent='Enquiry outline copied. Paste it into your email to contact us once our official address is published.'}catch(e){feedback.textContent='Select the text box above and copy it manually; clipboard access is not available in this browser.'}});
