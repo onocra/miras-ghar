@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- MG_HOME_V16_LEAF_LOWER_ONLY_20261103 -->
+<!-- MG_HOME_V21_BALANCED_CONCEPT_MEDIA_AND_SUBTLE_BOTANICALS_20261104 -->
 <!-- MG_HOME_V20_VERIFIED_FOUR_CLIP_PATHS_20261104 -->
 <!-- MG_HOME_V19_CONCEPT_VIDEOS_AND_FOOTER_SIGNATURE_20261104 -->
 <!-- MG_HOME_V18_FIVE_PRECISE_HOME_REFINEMENTS_20261104 -->
@@ -1072,6 +1073,172 @@ body[data-theme="dark"] .concept-video-actions button{
   .site-footer .footer-identity .footer-logo.footer-signature{font-size:34px}
 }
 
+
+/* ============================================================
+   V21: BALANCED MEDIA PAIR + QUIET HOUSE BOTANICALS
+   Targets only the concept-stage, header ornament and site footer.
+   No film-source, script, body section, palette or wording edits.
+   ============================================================ */
+/* Softer concealment of the approved final-R cut: existing flourish retained. */
+.site-header .wordmark-wrap .wordmark-leaf {
+  opacity:.70;
+  filter:saturate(.70) drop-shadow(0 1px 1px rgba(51,75,44,.10));
+  right:-6px;
+  top:44%;
+  width:18%;
+  height:33%;
+}
+/* Exactly ONE fine vine, travelling diagonally from lower-left to upper-right. */
+.site-header .nav-ornament-wrap::before,
+.site-header .nav-ornament-wrap::after {display:none!important}
+.site-header .nav-ornament-wrap{isolation:isolate}
+.site-header .nav-botanical.nav-botanical-top {
+  display:block;
+  top:0;
+  bottom:0;
+  height:100%;
+  opacity:.28;
+  z-index:0;
+  transform:none;
+  pointer-events:none;
+}
+.site-header .nav-ornament-wrap .primary-nav {position:relative;z-index:1}
+body[data-theme="dark"] .site-header .nav-botanical.nav-botanical-top{opacity:.23}
+@media(max-width:1130px) {
+  .site-header .nav-botanical.nav-botanical-top {display:none}
+}
+@media(max-width:650px) {
+  .site-header .wordmark-wrap .wordmark-leaf{right:-4px;top:44%;width:18%;height:33%}
+}
+/* Side-by-side panels now show the FILM LEFT and PHOTO RIGHT.
+   The caption and step description form one compact full-width baseline. */
+.experience-section .concept-stage {
+  display:grid;
+  grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);
+  grid-template-areas:"video photo" "copy copy";
+  align-items:stretch;
+  column-gap:clamp(13px,1.8vw,24px);
+  row-gap:12px;
+  margin-top:12px;
+}
+.experience-section .concept-stage > .concept-video-wrap {
+  grid-area:video;
+  align-self:stretch;
+  min-width:0;
+  width:100%;
+  margin:0;
+  padding:8px;
+  height:clamp(330px,34vw,442px);
+  display:flex;
+  flex-direction:column;
+}
+.experience-section .concept-stage .concept-video-media {
+  width:100%;
+  height:auto;
+  flex:1 1 0%;
+  min-height:0;
+  aspect-ratio:auto;
+}
+.experience-section .concept-stage .concept-video-media video{
+  width:100%;height:100%;object-fit:contain;
+}
+.experience-section .concept-stage .concept-video-toolbar {
+  flex:0 0 auto;
+  min-height:43px;
+  padding:8px 4px 0;
+}
+.experience-section .concept-stage > .concept-stage-photo {
+  grid-area:photo;
+  align-self:stretch;
+  justify-self:stretch;
+  min-height:0;
+  height:clamp(330px,34vw,442px);
+  width:100%;max-width:none;
+  padding:9px;
+}
+.experience-section .concept-stage > .concept-stage-copy {
+  grid-area:copy;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,245px);
+  align-items:center;
+  gap:10px 18px;
+  padding:11px 6px 2px;
+  background:transparent;
+  border-top:1px solid rgba(176,146,88,.46);
+}
+.experience-section .concept-stage-copy .step-content {
+  display:flex;gap:13px;
+  align-items:center;
+  margin:0;padding:0;
+}
+.experience-section .concept-stage-copy .step-symbol {
+  width:54px;height:54px;font-size:27px;
+}
+.experience-section .concept-stage-copy .step-kicker {margin:0 0 4px}
+.experience-section .concept-stage-copy .step-content h3 {
+  margin:0 0 5px;
+  font-size:clamp(23px,2.25vw,31px);
+  line-height:1.1;
+}
+.experience-section .concept-stage-copy .step-content p:last-child{
+  max-width:700px;
+  font-size:13.5px;
+  line-height:1.48;
+}
+.experience-section .concept-stage-copy .step-foot {
+  margin:0;
+  padding:0 0 0 13px;
+  border-top:0;
+  border-left:1px solid rgba(176,146,88,.46);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  gap:3px;
+}
+.experience-section .concept-stage-copy .step-foot span{
+  font-size:11px;line-height:1.4;
+}
+@media(max-width:820px){
+ .experience-section .concept-stage {
+   grid-template-columns:1fr;
+   grid-template-areas:"video" "photo" "copy";
+   row-gap:11px;
+ }
+ .experience-section .concept-stage > .concept-video-wrap{width:100%;max-width:none;height:auto}
+ .experience-section .concept-stage .concept-video-media {
+   height:auto;flex:none;aspect-ratio:16/9;
+ }
+ .experience-section .concept-stage > .concept-stage-photo {
+   width:100%;height:clamp(245px,57vw,385px);
+ }
+ .experience-section .concept-stage > .concept-stage-copy {
+   grid-template-columns:1fr;gap:10px;padding:10px 3px 2px;
+ }
+ .experience-section .concept-stage-copy .step-foot {
+   flex-direction:row;align-items:center;justify-content:space-between;
+   padding:9px 0 0;margin:0;border-left:0;border-top:1px solid rgba(176,146,88,.46);
+ }
+}
+@media(max-width:550px){
+ .experience-section .concept-stage{row-gap:9px}
+ .experience-section .concept-stage > .concept-video-wrap{padding:6px}
+ .experience-section .concept-stage > .concept-stage-photo{height:clamp(235px,76vw,340px);padding:7px}
+ .experience-section .concept-stage-copy .step-symbol{width:46px;height:46px;font-size:24px}
+ .experience-section .concept-stage-copy .step-content h3{font-size:25px}
+ .experience-section .concept-stage-copy .step-content p:last-child{font-size:13px;line-height:1.5}
+}
+/* A matching, translucent single botanical flourish on footer, behind text. */
+.site-footer{position:relative;isolation:isolate;overflow:hidden}
+.site-footer .footer-botanical{
+  position:absolute;top:0;left:0;width:100%;height:clamp(75px,9vw,140px);
+  opacity:.20;z-index:0;pointer-events:none;
+}
+.site-footer > .container{position:relative;z-index:1}
+@media(max-width:650px){
+  .site-footer .footer-botanical{height:90px;opacity:.15}
+}
+
 </style>
 </head>
 <body>
@@ -1086,7 +1253,23 @@ body[data-theme="dark"] .concept-video-actions button{
     </a>
     <button class="menu-toggle" type="button" data-menu aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
     <div class="nav-ornament-wrap">
-      <div class="nav-botanical nav-botanical-top" aria-hidden="true"><svg viewBox="0 0 590 34" preserveAspectRatio="none" focusable="false"><path d="M8 28 C93 -1 158 8 251 22 S424 33 582 7" fill="none" stroke="#a5bba0" stroke-width="1.35"/><g fill="#8eaa8d" stroke="#668a72" stroke-width=".6"><ellipse cx="74" cy="13" rx="13" ry="5" transform="rotate(-24 74 13)"/><ellipse cx="130" cy="13" rx="11" ry="4.5" transform="rotate(33 130 13)"/><ellipse cx="220" cy="16" rx="12" ry="4.5" transform="rotate(-21 220 16)"/><ellipse cx="365" cy="25" rx="11" ry="4" transform="rotate(30 365 25)"/><ellipse cx="475" cy="20" rx="12" ry="4.5" transform="rotate(-29 475 20)"/><ellipse cx="541" cy="11" rx="10" ry="4" transform="rotate(25 541 11)"/></g><g fill="#e8d5ae" stroke="#bc9b67" stroke-width=".7"><circle cx="180" cy="12" r="3.5"/><circle cx="303" cy="24" r="3"/><circle cx="515" cy="17" r="3.3"/></g></svg></div>
+      <div class="nav-botanical nav-botanical-top" aria-hidden="true">
+        <svg viewBox="0 0 620 94" preserveAspectRatio="none" focusable="false" role="presentation">
+          <path d="M3 91 C112 81 167 68 248 50 S430 25 617 3" fill="none" stroke="#729176" stroke-width="1.45" stroke-linecap="round"/>
+          <g fill="#83a284" stroke="#648369" stroke-width=".7">
+            <ellipse cx="92" cy="84" rx="12" ry="4.1" transform="rotate(-33 92 84)"/>
+            <ellipse cx="174" cy="68" rx="11" ry="4" transform="rotate(38 174 68)"/>
+            <ellipse cx="259" cy="49" rx="12" ry="4.3" transform="rotate(-34 259 49)"/>
+            <ellipse cx="356" cy="35" rx="10" ry="3.7" transform="rotate(38 356 35)"/>
+            <ellipse cx="452" cy="22" rx="11" ry="4" transform="rotate(-34 452 22)"/>
+            <ellipse cx="550" cy="11" rx="11" ry="4" transform="rotate(39 550 11)"/>
+          </g>
+          <g fill="#f1e3c2" stroke="#b79a61" stroke-width=".6">
+            <circle cx="215" cy="57" r="3.3"/><circle cx="405" cy="28" r="3.1"/>
+            <circle cx="496" cy="18" r="2.8"/>
+          </g>
+        </svg>
+      </div>
     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation" data-nav>
       <a href="index.html" aria-current="page">Home</a>
       <a href="philosophy/index.html" >Our Philosophy</a>
@@ -1095,7 +1278,6 @@ body[data-theme="dark"] .concept-video-actions button{
       <a href="about/index.html" >About</a>
       <a href="contact/index.html" >Contact</a>
     </nav>
-    <div class="nav-botanical nav-botanical-bottom" aria-hidden="true"><svg viewBox="0 0 590 34" preserveAspectRatio="none" focusable="false"><path d="M8 28 C93 -1 158 8 251 22 S424 33 582 7" fill="none" stroke="#a5bba0" stroke-width="1.35"/><g fill="#8eaa8d" stroke="#668a72" stroke-width=".6"><ellipse cx="74" cy="13" rx="13" ry="5" transform="rotate(-24 74 13)"/><ellipse cx="130" cy="13" rx="11" ry="4.5" transform="rotate(33 130 13)"/><ellipse cx="220" cy="16" rx="12" ry="4.5" transform="rotate(-21 220 16)"/><ellipse cx="365" cy="25" rx="11" ry="4" transform="rotate(30 365 25)"/><ellipse cx="475" cy="20" rx="12" ry="4.5" transform="rotate(-29 475 20)"/><ellipse cx="541" cy="11" rx="10" ry="4" transform="rotate(25 541 11)"/></g><g fill="#e8d5ae" stroke="#bc9b67" stroke-width=".7"><circle cx="180" cy="12" r="3.5"/><circle cx="303" cy="24" r="3"/><circle cx="515" cy="17" r="3.3"/></g></svg></div>
     </div>
     <div class="header-actions" role="group" aria-label="Website tools">
       <button type="button" class="header-tool" id="mgSearchToggle" aria-label="Search MIRĀS GHĀR" aria-expanded="false" aria-controls="mgSearchPanel" title="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m16 16 5 5"/></svg></button>
@@ -1190,6 +1372,22 @@ body[data-theme="dark"] .concept-video-actions button{
       <button type="button" data-step="3" aria-pressed="false">04 <span>Wear</span></button>
     </div>
     <div class="concept-stage">
+      <div class="concept-video-wrap" aria-label="Ritual concept film">
+        <div class="concept-video-media">
+          <video id="conceptStepVideo" muted playsinline loop preload="none"
+            poster="/assets/mg/open-concept.png" aria-label="Open the vessel concept film">
+            <p>Your browser does not support HTML5 video.</p>
+          </video>
+          <p class="concept-video-missing" data-concept-video-missing hidden role="status"></p>
+        </div>
+        <div class="concept-video-toolbar">
+          <span class="concept-video-caption" data-concept-video-caption>01 / OPEN · CONCEPT FILM</span>
+          <div class="concept-video-actions">
+            <button type="button" data-concept-video-play aria-label="Play concept film">Play ▶</button>
+            <button type="button" data-concept-video-mute aria-label="Unmute concept film">Unmute ♫</button>
+          </div>
+        </div>
+      </div>
       <div class="concept-stage-photo"><img data-concept-image src="/assets/mg/open-concept.png" alt="Concept step 1: opening the sacred aromatic vessel" loading="eager"></div>
       <div class="concept-stage-copy">
         <div class="step-content" aria-live="polite">
@@ -1201,23 +1399,6 @@ body[data-theme="dark"] .concept-video-actions button{
           </div>
         </div>
         <div class="step-foot"><span>Illustrative concept · Safety and performance under review</span><button type="button" data-step-next>Next step →</button></div>
-<div class="concept-video-wrap" aria-label="Ritual concept film">
-  <div class="concept-video-media">
-    <video id="conceptStepVideo" muted playsinline loop preload="none"
-      poster="/assets/mg/open-concept.png"
-      aria-label="Open the vessel concept film">
-      <p>Your browser does not support HTML5 video.</p>
-    </video>
-    <p class="concept-video-missing" data-concept-video-missing hidden role="status"></p>
-  </div>
-  <div class="concept-video-toolbar">
-    <span class="concept-video-caption" data-concept-video-caption>01 / OPEN · CONCEPT FILM</span>
-    <div class="concept-video-actions">
-      <button type="button" data-concept-video-play aria-label="Play concept film">Play ▶</button>
-      <button type="button" data-concept-video-mute aria-label="Unmute concept film">Unmute ♫</button>
-    </div>
-  </div>
-</div>
       </div>
     </div>
   </div>
@@ -1234,6 +1415,21 @@ body[data-theme="dark"] .concept-video-actions button{
 <section class="final-invite"><div class="container" data-reveal><span class="eyebrow">MIRĀS GHĀR · THE HERITAGE HOUSE</span><h2>Every collection, a new chapter.</h2><p>Egyptian Volume I begins our exploration of civilization-inspired aromatic traditions, carefully imagined for the modern world.</p><a class="button button-gold" href="collections/index.html">Enter the Collection <span aria-hidden="true">→</span></a></div></section>
 </main>
 <footer class="site-footer">
+  <svg class="footer-botanical" viewBox="0 0 1500 140" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path d="M5 136 C232 123 333 96 574 78 S1035 38 1494 7" stroke="#b4cfac" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <g fill="#a4c1a3" stroke="#c9dec1" stroke-width=".9">
+      <ellipse cx="180" cy="124" rx="25" ry="8" transform="rotate(-24 180 124)"/>
+      <ellipse cx="350" cy="103" rx="22" ry="8" transform="rotate(31 350 103)"/>
+      <ellipse cx="525" cy="81" rx="25" ry="9" transform="rotate(-27 525 81)"/>
+      <ellipse cx="736" cy="63" rx="22" ry="7" transform="rotate(27 736 63)"/>
+      <ellipse cx="913" cy="48" rx="24" ry="8" transform="rotate(-26 913 48)"/>
+      <ellipse cx="1122" cy="32" rx="20" ry="7" transform="rotate(28 1122 32)"/>
+      <ellipse cx="1317" cy="16" rx="23" ry="8" transform="rotate(-29 1317 16)"/>
+    </g>
+    <g fill="#efd5a8" stroke="#d2b47d" stroke-width=".9">
+      <circle cx="443" cy="91" r="7"/><circle cx="835" cy="55" r="6"/><circle cx="1230" cy="23" r="6"/>
+    </g>
+  </svg>
   <div class="container footer-layout">
     <div class="footer-identity"><div class="footer-house-line"><span>THE HERITAGE HOUSE</span><span class="footer-virasat" lang="ur" dir="rtl">وراثت</span></div><div class="footer-logo footer-signature">MIRĀS GHĀR</div><p>Trust · Authenticity · Preservation</p><p class="footer-motto">Ancient wisdom for a more balanced tomorrow.</p></div>
     <div><h2>Explore</h2><a href="index.html">Home</a><a href="philosophy/index.html">Our Philosophy</a><a href="collections/index.html">Our Collections</a><a href="about/index.html">About the House</a></div>
