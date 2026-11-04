@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- MG_HOME_V16_LEAF_LOWER_ONLY_20261103 -->
+<!-- MG_HOME_V20_VERIFIED_FOUR_CLIP_PATHS_20261104 -->
 <!-- MG_HOME_V19_CONCEPT_VIDEOS_AND_FOOTER_SIGNATURE_20261104 -->
 <!-- MG_HOME_V18_FIVE_PRECISE_HOME_REFINEMENTS_20261104 -->
 <!-- MG_HOME_V17_DARK_MODE_CONTRAST_FIX_20261103 -->
@@ -1250,10 +1251,10 @@ document.querySelectorAll('[data-year]').forEach(el=>{el.textContent=String(new 
 const reveal=document.querySelectorAll('[data-reveal]');if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>{entries.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.08});reveal.forEach(el=>obs.observe(el))}else reveal.forEach(el=>el.classList.add('visible'));
 // Interactive concept walkthrough. No unverified quantities, durations, or medical claims.
 const steps=[
- {title:'Open the vessel',icon:'✧',image:'/assets/mg/open-concept.png',video:'/assets/mg/open.mp4',videoLabel:'OPEN',alt:'Concept image: opening the sacred aromatic vessel',text:'Lift the signature lotus cap to reveal the proposed precision applicator. The final closure and dispensing mechanism remain subject to prototype verification.'},
- {title:'Apply aromatic oil',icon:'◈',image:'/assets/mg/apply-concept.png',video:'/assets/mg/apply.mp4',videoLabel:'APPLY',alt:'Concept image: applying oil to the diffuser disc',text:'The envisioned applicator transfers an appropriate amount of aromatic oil onto a separate porous ceramic disc. Final dose guidance will depend on formulation and safety testing.'},
- {title:'Fit the ceramic disc',icon:'◇',image:'/assets/mg/fit-concept.png',video:'/assets/mg/fit.mp4',videoLabel:'FIT',alt:'Concept image: fitting the diffuser disc into the pendant',text:'The removable disc is designed to fit inside the pendant housing. Retention, oil-contact materials and fit will require technical assessment.'},
- {title:'Carry the ritual',icon:'✦',image:'/assets/mg/wear-concept.png',video:'/assets/mg/wear.mp4',videoLabel:'WEAR',alt:'Concept image: carrying the sacred aromatic pendant through the day',text:'The pendant concept carries an aromatic keepsake through the day. Wearability, diffusion characteristics and safe-use instructions remain to be validated.'}
+ {title:'Open the vessel',icon:'✧',image:'/assets/mg/open-concept.png',video:'/assets/mg/28758.mp4',videoLabel:'OPEN',alt:'Concept image: opening the sacred aromatic vessel',text:'Lift the signature lotus cap to reveal the proposed precision applicator. The final closure and dispensing mechanism remain subject to prototype verification.'},
+ {title:'Apply aromatic oil',icon:'◈',image:'/assets/mg/apply-concept.png',video:'/assets/mg/28762.mp4',videoLabel:'APPLY',alt:'Concept image: applying oil to the diffuser disc',text:'The envisioned applicator transfers an appropriate amount of aromatic oil onto a separate porous ceramic disc. Final dose guidance will depend on formulation and safety testing.'},
+ {title:'Fit the ceramic disc',icon:'◇',image:'/assets/mg/fit-concept.png',video:'/assets/mg/28765.mp4',videoLabel:'FIT',alt:'Concept image: fitting the diffuser disc into the pendant',text:'The removable disc is designed to fit inside the pendant housing. Retention, oil-contact materials and fit will require technical assessment.'},
+ {title:'Carry the ritual',icon:'✦',image:'/assets/mg/wear-concept.png',video:'/assets/mg/28766.mp4',videoLabel:'WEAR',alt:'Concept image: carrying the sacred aromatic pendant through the day',text:'The pendant concept carries an aromatic keepsake through the day. Wearability, diffusion characteristics and safe-use instructions remain to be validated.'}
 ];
 const buttons=[...document.querySelectorAll('[data-step]')];const title=document.querySelector('[data-step-title]');let selected=0;
 const conceptVideo=document.getElementById('conceptStepVideo');
