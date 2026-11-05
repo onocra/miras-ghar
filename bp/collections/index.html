@@ -1368,6 +1368,53 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
 @media(max-width:600px){
   .col-chapters .col-chapter-egypt .col-egypt-relief{width:120%;right:-28%;opacity:.14}
 }
+
+/* ==========================================================
+   COLLECTIONS V4 · ROYAL PREMIUM + SIGNATURES MEDIA GALLERIES
+   Visual assets retain natural aspect ratio; responsive modal.
+   ========================================================== */
+.collections-page .col-gallery-product{scroll-margin-top:130px}
+.collections-page .col-gallery-preview{display:flex;appearance:none;border:0;border-radius:0;text-align:center;width:100%;position:relative;isolation:isolate;padding:27px 15px 24px;overflow:hidden;cursor:zoom-in;align-items:center;justify-content:center;flex-direction:column;background:radial-gradient(ellipse at 50% 30%,#fff9eb 0%,#e9efe5 69%,#dee9de 100%);min-height:255px}
+.collections-page .col-gallery-preview:focus-visible{outline:3px solid #be974e;outline-offset:-5px}
+.collections-page .col-gallery-preview img[hidden]{display:none!important}
+.collections-page .col-gallery-preview img{display:block;max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 14px 10px rgba(36,53,36,.16));transition:transform .3s}
+.collections-page .col-gallery-preview:hover img{transform:scale(1.035)}
+.collections-page .col-signatures-art{background:radial-gradient(ellipse at 50% 40%,#6b745e,#253e32 82%)}
+.collections-page .col-signatures-art .col-art-caption{color:#f5deb0}
+.collections-page .col-gallery-preview .col-art-caption{position:absolute;left:12px;top:11px;z-index:2;font:700 9px Arial,sans-serif;letter-spacing:.14em}
+.collections-page .col-signatures-art .col-gallery-preview-fallback{font:400 29px/1.2 Georgia,serif;color:#f6eacb;letter-spacing:.02em}
+.collections-page .col-signatures-art .col-gallery-preview-fallback em{display:block;color:#e2c28a;font-size:21px}
+.collections-page .col-gallery-preview-fallback small{font:700 10px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;display:block;margin-top:14px}
+.collections-page .col-gallery-preview-fallback[hidden]{display:none!important}
+.collections-page .col-gallery-visual-hint{display:block;position:absolute;bottom:11px;right:11px;padding:6px 9px;background:#fffff1ee;border:1px solid #d1b985;color:#375441;font:700 10px Arial,sans-serif;z-index:2;box-shadow:0 3px 12px #20392720}
+.collections-page .col-gallery-launch{align-self:flex-start;border:1px solid #b08a4a;background:#284b39;color:#fff9eb;cursor:pointer;padding:10px 14px;font:bold 10px Arial,sans-serif;letter-spacing:.09em;text-transform:uppercase;display:inline-flex;align-items:center;gap:12px;margin:-3px 0 16px;transition:background .2s}
+.collections-page .col-gallery-launch:hover{background:#40654b}.collections-page .col-gallery-launch:focus-visible{outline:3px solid #c99f5b;outline-offset:2px}
+.mg-collection-dialog{position:fixed;inset:0;margin:auto;width:min(1080px,calc(100vw - 30px));max-width:none;max-height:min(93dvh,900px);height:auto;padding:0;overflow:hidden;border:1px solid #c9a76e;background:#fffaf0;color:#2c4739;box-shadow:0 24px 90px #15261b91}
+.mg-collection-dialog::backdrop{background:#14261dce;backdrop-filter:blur(5px)}
+.mg-collection-gallery{display:flex;flex-direction:column;max-height:min(93dvh,900px)}
+.mg-gallery-top{display:flex;align-items:center;justify-content:space-between;gap:15px;background:#284737;color:#f9efd6;padding:13px 17px;border-bottom:2px solid #bd9653}
+.collections-page .mg-gallery-title{font:400 clamp(20px,2.5vw,30px)/1.25 Georgia,serif;color:#fffaf0;margin:0}
+.collections-page .mg-gallery-eyebrow{color:#ebcf99;letter-spacing:.14em;font:700 9px Arial,sans-serif;text-transform:uppercase;margin:0 0 3px}
+.mg-gallery-close{display:grid;place-items:center;border:1px solid #dac18f;color:#fff9e7;background:#355442;font-size:26px;font-weight:300;line-height:1;width:42px;height:42px;cursor:pointer;flex-shrink:0}
+.mg-gallery-stage{display:grid;grid-template-columns:49px minmax(0,1fr) 49px;align-items:center;gap:6px;padding:10px 14px;background:radial-gradient(ellipse,#fdfaf0,#e8eee4);min-height:0;flex:1}
+.mg-gallery-stage button{width:42px;height:56px;border:1px solid #c4a56c;color:#284a3a;background:#fffdf5db;cursor:pointer;font-size:30px;line-height:1}
+.mg-gallery-media{min-width:0;min-height:200px;height:clamp(220px,45vh,495px);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.mg-gallery-media img,.mg-gallery-media video{display:block;max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain}
+.mg-gallery-media video{background:#15281d}
+.mg-gallery-loading,.mg-gallery-missing{color:#546d57;text-align:center;font:italic 15px/1.6 Georgia,serif;padding:25px 10px;max-width:590px}
+.mg-gallery-missing strong{color:#274a39;display:block;font-style:normal;font-size:20px}
+.mg-gallery-bottom{padding:10px 17px 12px;background:#fffaf0;border-top:1px solid #d8c9a9}
+.mg-gallery-details{display:flex;justify-content:space-between;align-items:baseline;gap:20px;font:15px Georgia,serif;margin-bottom:9px}
+.mg-gallery-details span:last-child{flex-shrink:0;font:700 10px Arial,sans-serif;letter-spacing:.1em;color:#8f7243}
+.mg-gallery-thumbs{display:flex;gap:8px;overflow-x:auto;padding:3px 0 6px;scrollbar-width:thin}
+.mg-gallery-thumb{flex:0 0 105px;min-height:53px;display:flex;align-items:center;gap:8px;background:#f5f0e5;border:1px solid #d8c9a9;cursor:pointer;padding:7px 9px;text-align:left;color:#355341}
+.mg-gallery-thumb[aria-current="true"]{border:2px solid #aa7d39;background:#e9f0e3}
+.mg-gallery-thumb .mg-thumb-number{color:#99733c;font:700 13px Georgia,serif}
+.mg-gallery-thumb .mg-thumb-label{font:700 9px/1.4 Arial,sans-serif;letter-spacing:.04em}
+.mg-gallery-help{font:11px Arial,sans-serif;color:#778473;margin:6px 0 0}
+@media(max-width:640px){.mg-collection-dialog{width:calc(100vw - 12px);max-height:96dvh}.mg-collection-gallery{max-height:96dvh}.mg-gallery-top{padding:10px}.mg-gallery-stage{grid-template-columns:35px minmax(0,1fr) 35px;gap:2px;padding:6px 4px}.mg-gallery-stage button{width:33px;height:47px;font-size:26px}.mg-gallery-media{height:min(48dvh,370px);min-height:160px}.mg-gallery-bottom{padding:10px}.mg-gallery-thumb{flex-basis:96px}.mg-gallery-help{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.collections-page .col-gallery-preview img{transition:none!important}}
+
 </style>
 </head>
 <body>
@@ -1527,7 +1574,7 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
    <div class="col-arch-stem" aria-hidden="true"></div><div class="col-arch-strand-label">THREE PRESENTATION FAMILIES</div>
    <div class="col-arch-branch" aria-hidden="true"></div>
    <div class="col-family-grid">
-     <div class="col-family-arch"><div class="col-family-arch-head">Royal Family <small>Collectible, ceremonial expression</small></div><div class="col-arch-tiers"><a href="#royal-family">Premium</a><a href="#royal-family">Signatures</a><a href="#royal-family">Standard</a></div></div>
+     <div class="col-family-arch"><div class="col-family-arch-head">Royal Family <small>Collectible, ceremonial expression</small></div><div class="col-arch-tiers"><a href="#royal-premium">Premium</a><a href="#royal-signatures">Signatures</a><a href="#royal-family">Standard</a></div></div>
      <div class="col-family-arch"><div class="col-family-arch-head">Heritage Family <small>Distinctive heritage presentations</small></div><div class="col-arch-tiers"><a href="#heritage-family">Premium</a><a href="#heritage-family">Signatures</a><a href="#heritage-family">Standard</a></div></div>
      <div class="col-family-arch col-family-accessible"><div class="col-family-arch-head">Accessible Family <small>Considered everyday interpretations · proposed</small></div><div class="col-arch-tiers"><a href="#accessible-family">Premium</a><a href="#accessible-family">Signatures</a><a href="#accessible-family">Standard</a></div></div>
    </div>
@@ -1541,8 +1588,34 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
  <div class="col-wrap"><div class="col-section-heading"><div class="col-kicker centered">04 — THE PRODUCT CATALOGUE</div><h2 id="catalogue-title">Expressions of <em>Egyptian Volume I.</em></h2><p>Explore the proposed catalogue by family and tier. The Royal Premium case is the lead visual concept; content, formats, price and availability for other variants remain unconfirmed.</p></div>
  <div class="col-family-intro" id="royal-family"><div class="col-family-title"><span class="col-family-index">FAMILY 01</span><h3>Royal <em>Family.</em></h3><p>The most ceremonial expression of the chapter, conceived around presentation, design richness and a sense of permanence.</p></div><span class="col-family-count">03 PROPOSED VARIANTS</span></div>
  <div class="col-product-grid">
-   <article class="col-product-card col-feature-product"><div class="col-prod-art col-prod-book"><span class="col-art-caption">ROYAL PREMIUM · OPEN &amp; CLOSED</span><img class="col-royal-open" src="/assets/mg/royal-open-v6.png" alt="Royal Premium approved open three-panel book case, displaying the three sacred ritual vessels" loading="lazy" onerror="this.onerror=null;this.src='/assets/mg/royal-stage-reference.jpg'"><figure class="col-royal-closed"><img src="/assets/mg/royal-cover-v5.png" alt="Royal Premium approved closed book-style case" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>Closed cover</figcaption></figure></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Premium</h4><p>Our lead collectible case concept: three distinct 10 ml vessels, an aromatic pendant and disc concept, storytelling and a planned certificate compartment.</p><span class="col-in-dev">Design under development</span></div></article>
-   <article class="col-product-card"><div class="col-prod-art col-prod-symbol"><span>✧</span><small>ILLUSTRATIVE PLACEHOLDER</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Signatures</h4><p>A proposed curated Royal presentation tier. Its packaging, contents and production specifications are yet to be defined.</p><span class="col-in-dev">In the pipeline</span></div></article>
+   <article class="col-product-card col-feature-product col-gallery-product" id="royal-premium">
+     <button type="button" class="col-prod-art col-prod-book col-gallery-preview" data-collection-gallery-trigger="premium" aria-label="Open Royal Premium gallery, ten visuals">
+       <span class="col-art-caption">ROYAL PREMIUM · THE CEREMONIAL CASE</span>
+       <img data-gallery-preview="premium" src="/assets/mg/royal-cover-v5.png" alt="Royal Premium approved closed collectible book cover" loading="lazy">
+       <span class="col-gallery-visual-hint"><span aria-hidden="true">⊕</span> View 10 images</span>
+       <span class="col-gallery-preview-fallback" hidden>ROYAL PREMIUM<br><small>Explore the presentation gallery</small></span>
+     </button>
+     <div class="col-prod-copy">
+       <div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Premium</h4>
+       <p>Our lead collectible case concept: three distinct 10 ml vessels, an aromatic pendant and diffuser disc, storytelling and a planned certificate compartment. Discover the closed and open case, approved vessel masters, ritual presentations and use concept.</p>
+       <button class="col-gallery-launch" type="button" data-collection-gallery-trigger="premium">Explore Premium Gallery <span aria-hidden="true">↗</span></button>
+       <span class="col-in-dev">Design under development</span>
+     </div>
+   </article>
+   <article class="col-product-card col-gallery-product" id="royal-signatures">
+     <button type="button" class="col-prod-art col-signatures-art col-gallery-preview" data-collection-gallery-trigger="signatures" aria-label="Open Royal Signatures gallery, seven images and two videos">
+       <span class="col-art-caption">ROYAL SIGNATURES · PRESENTATION STUDY</span>
+       <img data-gallery-preview="signatures" alt="Royal Signatures collectible cover visual" loading="lazy">
+       <span class="col-gallery-preview-fallback">ROYAL<br><em>Signatures</em><small>Visual collection</small></span>
+       <span class="col-gallery-visual-hint"><span aria-hidden="true">⊕</span> View 7 images + 2 films</span>
+     </button>
+     <div class="col-prod-copy">
+       <div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Signatures</h4>
+       <p>A design study of the Royal Signatures presentation, shown through cover explorations, the opened case and its individual panel views. Two film clips complete the visual sequence; product specifications remain under development.</p>
+       <button class="col-gallery-launch" type="button" data-collection-gallery-trigger="signatures">Explore Signatures Gallery <span aria-hidden="true">↗</span></button>
+       <span class="col-in-dev">Design under development</span>
+     </div>
+   </article>
    <article class="col-product-card"><div class="col-prod-art col-prod-symbol"><span>◈</span><small>ILLUSTRATIVE PLACEHOLDER</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Standard</h4><p>The proposed entry presentation in the Royal family, with final configuration subject to design and validation.</p><span class="col-in-dev">In the pipeline</span></div></article>
  </div>
  <div class="col-family-intro col-heritage-intro" id="heritage-family"><div class="col-family-title"><span class="col-family-index">FAMILY 02</span><h3>Heritage <em>Family.</em></h3><p>A complementary expression of the Egyptian story, planned with its own presentation identity while retaining the House’s core values.</p></div><span class="col-family-count">03 PROPOSED VARIANTS</span></div>
@@ -1571,6 +1644,15 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
 </div></section>
 
 <section class="col-last"><div class="col-wrap col-last-inner"><div class="col-last-icon" aria-hidden="true">❦</div><div class="col-kicker centered">THE HOUSE CONTINUES ITS JOURNEY</div><h2>Designed to be collected.<br><em>Created to be remembered.</em></h2><p>Follow the progress of the first Egyptian chapter as the House refines its collections, prototypes and presentation details.</p><div class="col-last-buttons"><a href="/bp/philosophy/" class="col-gold-button">Our Philosophy ↗</a><a href="/bp/contact/" class="col-lined-link">Contact the House</a></div></div></section>
+
+<!-- Collection galleries: exact approved sources, no regenerated or cropped bottle art. -->
+<dialog id="mgCollectionGallery" class="mg-collection-dialog" aria-labelledby="mgGalleryTitle">
+  <div class="mg-collection-gallery">
+    <div class="mg-gallery-top"><div><p class="mg-gallery-eyebrow">MIRĀS GHĀR · THE EGYPTIAN VOLUME I</p><h2 class="mg-gallery-title" id="mgGalleryTitle">Royal Collection</h2></div><button class="mg-gallery-close" type="button" id="mgGalleryClose" aria-label="Close gallery">×</button></div>
+    <div class="mg-gallery-stage"><button type="button" id="mgGalleryPrev" aria-label="Previous image">‹</button><div class="mg-gallery-media" id="mgGalleryMedia" aria-live="polite"></div><button type="button" id="mgGalleryNext" aria-label="Next image">›</button></div>
+    <div class="mg-gallery-bottom"><div class="mg-gallery-details"><span id="mgGalleryCaption">Presentation</span><span id="mgGalleryCount">1 / 10</span></div><div id="mgGalleryThumbs" class="mg-gallery-thumbs" aria-label="Choose gallery image"></div><p class="mg-gallery-help">Use the arrow buttons, thumbnails or keyboard ← →. Videos have their own playback controls.</p></div>
+  </div>
+</dialog>
 </main>
 <footer class="site-footer">
 <svg aria-hidden="true" class="footer-botanical" focusable="false" preserveaspectratio="none" viewbox="0 0 1500 140">
@@ -1675,4 +1757,98 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
  });
 })();
 </script>
+
+<script>
+/* V4 Royal product visual galleries. Uses files as supplied, not re-generated art.
+   Signature images are named from the user's folder screenshot (extensions hidden).
+   Fallback resolution supports /assets/Royal Signature/ and /assets/mg/ and .png/.jpg/.webp.
+   Missing media displays an informative placeholder rather than a broken picture. */
+(()=>{'use strict';
+ const dialog=document.getElementById('mgCollectionGallery');
+ if(!dialog || typeof dialog.showModal!=='function')return;
+ const media=document.getElementById('mgGalleryMedia'),title=document.getElementById('mgGalleryTitle'),caption=document.getElementById('mgGalleryCaption'),count=document.getElementById('mgGalleryCount'),thumbs=document.getElementById('mgGalleryThumbs');
+ const premium=[
+   ['royal-cover-v5','Royal Premium · Closed collectible book'],
+   ['royal-open-v6','Royal Premium · Open ceremonial case'],
+   ['morning-bottle-v5','The Awakening of Khepri · Morning vessel'],
+   ['noon-bottle-v5','The Zenith of Ra · Noon vessel'],
+   ['night-bottle-v5','The Descent of Atum · Nightfall vessel'],
+   ['morning-ritual-panel','Khepri · Ritual heritage presentation'],
+   ['noon-ritual-panel','Ra · Ritual heritage presentation'],
+   ['night-ritual-panel','Atum · Ritual heritage presentation'],
+   ['open-concept','The Modern Ritual · Open'],
+   ['wear-concept','The Modern Ritual · Carry']
+ ].map(([name,label])=>({name,label,type:'image',paths:['/assets/mg/']}));
+ const signatures=[
+   ['royal-signature-01','Signatures · Cover exploration 01','image'],
+   ['royal-signature-02','Signatures · Cover exploration 02','image'],
+   ['royal-signature-03','Signatures · Cover exploration 03','image'],
+   ['royal-signature-cover-master','Signatures · Approved cover master study','image'],
+   ['royal-signature-open-dual-transparent','Signatures · Open dual-panel view','image'],
+   ['royal-signature-open-left-transparent','Signatures · Open left-angle view','image'],
+   ['royal-signature-open-right-transparent','Signatures · Open right-angle view','image'],
+   ['royal-signature-open-web','Signatures · Opening presentation film','video'],
+   ['royal-signature-cover-web','Signatures · Cover presentation film','video']
+ ].map(([name,label,type])=>({name,label,type,paths:['/assets/Royal%20Signature/','/assets/mg/','/bp/assets/Royal%20Signature/']}));
+ const sets={premium:{title:'Royal Premium · Visual Gallery',items:premium},signatures:{title:'Royal Signatures · Visual Gallery',items:signatures}};
+ let currentSet='premium',index=0,renderToken=0,lastOpener=null;
+ const qs=(id)=>document.getElementById(id);
+ function candidates(item){
+   const extensions=item.type==='video'?['mp4','webm','mov']:['png','jpg','jpeg','webp'];
+   const found=[];for(const path of item.paths)for(const ext of extensions)found.push(path+encodeURIComponent(item.name)+'.'+ext);
+   return found;
+ }
+ function placeholder(item){
+   media.replaceChildren();const d=document.createElement('div');d.className='mg-gallery-missing';
+   const h=document.createElement('strong');h.textContent='Gallery file not yet published';d.appendChild(h);
+   const p=document.createElement('p');p.textContent=item.label+' — upload '+item.name+(item.type==='video'?'.mp4':'.png')+' to your website assets folder.';d.appendChild(p);media.appendChild(d);
+ }
+ function render(){
+   const token=++renderToken,items=sets[currentSet].items,item=items[index];
+   title.textContent=sets[currentSet].title;caption.textContent=item.label;count.textContent=(index+1)+' / '+items.length;
+   const loading=document.createElement('div');loading.className='mg-gallery-loading';loading.textContent='Loading '+(item.type==='video'?'film':'image')+'…';media.replaceChildren(loading);
+   thumbs.replaceChildren();
+   items.forEach((entry,i)=>{
+     const b=document.createElement('button');b.type='button';b.className='mg-gallery-thumb';b.setAttribute('aria-current',String(i===index));b.setAttribute('aria-label','View '+entry.label);
+     const n=document.createElement('span');n.className='mg-thumb-number';n.textContent=String(i+1).padStart(2,'0');
+     const label=document.createElement('span');label.className='mg-thumb-label';label.textContent=(entry.type==='video'?'▶ ':'')+entry.label.split(' · ').slice(-1)[0];
+     b.append(n,label);b.addEventListener('click',()=>{index=i;render()});thumbs.appendChild(b);
+     if(i===index)b.scrollIntoView({block:'nearest',inline:'nearest'});
+   });
+   const options=candidates(item);let c=0;
+   const nextSource=()=>{
+     if(token!==renderToken)return;
+     if(c>=options.length){placeholder(item);return;}
+     const url=options[c++];
+     if(item.type==='image'){
+       const img=new Image();img.alt=item.label;img.decoding='async';img.onload=()=>{if(token===renderToken){media.replaceChildren(img)}};
+       img.onerror=nextSource;img.src=url;
+     }else{
+       const v=document.createElement('video');v.controls=true;v.playsInline=true;v.preload='metadata';v.poster='';v.setAttribute('aria-label',item.label);
+       v.addEventListener('loadedmetadata',()=>{if(token===renderToken)media.replaceChildren(v)},{once:true});
+       v.addEventListener('error',nextSource,{once:true});v.src=url;v.load();
+     }
+   };
+   nextSource();
+ }
+ function show(set,opener){currentSet=set;index=0;lastOpener=opener;dialog.showModal();render();qs('mgGalleryClose').focus()}
+ function move(step){const items=sets[currentSet].items;index=(index+step+items.length)%items.length;render()}
+ document.querySelectorAll('[data-collection-gallery-trigger]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.collectionGalleryTrigger,b)));
+ qs('mgGalleryClose').addEventListener('click',()=>dialog.close());
+ qs('mgGalleryNext').addEventListener('click',()=>move(1));
+ qs('mgGalleryPrev').addEventListener('click',()=>move(-1));
+ dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+ dialog.addEventListener('close',()=>{++renderToken;media.querySelector('video')?.pause();media.replaceChildren();lastOpener?.focus()});
+ dialog.addEventListener('keydown',e=>{if(e.target.closest('video'))return;if(e.key==='ArrowRight'){e.preventDefault();move(1)}else if(e.key==='ArrowLeft'){e.preventDefault();move(-1)}});
+ // Gallery card previews: use the first supplied exact still, no approximated artwork.
+ document.querySelectorAll('[data-gallery-preview]').forEach(preview=>{
+   const set=preview.dataset.galleryPreview,first=sets[set].items[0];
+   const opts=candidates(first);let i=0;
+   const fail=()=>{const fallback=preview.parentElement.querySelector('.col-gallery-preview-fallback');preview.hidden=true;if(fallback)fallback.hidden=false};
+   const tryNext=()=>{if(i>=opts.length){fail();return;}preview.onerror=tryNext;preview.onload=()=>{preview.hidden=false;const fallback=preview.parentElement.querySelector('.col-gallery-preview-fallback');if(fallback)fallback.hidden=true};preview.src=opts[i++]};
+   tryNext();
+ });
+})();
+</script>
+
 </body></html>
