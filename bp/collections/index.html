@@ -1337,6 +1337,37 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
 @media(max-width:880px){.col-family-grid{gap:9px}.col-family-arch-head{font-size:20px}.col-arch-tiers{grid-template-columns:1fr;gap:5px}.col-arch-tiers a{font-size:11px;padding:9px 5px}.col-ritual-tree{gap:7px}.col-ritual-tree a{padding:12px 7px}}
 @media(max-width:600px){.col-family-grid{grid-template-columns:1fr;gap:16px;max-width:400px}.col-arch-branch{display:none}.col-family-arch-head{font-size:23px}.col-arch-tiers{grid-template-columns:repeat(3,minmax(0,1fr))}.col-ritual-tree{grid-template-columns:1fr;max-width:400px}.col-ritual-tree a{padding:11px}.col-royal-open{max-width:90%!important}.col-royal-closed{width:32%;height:58%}}
 
+
+/* =========================================================
+   MIRĀS GHĀR / COLLECTIONS V3 — Subtle Egypt bas-relief
+   Original inline SVG art: winged sun disk, lotus and temple.
+   Decorative only; the approved text remains foreground.
+   No external image path or file is required for the etching.
+   ========================================================= */
+.col-chapters .col-chapter-egypt{
+  isolation:isolate;
+  background:linear-gradient(105deg,#284637 0%,#2b493b 51%,#47674c 100%);
+  box-shadow:0 15px 30px rgba(40,68,53,.16);
+}
+.col-chapters .col-chapter-egypt::after{content:none!important}
+.col-chapters .col-chapter-egypt .col-egypt-relief{
+  position:absolute;
+  z-index:0;
+  right:-9%;top:-10%;
+  height:125%;width:95%;
+  pointer-events:none;
+  opacity:.22;
+  filter:blur(.12px);
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.38) 27%,#000 58%);
+  mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.38) 27%,#000 58%);
+}
+.col-chapters .col-chapter-egypt > :not(.col-egypt-relief){position:relative;z-index:1}
+@media(max-width:810px){
+  .col-chapters .col-chapter-egypt .col-egypt-relief{width:88%;right:-8%;opacity:.18}
+}
+@media(max-width:600px){
+  .col-chapters .col-chapter-egypt .col-egypt-relief{width:120%;right:-28%;opacity:.14}
+}
 </style>
 </head>
 <body>
@@ -1407,8 +1438,8 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
       <div class="col-video-shell" id="colFilmShell" aria-label="Royal Premium book-style presentation display">
         <span class="col-corner col-corner-l" aria-hidden="true"></span><span class="col-corner col-corner-r" aria-hidden="true"></span>
         <div class="col-film-backdrop" aria-hidden="true"></div>
-        <div class="col-hero-fallback"><img id="colRoyalPoster" src="/assets/mg/royal-open-v5.png" alt="Open Royal Premium heritage case presentation with the three aromatic ritual vessels" loading="eager" fetchpriority="high"></div>
-        <video id="colRoyalFilm" autoplay muted loop playsinline preload="metadata" aria-label="Rotating Royal Premium ceremonial case film" poster="/assets/mg/royal-open-v5.png"><source src="/assets/mg/royal-premium-rotation.mp4" type="video/mp4"></video>
+        <div class="col-hero-fallback"><img id="colRoyalPoster" src="/assets/mg/royal-open-v6.png" alt="Open Royal Premium heritage case presentation with the three aromatic ritual vessels" loading="eager" fetchpriority="high"></div>
+        <video id="colRoyalFilm" autoplay muted loop playsinline preload="metadata" aria-label="Rotating Royal Premium ceremonial case film" poster="/assets/mg/royal-open-v6.png"><source src="/assets/mg/royal-premium-rotation.mp4" type="video/mp4"></video>
         <div class="col-film-annotation"><span>THE EGYPTIAN VOLUME I</span><span class="col-annotation-dot" aria-hidden="true"></span><span>ROYAL PREMIUM PRESENTATION</span></div>
       </div>
       <div class="col-film-controls"><span><i class="col-live-dot" aria-hidden="true"></i> A moving portrait of the House’s first collection</span><button id="colFilmPause" type="button" aria-pressed="false" title="Pause or resume presentation animation">Pause motion <span aria-hidden="true">Ⅱ</span></button></div>
@@ -1432,7 +1463,46 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
 <section class="col-section col-chapters" id="aromatic-heritage" aria-labelledby="chapters-title">
  <div class="col-wrap"><div class="col-editorial"><div><div class="col-kicker">02 — AROMATIC RITUAL HERITAGE</div><h2 id="chapters-title">Chapters gathered <em>by the House.</em></h2></div><div class="col-editorial-prose"><p>We approach each chapter as a cultural and design inquiry: begin with a historical source of inspiration, explore its ritual symbolism, and translate that inspiration into original vessels, narratives, fragrance concepts and collectible presentations.</p><p>These are contemporary interpretations—not reproductions of ancient formulas or claims of uninterrupted historical practice. The House develops each concept through research, prototyping and independent validation before any commercial launch.</p></div></div>
   <div class="col-chapter-cards">
-    <a class="col-chapter col-chapter-egypt" href="#egyptian"><span class="col-chapter-seal">VOL. I</span><span class="col-chapter-eyebrow">THE OPENING CHAPTER</span><h3>The Egyptian<br><em>Volume I</em></h3><p class="col-chapter-ritual-list">The Awakening of Khepri<br>The Zenith of Ra<br>The Descent of Atum</p><span class="col-chapter-explore">Discover the Egyptian collection <b aria-hidden="true">↗</b></span></a>
+    <a class="col-chapter col-chapter-egypt" href="#egyptian"><svg class="col-egypt-relief" viewBox="0 0 840 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="mg-egypt-etch" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e7d7a5"/><stop offset="1" stop-color="#c6a86a"/></linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#mg-egypt-etch)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Carved winged sun disk and its feathers -->
+    <g transform="translate(534 113)" stroke-width="3.1">
+      <circle r="41"/><circle r="27"/><circle r="12"/>
+      <path d="M-41-10C-100-46-170-59-247-30c47 1 82 15 116 35-46-7-78-4-111 13 52 7 89 16 123 29-33 1-57 8-74 21 62-1 115-15 152-45M41-10C100-46 170-59 247-30c-47 1-82 15-116 35 46-7 78-4 111 13-52 7-89 16-123 29 33 1 57 8 74 21-62-1-115-15-152-45"/>
+      <path d="M-247-30l141 48m-136 0 116 17m-67 33 96-35M247-30 106 18m136 0-116 17m67 33-96-35" stroke-width="1.6"/>
+      <path d="M-15 40c-9 31-7 51 11 73m19-73c9 31 7 51-11 73M0 112v44"/>
+    </g>
+    <!-- Temple colonnade: capitals, shafts, ornament -->
+    <g transform="translate(360 225)" stroke-width="2.6">
+      <path d="M-38 0h325M-38 14h325M-38 223h325M-38 237h325"/>
+      <path d="M-22 14v209M33 14v209M104 14v209M159 14v209M230 14v209M285 14v209"/>
+      <path d="M-31 14q32-31 72 0m54 0q32-31 72 0m54 0q32-31 72 0"/>
+      <path d="M-25 223q30-24 60 0m64 0q28-24 57 0m68 0q28-24 57 0"/>
+      <path d="M5 30v175m126-175v175m126-175v175" stroke-width="1" stroke-dasharray="4 8"/>
+      <path d="M-15-7V-25h290v18M-20-27h300M-13 8h294"/>
+      <path d="M-9-47l14-19 14 19 14-19 14 19m31 0 14-19 14 19 14-19 14 19m31 0 14-19 14 19 14-19 14 19m30 0 14-19 14 19"/>
+    </g>
+    <!-- Paired lotus blooms with papyrus stems -->
+    <g transform="translate(750 400)" stroke-width="2.5">
+      <path d="M0 100V-3M0 7q-23-24-17-53Q-1-30 0 7q9-42 30-57 11 32-30 57"/>
+      <path d="M0 7q-39-28-49-46Q-58-9 0 7m0 0q39-28 49-46Q58-9 0 7"/>
+      <path d="M0 46q-36-32-66-22M0 63q40-27 71-19M0 79q-35-22-58-11"/>
+      <path d="M-28 100h56"/>
+    </g>
+    <g transform="translate(330 421) scale(.75)" stroke-width="2.4">
+      <path d="M0 100V-3M0 7q-23-24-17-53Q-1-30 0 7q9-42 30-57 11 32-30 57"/>
+      <path d="M0 7q-39-28-49-46Q-58-9 0 7m0 0q39-28 49-46Q58-9 0 7"/>
+      <path d="M0 46q-36-32-66-22M0 63q40-27 71-19"/>
+    </g>
+    <!-- Ancient border lines and etched stone texture -->
+    <path d="M300 26h528M300 38h528M300 488h528M300 501h528" stroke-width="1.4"/>
+    <path d="M304 38v450M826 38v450" stroke-width="1.4"/>
+    <path d="M321 50v21h20V50h20v21h20V50h20v21h20m-100 394v20h20v-20h20v20h20v-20h20v20h20" stroke-width="1.4"/>
+  </g>
+</svg><span class="col-chapter-seal">VOL. I</span><span class="col-chapter-eyebrow">THE OPENING CHAPTER</span><h3>The Egyptian<br><em>Volume I</em></h3><p class="col-chapter-ritual-list">The Awakening of Khepri<br>The Zenith of Ra<br>The Descent of Atum</p><span class="col-chapter-explore">Discover the Egyptian collection <b aria-hidden="true">↗</b></span></a>
     <article class="col-chapter col-chapter-future"><span class="col-chapter-seal">VOL. II</span><span class="col-chapter-eyebrow">A FUTURE CHAPTER</span><h3>Persian<br><em>Volume II</em></h3><p>A new cultural narrative reserved for future development.</p><span class="col-chapter-label">In the pipeline</span></article>
     <article class="col-chapter col-chapter-future"><span class="col-chapter-seal">VOL. III</span><span class="col-chapter-eyebrow">A FUTURE CHAPTER</span><h3>Mughal<br><em>Volume III</em></h3><p>Another heritage-inspired chapter to be developed in time.</p><span class="col-chapter-label">In the pipeline</span></article>
   </div>
@@ -1471,7 +1541,7 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
  <div class="col-wrap"><div class="col-section-heading"><div class="col-kicker centered">04 — THE PRODUCT CATALOGUE</div><h2 id="catalogue-title">Expressions of <em>Egyptian Volume I.</em></h2><p>Explore the proposed catalogue by family and tier. The Royal Premium case is the lead visual concept; content, formats, price and availability for other variants remain unconfirmed.</p></div>
  <div class="col-family-intro" id="royal-family"><div class="col-family-title"><span class="col-family-index">FAMILY 01</span><h3>Royal <em>Family.</em></h3><p>The most ceremonial expression of the chapter, conceived around presentation, design richness and a sense of permanence.</p></div><span class="col-family-count">03 PROPOSED VARIANTS</span></div>
  <div class="col-product-grid">
-   <article class="col-product-card col-feature-product"><div class="col-prod-art col-prod-book"><span class="col-art-caption">ROYAL PREMIUM · OPEN &amp; CLOSED</span><img class="col-royal-open" src="/assets/mg/royal-open-v5.png" alt="Royal Premium approved open three-panel book case, displaying the three sacred ritual vessels" loading="lazy" onerror="this.onerror=null;this.src='/assets/mg/royal-stage-reference.jpg'"><figure class="col-royal-closed"><img src="/assets/mg/royal-cover-v5.png" alt="Royal Premium approved closed book-style case" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>Closed cover</figcaption></figure></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Premium</h4><p>Our lead collectible case concept: three distinct 10 ml vessels, an aromatic pendant and disc concept, storytelling and a planned certificate compartment.</p><span class="col-in-dev">Design under development</span></div></article>
+   <article class="col-product-card col-feature-product"><div class="col-prod-art col-prod-book"><span class="col-art-caption">ROYAL PREMIUM · OPEN &amp; CLOSED</span><img class="col-royal-open" src="/assets/mg/royal-open-v6.png" alt="Royal Premium approved open three-panel book case, displaying the three sacred ritual vessels" loading="lazy" onerror="this.onerror=null;this.src='/assets/mg/royal-stage-reference.jpg'"><figure class="col-royal-closed"><img src="/assets/mg/royal-cover-v5.png" alt="Royal Premium approved closed book-style case" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>Closed cover</figcaption></figure></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Premium</h4><p>Our lead collectible case concept: three distinct 10 ml vessels, an aromatic pendant and disc concept, storytelling and a planned certificate compartment.</p><span class="col-in-dev">Design under development</span></div></article>
    <article class="col-product-card"><div class="col-prod-art col-prod-symbol"><span>✧</span><small>ILLUSTRATIVE PLACEHOLDER</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Signatures</h4><p>A proposed curated Royal presentation tier. Its packaging, contents and production specifications are yet to be defined.</p><span class="col-in-dev">In the pipeline</span></div></article>
    <article class="col-product-card"><div class="col-prod-art col-prod-symbol"><span>◈</span><small>ILLUSTRATIVE PLACEHOLDER</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Standard</h4><p>The proposed entry presentation in the Royal family, with final configuration subject to design and validation.</p><span class="col-in-dev">In the pipeline</span></div></article>
  </div>
