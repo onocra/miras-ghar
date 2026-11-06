@@ -1370,7 +1370,7 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
 }
 
 /* ==========================================================
-   COLLECTIONS V4 · ROYAL PREMIUM + SIGNATURES MEDIA GALLERIES
+   COLLECTIONS V4 + V5 · ROYAL PREMIUM + SIGNATURES MEDIA GALLERIES
    Visual assets retain natural aspect ratio; responsive modal.
    ========================================================== */
 .collections-page .col-gallery-product{scroll-margin-top:130px}
@@ -1414,6 +1414,254 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
 .mg-gallery-help{font:11px Arial,sans-serif;color:#778473;margin:6px 0 0}
 @media(max-width:640px){.mg-collection-dialog{width:calc(100vw - 12px);max-height:96dvh}.mg-collection-gallery{max-height:96dvh}.mg-gallery-top{padding:10px}.mg-gallery-stage{grid-template-columns:35px minmax(0,1fr) 35px;gap:2px;padding:6px 4px}.mg-gallery-stage button{width:33px;height:47px;font-size:26px}.mg-gallery-media{height:min(48dvh,370px);min-height:160px}.mg-gallery-bottom{padding:10px}.mg-gallery-thumb{flex-basis:96px}.mg-gallery-help{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.collections-page .col-gallery-preview img{transition:none!important}}
+
+
+/* ================================================================
+   COLLECTIONS V5 — IMAGE FRAMING / UNCROPPED MEDIA CORRECTION
+   Preserve complete original artworks rather than filling/cropping.
+   ================================================================ */
+.collections-page .col-gallery-preview{
+  height:290px;
+  min-height:290px;
+  overflow:hidden;
+  padding:31px 16px 35px;
+}
+.collections-page .col-gallery-preview img,
+.collections-page .col-gallery-preview:hover img{
+  display:block!important;
+  flex:0 1 auto;
+  width:auto!important;
+  height:auto!important;
+  max-width:100%!important;
+  max-height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  transform:none!important;
+  transition:none!important;
+}
+/* The viewer fits every landscape, portrait or square image without trimming edges. */
+.mg-collection-dialog{
+  width:min(1260px,calc(100vw - 22px));
+  max-height:96dvh;
+}
+.mg-collection-gallery{max-height:96dvh;min-height:0}
+.mg-gallery-stage{min-height:0}
+.mg-gallery-media{
+  width:100%;
+  min-width:0;
+  min-height:0;
+  height:clamp(230px,55dvh,650px);
+  overflow:hidden;
+}
+.mg-gallery-media img,
+.mg-gallery-media video{
+  display:block!important;
+  flex:0 1 auto;
+  width:auto!important;
+  height:auto!important;
+  max-width:100%!important;
+  max-height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  transform:none!important;
+}
+.mg-gallery-original-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #c2a36c;
+  color:#375642;
+  background:#fcf7e9;
+  padding:7px 12px;
+  margin:0 0 8px;
+  text-decoration:none;
+  font:700 11px Arial,sans-serif;
+}
+.mg-gallery-original-link:hover{background:#f0ead8}
+.mg-gallery-original-link[hidden]{display:none!important}
+@media(max-width:640px){
+  .collections-page .col-gallery-preview{height:265px;min-height:265px;padding:27px 9px 30px}
+  .mg-collection-dialog{width:calc(100vw - 10px);max-height:97dvh}
+  .mg-collection-gallery{max-height:97dvh}
+  .mg-gallery-media{height:min(52dvh,440px);min-height:180px}
+  .mg-gallery-original-link{font-size:10px;margin-bottom:6px;padding:6px 9px}
+}
+
+
+/* ==============================================================
+   MIRĀS GHĀR — COLLECTIONS V6 · EXPRESSION PALETTES & RITUAL PANELS
+   Brand finishes are used as the actual TEXT-CARD backgrounds;
+   approved Royal colourways and proposed Heritage/Accessible palettes.
+   The three original ritual panels are displayed in full 16:9 format.
+   ============================================================== */
+.collections-page .col-themed-product{
+  --tier-bg:#e2ebe2;--tier-fg:#254638;--tier-muted:#4b6859;
+  --tier-accent:#a78143;--tier-outline:#cbb587;--tier-highlight:rgba(255,255,255,.48);
+  border-color:var(--tier-outline);
+}
+/* ROYAL: approved material/colour directions */
+.collections-page .col-royal-premium{
+  --tier-bg:#d7e8df;--tier-fg:#234637;--tier-muted:#3b6150;
+  --tier-accent:#9c732f;--tier-outline:#b8a06c;--tier-highlight:rgba(255,255,255,.52);
+}
+.collections-page .col-royal-signatures{
+  --tier-bg:#303632;--tier-fg:#fff9ed;--tier-muted:#e3dbcc;
+  --tier-accent:#e2c18b;--tier-outline:#9b8056;--tier-highlight:rgba(255,255,255,.035);
+}
+.collections-page .col-royal-standard{
+  --tier-bg:#e9dfd0;--tier-fg:#38463e;--tier-muted:#535f59;
+  --tier-accent:#677985;--tier-outline:#a9adb0;--tier-highlight:rgba(255,255,255,.60);
+}
+/* HERITAGE: suggested companion palettes, still in development */
+.collections-page .col-heritage-premium{
+  --tier-bg:#3c5144;--tier-fg:#fff7e7;--tier-muted:#e4e8d9;
+  --tier-accent:#e2c48c;--tier-outline:#b9a06d;--tier-highlight:rgba(255,255,255,.04);
+}
+.collections-page .col-heritage-signatures{
+  --tier-bg:#ebdec9;--tier-fg:#2b4b3d;--tier-muted:#5f6656;
+  --tier-accent:#9e7149;--tier-outline:#bf9c73;--tier-highlight:rgba(255,255,255,.40);
+}
+.collections-page .col-heritage-standard{
+  --tier-bg:#f1ede3;--tier-fg:#365344;--tier-muted:#65736a;
+  --tier-accent:#78838c;--tier-outline:#b7bec0;--tier-highlight:rgba(255,255,255,.58);
+}
+/* ACCESSIBLE: restrained, approachable proposed palettes */
+.collections-page .col-accessible-premium{
+  --tier-bg:#e5efe8;--tier-fg:#2e5844;--tier-muted:#527260;
+  --tier-accent:#98743f;--tier-outline:#bcac80;--tier-highlight:rgba(255,255,255,.60);
+}
+.collections-page .col-accessible-signatures{
+  --tier-bg:#f5ead6;--tier-fg:#4a5743;--tier-muted:#68725b;
+  --tier-accent:#a96e50;--tier-outline:#bc997d;--tier-highlight:rgba(255,255,255,.66);
+}
+.collections-page .col-accessible-standard{
+  --tier-bg:#faf6ec;--tier-fg:#355045;--tier-muted:#627369;
+  --tier-accent:#74828a;--tier-outline:#b1bac0;--tier-highlight:rgba(255,255,255,.90);
+}
+/* Apply tier colour to the description/text box, not the approved photography. */
+.collections-page .col-themed-product .col-prod-copy,
+body[data-theme="dark"] .collections-page .col-themed-product .col-prod-copy{
+  background:
+    linear-gradient(125deg,var(--tier-highlight),transparent 64%),
+    repeating-linear-gradient(105deg,transparent 0,transparent 13px,rgba(121,102,64,.016) 14px,transparent 15px),
+    var(--tier-bg)!important;
+  color:var(--tier-fg)!important;
+  border-top:3px solid var(--tier-outline);
+}
+.collections-page .col-themed-product .col-prod-copy h4,
+body[data-theme="dark"] .collections-page .col-themed-product .col-prod-copy h4{
+  color:var(--tier-fg)!important;
+}
+.collections-page .col-themed-product .col-prod-copy .col-prod-meta,
+body[data-theme="dark"] .collections-page .col-themed-product .col-prod-copy .col-prod-meta{
+  color:var(--tier-accent)!important;
+}
+.collections-page .col-themed-product .col-prod-copy > p:not(.col-finish-note),
+body[data-theme="dark"] .collections-page .col-themed-product .col-prod-copy > p:not(.col-finish-note){
+  color:var(--tier-muted)!important;
+}
+.collections-page .col-finish-note,
+body[data-theme="dark"] .collections-page .col-finish-note{
+  display:flex;flex-direction:column;gap:7px;
+  margin:9px 0 13px!important;padding:12px 0 13px;
+  border-top:1px solid var(--tier-outline);
+  border-bottom:1px solid var(--tier-outline);
+  flex:0 0 auto!important;
+  line-height:1.6!important;color:var(--tier-fg)!important;
+}
+.collections-page .col-finish-note strong{
+  font:700 10px/1.5 Arial,sans-serif;letter-spacing:.12em;
+  color:var(--tier-accent)!important;
+}
+.collections-page .col-finish-note span{font:14px/1.65 Georgia,serif;color:var(--tier-fg)!important}
+.collections-page .col-themed-product .col-in-dev{
+  background:transparent;border-color:var(--tier-outline);
+  color:var(--tier-fg)!important;
+}
+.collections-page .col-themed-product .col-gallery-launch{
+  color:var(--tier-fg)!important;
+  border-color:var(--tier-accent)!important;
+}
+/* Colour-coded family introduction boxes, consistent with the first tier. */
+.collections-page .col-family-intro{
+  padding:22px 27px;margin-top:48px;border:1px solid #bba57d;
+  border-left:5px solid #af894d;box-shadow:0 8px 22px rgba(37,55,39,.08);
+}
+.collections-page #royal-family{background:linear-gradient(110deg,#dbeae1,#f3f0e4);color:#2c5040}
+.collections-page #heritage-family{background:linear-gradient(110deg,#334d3e,#49644f);color:#fff5e4;border-color:#ac926a}
+.collections-page #accessible-family{background:linear-gradient(110deg,#edf2e7,#f8f0de);color:#365847;border-color:#c4a87d}
+.collections-page .col-family-intro h3,
+.collections-page .col-family-intro h3 em,
+.collections-page .col-family-intro .col-family-title p,
+.collections-page .col-family-intro .col-family-index,
+.collections-page .col-family-intro .col-family-count,
+body[data-theme="dark"] .collections-page .col-family-intro h3,
+body[data-theme="dark"] .collections-page .col-family-intro h3 em,
+body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
+  color:inherit!important;
+}
+.collections-page #heritage-family .col-family-index,
+.collections-page #heritage-family .col-family-count{color:#f0d09b!important}
+/* Rituals become large landscape editorial panels, readable and uncropped. */
+.collections-page .col-ritual-grid{
+  display:grid;grid-template-columns:minmax(0,1fr);
+  gap:23px;
+}
+.collections-page .col-ritual{
+  display:grid;grid-template-columns:minmax(0,1.8fr) minmax(270px,1fr);
+  align-items:stretch;min-width:0;
+  border:1px solid #d5bb85;
+  box-shadow:0 14px 28px rgba(34,49,36,.09);
+}
+.collections-page .col-ritual-panel-art,
+.collections-page .col-ritual-noon .col-ritual-panel-art,
+.collections-page .col-ritual-night .col-ritual-panel-art{
+  height:auto!important;min-height:0!important;
+  aspect-ratio:1672 / 941;
+  width:100%;padding:0!important;margin:0;
+  display:flex;align-items:stretch;justify-content:center;
+  background:linear-gradient(150deg,#f6f1e6,#e1e9dc);
+  overflow:hidden;
+}
+.collections-page .col-ritual-panel-link{
+  display:block;width:100%;height:100%;overflow:hidden;
+  background:transparent;
+}
+.collections-page .col-ritual-panel-link img,
+.collections-page .col-ritual-panel-link:hover img{
+  display:block!important;width:100%!important;height:100%!important;
+  max-width:100%!important;max-height:100%!important;
+  object-fit:contain!important;object-position:center center!important;
+  padding:0!important;margin:0!important;
+  filter:none!important;transform:none!important;
+  transition:none!important;
+}
+.collections-page .col-ritual-panel-art .col-time-mark{display:none!important}
+.collections-page .col-ritual-copy{
+  display:flex;flex-direction:column;align-items:flex-start;
+  justify-content:center;text-align:left;
+  padding:clamp(22px,3vw,48px);
+  background:linear-gradient(135deg,#fffaf0,#e8eee3);
+}
+.collections-page .col-ritual-noon .col-ritual-copy{background:linear-gradient(135deg,#fff4d9,#f4ede0)}
+.collections-page .col-ritual-night .col-ritual-copy{background:linear-gradient(135deg,#254135,#3c5547);color:#f8efdc}
+.collections-page .col-ritual-night .col-ritual-copy h3,
+.collections-page .col-ritual-night .col-ritual-copy p,
+.collections-page .col-ritual-night .col-ritual-copy > span{
+  color:#f7e9cc!important;
+}
+.collections-page .col-ritual-copy h3{font-size:clamp(27px,3vw,41px);line-height:1.15}
+@media(max-width:920px){
+ .collections-page .col-ritual{grid-template-columns:1fr!important}
+ .collections-page .col-ritual-panel-art{aspect-ratio:1672 / 941!important;max-height:none!important}
+ .collections-page .col-ritual-copy{padding:25px 28px;align-items:flex-start;text-align:left}
+}
+@media(max-width:600px){
+ .collections-page .col-family-intro{padding:17px 16px;gap:11px;margin-top:32px}
+ .collections-page .col-finish-note{margin:8px 0 12px!important}
+ .collections-page .col-ritual-panel-art{height:auto!important;aspect-ratio:1672 / 941!important}
+ .collections-page .col-ritual-copy{padding:23px 21px}
+}
 
 </style>
 </head>
@@ -1588,7 +1836,7 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
  <div class="col-wrap"><div class="col-section-heading"><div class="col-kicker centered">04 — THE PRODUCT CATALOGUE</div><h2 id="catalogue-title">Expressions of <em>Egyptian Volume I.</em></h2><p>Explore the proposed catalogue by family and tier. The Royal Premium case is the lead visual concept; content, formats, price and availability for other variants remain unconfirmed.</p></div>
  <div class="col-family-intro" id="royal-family"><div class="col-family-title"><span class="col-family-index">FAMILY 01</span><h3>Royal <em>Family.</em></h3><p>The most ceremonial expression of the chapter, conceived around presentation, design richness and a sense of permanence.</p></div><span class="col-family-count">03 PROPOSED VARIANTS</span></div>
  <div class="col-product-grid">
-   <article class="col-product-card col-feature-product col-gallery-product" id="royal-premium">
+   <article class="col-product-card col-feature-product col-gallery-product col-themed-product col-royal-theme col-royal-premium" id="royal-premium">
      <button type="button" class="col-prod-art col-prod-book col-gallery-preview" data-collection-gallery-trigger="premium" aria-label="Open Royal Premium gallery, ten visuals">
        <span class="col-art-caption">ROYAL PREMIUM · THE CEREMONIAL CASE</span>
        <img data-gallery-preview="premium" src="/assets/mg/royal-cover-v5.png" alt="Royal Premium approved closed collectible book cover" loading="lazy">
@@ -1596,13 +1844,13 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
        <span class="col-gallery-preview-fallback" hidden>ROYAL PREMIUM<br><small>Explore the presentation gallery</small></span>
      </button>
      <div class="col-prod-copy">
-       <div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Premium</h4>
+       <div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Premium</h4><p class="col-finish-note"><strong>SEAFOAM MIST GREEN · IVORY · GOLD</strong><span>Soft seafoam-green textured leather, ivory highlights and refined gold detailing.</span></p>
        <p>Our lead collectible case concept: three distinct 10 ml vessels, an aromatic pendant and diffuser disc, storytelling and a planned certificate compartment. Discover the closed and open case, approved vessel masters, ritual presentations and use concept.</p>
        <button class="col-gallery-launch" type="button" data-collection-gallery-trigger="premium">Explore Premium Gallery <span aria-hidden="true">↗</span></button>
        <span class="col-in-dev">Design under development</span>
      </div>
    </article>
-   <article class="col-product-card col-gallery-product" id="royal-signatures">
+   <article class="col-product-card col-gallery-product col-themed-product col-royal-theme col-royal-signatures" id="royal-signatures">
      <button type="button" class="col-prod-art col-signatures-art col-gallery-preview" data-collection-gallery-trigger="signatures" aria-label="Open Royal Signatures gallery, seven images and two videos">
        <span class="col-art-caption">ROYAL SIGNATURES · PRESENTATION STUDY</span>
        <img data-gallery-preview="signatures" alt="Royal Signatures collectible cover visual" loading="lazy">
@@ -1610,35 +1858,35 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
        <span class="col-gallery-visual-hint"><span aria-hidden="true">⊕</span> View 7 images + 2 films</span>
      </button>
      <div class="col-prod-copy">
-       <div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Signatures</h4>
+       <div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Signatures</h4><p class="col-finish-note"><strong>CHARCOAL · IVORY · ANTIQUE GOLD</strong><span>Rich charcoal textured leather, elegant ivory accents and antique-gold detailing.</span></p>
        <p>A design study of the Royal Signatures presentation, shown through cover explorations, the opened case and its individual panel views. Two film clips complete the visual sequence; product specifications remain under development.</p>
        <button class="col-gallery-launch" type="button" data-collection-gallery-trigger="signatures">Explore Signatures Gallery <span aria-hidden="true">↗</span></button>
        <span class="col-in-dev">Design under development</span>
      </div>
    </article>
-   <article class="col-product-card"><div class="col-prod-art col-prod-symbol"><span>◈</span><small>ILLUSTRATIVE PLACEHOLDER</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Standard</h4><p>The proposed entry presentation in the Royal family, with final configuration subject to design and validation.</p><span class="col-in-dev">In the pipeline</span></div></article>
+   <article class="col-product-card col-themed-product col-royal-theme col-royal-standard"><div class="col-prod-art col-prod-symbol"><span>◈</span><small>ILLUSTRATIVE PLACEHOLDER</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Standard</h4><p class="col-finish-note"><strong>SANDSTONE IVORY · SILVER</strong><span>Sandstone-ivory presentation with refined silver accents.</span></p><p>The proposed entry presentation in the Royal family, with final configuration subject to design and validation.</p><span class="col-in-dev">In the pipeline</span></div></article>
  </div>
  <div class="col-family-intro col-heritage-intro" id="heritage-family"><div class="col-family-title"><span class="col-family-index">FAMILY 02</span><h3>Heritage <em>Family.</em></h3><p>A complementary expression of the Egyptian story, planned with its own presentation identity while retaining the House’s core values.</p></div><span class="col-family-count">03 PROPOSED VARIANTS</span></div>
  <div class="col-product-grid">
-   <article class="col-product-card"><div class="col-prod-art col-prod-symbol col-prod-heritage"><span>❖</span><small>PRESENTATION IN DEVELOPMENT</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · HERITAGE</div><h4>Premium</h4><p>A premium-level presentation in the Heritage family; final case, accessories and specifications remain to be confirmed.</p><span class="col-in-dev">In the pipeline</span></div></article>
-   <article class="col-product-card"><div class="col-prod-art col-prod-symbol col-prod-heritage"><span>✺</span><small>PRESENTATION IN DEVELOPMENT</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · HERITAGE</div><h4>Signatures</h4><p>A future Heritage variant to interpret the chapter with a different balance of presentation and ritual storytelling.</p><span class="col-in-dev">In the pipeline</span></div></article>
-   <article class="col-product-card"><div class="col-prod-art col-prod-symbol col-prod-heritage"><span>✦</span><small>PRESENTATION IN DEVELOPMENT</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · HERITAGE</div><h4>Standard</h4><p>A proposed standard presentation in the Heritage family; detailed product information will follow development.</p><span class="col-in-dev">In the pipeline</span></div></article>
+   <article class="col-product-card col-themed-product col-heritage-theme col-heritage-premium"><div class="col-prod-art col-prod-symbol col-prod-heritage"><span>❖</span><small>PRESENTATION IN DEVELOPMENT</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · HERITAGE</div><h4>Premium</h4><p class="col-finish-note"><strong>PROPOSED · HERITAGE FOREST · GOLD</strong><span>Suggested palette: heritage forest-green with ivory and soft antique-gold accents.</span></p><p>A premium-level presentation in the Heritage family; final case, accessories and specifications remain to be confirmed.</p><span class="col-in-dev">In the pipeline</span></div></article>
+   <article class="col-product-card col-themed-product col-heritage-theme col-heritage-signatures"><div class="col-prod-art col-prod-symbol col-prod-heritage"><span>✺</span><small>PRESENTATION IN DEVELOPMENT</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · HERITAGE</div><h4>Signatures</h4><p class="col-finish-note"><strong>PROPOSED · WARM PARCHMENT · BRONZE</strong><span>Suggested palette: warm parchment with botanical-green lettering and bronze accents.</span></p><p>A future Heritage variant to interpret the chapter with a different balance of presentation and ritual storytelling.</p><span class="col-in-dev">In the pipeline</span></div></article>
+   <article class="col-product-card col-themed-product col-heritage-theme col-heritage-standard"><div class="col-prod-art col-prod-symbol col-prod-heritage"><span>✦</span><small>PRESENTATION IN DEVELOPMENT</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · HERITAGE</div><h4>Standard</h4><p class="col-finish-note"><strong>PROPOSED · LINEN · SILVER</strong><span>Suggested palette: linen ivory with sage-green detailing and brushed-silver accents.</span></p><p>A proposed standard presentation in the Heritage family; detailed product information will follow development.</p><span class="col-in-dev">In the pipeline</span></div></article>
   </div>
   <div class="col-family-intro col-accessible-intro" id="accessible-family"><div class="col-family-title"><span class="col-family-index">FAMILY 03 · PROPOSED</span><h3>Accessible <em>Family.</em></h3><p>A carefully considered future expression of Egyptian Volume I, intended to make the heritage narrative approachable through simplified presentation without compromising the identity of the House. Configurations and pricing remain undecided.</p></div><span class="col-family-count">03 PROVISIONAL VARIANTS</span></div>
   <div class="col-product-grid col-accessible-grid">
-    <article class="col-product-card"><div class="col-prod-art col-prod-symbol col-prod-accessible"><span>✧</span><small>FUTURE DESIGN STUDY</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ACCESSIBLE</div><h4>Premium</h4><p>Provisional accessible-family presentation tier. Contents, materials and positioning are to be determined.</p><span class="col-in-dev">In the pipeline</span></div></article>
-    <article class="col-product-card"><div class="col-prod-art col-prod-symbol col-prod-accessible"><span>❀</span><small>FUTURE DESIGN STUDY</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ACCESSIBLE</div><h4>Signatures</h4><p>A proposed compact interpretation of the ritual narrative, pending a defined concept, prototyping and validation.</p><span class="col-in-dev">In the pipeline</span></div></article>
-    <article class="col-product-card"><div class="col-prod-art col-prod-symbol col-prod-accessible"><span>◇</span><small>FUTURE DESIGN STUDY</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ACCESSIBLE</div><h4>Standard</h4><p>An everyday-oriented presentation concept under consideration; no specifications or launch plans are confirmed.</p><span class="col-in-dev">In the pipeline</span></div></article>
+    <article class="col-product-card col-themed-product col-accessible-theme col-accessible-premium"><div class="col-prod-art col-prod-symbol col-prod-accessible"><span>✧</span><small>FUTURE DESIGN STUDY</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ACCESSIBLE</div><h4>Premium</h4><p class="col-finish-note"><strong>PROPOSED · MIST SAGE · GOLD</strong><span>Suggested palette: light mist sage with deep-green lettering and restrained gold accents.</span></p><p>Provisional accessible-family presentation tier. Contents, materials and positioning are to be determined.</p><span class="col-in-dev">In the pipeline</span></div></article>
+    <article class="col-product-card col-themed-product col-accessible-theme col-accessible-signatures"><div class="col-prod-art col-prod-symbol col-prod-accessible"><span>❀</span><small>FUTURE DESIGN STUDY</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ACCESSIBLE</div><h4>Signatures</h4><p class="col-finish-note"><strong>PROPOSED · CREAM · COPPER</strong><span>Suggested palette: soft cream with muted olive lettering and warm copper accents.</span></p><p>A proposed compact interpretation of the ritual narrative, pending a defined concept, prototyping and validation.</p><span class="col-in-dev">In the pipeline</span></div></article>
+    <article class="col-product-card col-themed-product col-accessible-theme col-accessible-standard"><div class="col-prod-art col-prod-symbol col-prod-accessible"><span>◇</span><small>FUTURE DESIGN STUDY</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ACCESSIBLE</div><h4>Standard</h4><p class="col-finish-note"><strong>PROPOSED · IVORY · PEWTER</strong><span>Suggested palette: simple ivory with forest-green type and refined pewter-silver accents.</span></p><p>An everyday-oriented presentation concept under consideration; no specifications or launch plans are confirmed.</p><span class="col-in-dev">In the pipeline</span></div></article>
   </div>
   </div>
 </section>
 
 <!-- 06 / exact ritual masters -->
-<section class="col-section col-rituals" id="rituals" aria-labelledby="rituals-title"><div class="col-wrap"><div class="col-section-heading"><div class="col-kicker centered">05 — THE THREE SACRED AROMATICS</div><h2 id="rituals-title">A day told in <em>three rituals.</em></h2><p>The three original sculptural vessels form the heart of Egyptian Volume I. The images below retain the supplied approved bottle shapes and source-label artwork.</p></div>
+<section class="col-section col-rituals" id="rituals" aria-labelledby="rituals-title"><div class="col-wrap"><div class="col-section-heading"><div class="col-kicker centered">05 — THE THREE SACRED AROMATICS</div><h2 id="rituals-title">A day told in <em>three rituals.</em></h2><p>The three original sculptural vessels form the heart of Egyptian Volume I. Explore each complete illustrated ritual panel, from its ancient inspiration to its modern interpretation. Select an image to view the original artwork at full resolution.</p></div>
   <div class="col-ritual-grid">
-  <article class="col-ritual col-ritual-morning" id="khepri"><div class="col-ritual-art"><span class="col-time-mark">☼ · 01</span><img src="/assets/mg/morning-bottle-v5.png" alt="The Awakening of Khepri approved rounded faceted 10 ml morning ritual bottle with wood lotus cap and pelican pedestal" loading="lazy"></div><div class="col-ritual-copy"><div class="col-prod-meta">MORNING RITUAL</div><h3>The Awakening<br>of Khepri</h3><p>Renewal · Clarity · Vitality</p><span>Gentle clarity for a fresh beginning.</span></div></article>
-  <article class="col-ritual col-ritual-noon" id="ra"><div class="col-ritual-art"><span class="col-time-mark">✺ · 02</span><img src="/assets/mg/noon-bottle-v5.png" alt="The Zenith of Ra approved starburst faceted 10 ml noon ritual bottle with wood lotus cap and pelican pedestal" loading="lazy"></div><div class="col-ritual-copy"><div class="col-prod-meta">NOON RITUAL</div><h3>The Zenith<br>of Ra</h3><p>Energy · Focus · Balance</p><span>A luminous expression of midday vitality.</span></div></article>
-  <article class="col-ritual col-ritual-night" id="atum"><div class="col-ritual-art"><span class="col-time-mark">☾ · 03</span><img src="/assets/mg/night-bottle-v5.png" alt="The Descent of Atum approved crescent-shaped 10 ml nightfall ritual bottle with dark amber oil and pelican pedestal" loading="lazy"></div><div class="col-ritual-copy"><div class="col-prod-meta">NIGHTFALL RITUAL</div><h3>The Descent<br>of Atum</h3><p>Sacred Reverie</p><span>An invitation to reflection and stillness.</span></div></article>
+  <article class="col-ritual col-ritual-morning" id="khepri"><div class="col-ritual-art col-ritual-panel-art"><span class="col-time-mark">☼ · 01</span><a class="col-ritual-panel-link" href="/assets/mg/morning-ritual-panel.png" target="_blank" rel="noopener noreferrer" aria-label="View complete The Awakening of Khepri — complete illustrated Morning ritual heritage panel at original resolution"><img src="/assets/mg/morning-ritual-panel.png" data-panel-fallback="/assets/mg/morning-bottle-v5.png" alt="The Awakening of Khepri — complete illustrated Morning ritual heritage panel" loading="lazy" decoding="async"></a></div><div class="col-ritual-copy"><div class="col-prod-meta">MORNING RITUAL</div><h3>The Awakening<br>of Khepri</h3><p>Renewal · Clarity · Vitality</p><span>Gentle clarity for a fresh beginning.</span></div></article>
+  <article class="col-ritual col-ritual-noon" id="ra"><div class="col-ritual-art col-ritual-panel-art"><span class="col-time-mark">✺ · 02</span><a class="col-ritual-panel-link" href="/assets/mg/noon-ritual-panel.png" target="_blank" rel="noopener noreferrer" aria-label="View complete The Zenith of Ra — complete illustrated Noon ritual heritage panel at original resolution"><img src="/assets/mg/noon-ritual-panel.png" data-panel-fallback="/assets/mg/noon-bottle-v5.png" alt="The Zenith of Ra — complete illustrated Noon ritual heritage panel" loading="lazy" decoding="async"></a></div><div class="col-ritual-copy"><div class="col-prod-meta">NOON RITUAL</div><h3>The Zenith<br>of Ra</h3><p>Energy · Focus · Balance</p><span>A luminous expression of midday vitality.</span></div></article>
+  <article class="col-ritual col-ritual-night" id="atum"><div class="col-ritual-art col-ritual-panel-art"><span class="col-time-mark">☾ · 03</span><a class="col-ritual-panel-link" href="/assets/mg/night-ritual-panel.png" target="_blank" rel="noopener noreferrer" aria-label="View complete The Descent of Atum — complete illustrated Nightfall ritual heritage panel at original resolution"><img src="/assets/mg/night-ritual-panel.png" data-panel-fallback="/assets/mg/night-bottle-v5.png" alt="The Descent of Atum — complete illustrated Nightfall ritual heritage panel" loading="lazy" decoding="async"></a></div><div class="col-ritual-copy"><div class="col-prod-meta">NIGHTFALL RITUAL</div><h3>The Descent<br>of Atum</h3><p>Sacred Reverie</p><span>An invitation to reflection and stillness.</span></div></article>
   </div>
   <p class="col-ritual-note">The illustrated vessels, aromatic blends and accessories are development concepts. Packaging, performance, safety claims and commercialization depend on final prototypes and appropriate testing.</p>
 </div></section>
@@ -1650,7 +1898,7 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
   <div class="mg-collection-gallery">
     <div class="mg-gallery-top"><div><p class="mg-gallery-eyebrow">MIRĀS GHĀR · THE EGYPTIAN VOLUME I</p><h2 class="mg-gallery-title" id="mgGalleryTitle">Royal Collection</h2></div><button class="mg-gallery-close" type="button" id="mgGalleryClose" aria-label="Close gallery">×</button></div>
     <div class="mg-gallery-stage"><button type="button" id="mgGalleryPrev" aria-label="Previous image">‹</button><div class="mg-gallery-media" id="mgGalleryMedia" aria-live="polite"></div><button type="button" id="mgGalleryNext" aria-label="Next image">›</button></div>
-    <div class="mg-gallery-bottom"><div class="mg-gallery-details"><span id="mgGalleryCaption">Presentation</span><span id="mgGalleryCount">1 / 10</span></div><div id="mgGalleryThumbs" class="mg-gallery-thumbs" aria-label="Choose gallery image"></div><p class="mg-gallery-help">Use the arrow buttons, thumbnails or keyboard ← →. Videos have their own playback controls.</p></div>
+    <div class="mg-gallery-bottom"><div class="mg-gallery-details"><span id="mgGalleryCaption">Presentation</span><span id="mgGalleryCount">1 / 10</span></div><a id="mgGalleryOriginal" class="mg-gallery-original-link" href="#" target="_blank" rel="noopener noreferrer" hidden>View original at full resolution ↗</a><div id="mgGalleryThumbs" class="mg-gallery-thumbs" aria-label="Choose gallery image"></div><p class="mg-gallery-help">Use the arrow buttons, thumbnails or keyboard ← →. Videos have their own playback controls.</p></div>
   </div>
 </dialog>
 </main>
@@ -1767,6 +2015,7 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
  const dialog=document.getElementById('mgCollectionGallery');
  if(!dialog || typeof dialog.showModal!=='function')return;
  const media=document.getElementById('mgGalleryMedia'),title=document.getElementById('mgGalleryTitle'),caption=document.getElementById('mgGalleryCaption'),count=document.getElementById('mgGalleryCount'),thumbs=document.getElementById('mgGalleryThumbs');
+ const originalLink=document.getElementById('mgGalleryOriginal');
  const premium=[
    ['royal-cover-v5','Royal Premium · Closed collectible book'],
    ['royal-open-v6','Royal Premium · Open ceremonial case'],
@@ -1799,6 +2048,7 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
    return found;
  }
  function placeholder(item){
+   originalLink.hidden=true;originalLink.removeAttribute('href');
    media.replaceChildren();const d=document.createElement('div');d.className='mg-gallery-missing';
    const h=document.createElement('strong');h.textContent='Gallery file not yet published';d.appendChild(h);
    const p=document.createElement('p');p.textContent=item.label+' — upload '+item.name+(item.type==='video'?'.mp4':'.png')+' to your website assets folder.';d.appendChild(p);media.appendChild(d);
@@ -1806,6 +2056,7 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
  function render(){
    const token=++renderToken,items=sets[currentSet].items,item=items[index];
    title.textContent=sets[currentSet].title;caption.textContent=item.label;count.textContent=(index+1)+' / '+items.length;
+   originalLink.hidden=true;originalLink.removeAttribute('href');
    const loading=document.createElement('div');loading.className='mg-gallery-loading';loading.textContent='Loading '+(item.type==='video'?'film':'image')+'…';media.replaceChildren(loading);
    thumbs.replaceChildren();
    items.forEach((entry,i)=>{
@@ -1821,11 +2072,11 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
      if(c>=options.length){placeholder(item);return;}
      const url=options[c++];
      if(item.type==='image'){
-       const img=new Image();img.alt=item.label;img.decoding='async';img.onload=()=>{if(token===renderToken){media.replaceChildren(img)}};
+       const img=new Image();img.alt=item.label;img.decoding='async';img.onload=()=>{if(token===renderToken){media.replaceChildren(img);originalLink.href=url;originalLink.textContent='View full-resolution original ↗';originalLink.hidden=false;}};
        img.onerror=nextSource;img.src=url;
      }else{
        const v=document.createElement('video');v.controls=true;v.playsInline=true;v.preload='metadata';v.poster='';v.setAttribute('aria-label',item.label);
-       v.addEventListener('loadedmetadata',()=>{if(token===renderToken)media.replaceChildren(v)},{once:true});
+       v.addEventListener('loadedmetadata',()=>{if(token===renderToken){media.replaceChildren(v);originalLink.href=url;originalLink.textContent='Open original film ↗';originalLink.hidden=false;}},{once:true});
        v.addEventListener('error',nextSource,{once:true});v.src=url;v.load();
      }
    };
@@ -1848,6 +2099,28 @@ body[data-theme="dark"] .col-family-accessible .col-family-arch-head small{color
    const tryNext=()=>{if(i>=opts.length){fail();return;}preview.onerror=tryNext;preview.onload=()=>{preview.hidden=false;const fallback=preview.parentElement.querySelector('.col-gallery-preview-fallback');if(fallback)fallback.hidden=true};preview.src=opts[i++]};
    tryNext();
  });
+})();
+</script>
+
+
+<!-- V6 graceful fallback: full ritual presentation if uploaded; approved bottle if missing. -->
+<script>
+(()=>{
+  document.querySelectorAll('.col-ritual-panel-link img[data-panel-fallback]').forEach(img=>{
+    const link=img.closest('a');
+    let tried=false;
+    const showFallback=()=>{
+      if(tried)return;
+      tried=true;
+      const fallback=img.dataset.panelFallback;
+      if(!fallback)return;
+      img.src=fallback;
+      if(link){link.href=fallback;link.setAttribute('aria-label','View approved ritual vessel while the full panel image is being uploaded');}
+      img.alt='Approved ritual vessel (full illustrated panel not yet uploaded)';
+    };
+    img.addEventListener('error',showFallback);
+    if(img.complete && img.naturalWidth===0)showFallback();
+  });
 })();
 </script>
 
