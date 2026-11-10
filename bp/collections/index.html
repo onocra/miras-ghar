@@ -1663,6 +1663,13 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
  .collections-page .col-ritual-copy{padding:23px 21px}
 }
 
+
+/* Royal Standard gallery: preserve the approved ivory/silver presentation. */
+.collections-page .col-standard-art{background:radial-gradient(ellipse at 50% 40%,#fffaf0,#e9dfd0 80%)}
+.collections-page .col-standard-art .col-art-caption{color:#3e4343}
+.collections-page .col-royal-standard .col-gallery-launch{background:#4a4d4f;border-color:#a9adb0;color:#fffaf1}
+.collections-page .col-royal-standard .col-gallery-launch:hover{background:#64696b}
+
 </style>
 </head>
 <body>
@@ -1822,7 +1829,7 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
    <div class="col-arch-stem" aria-hidden="true"></div><div class="col-arch-strand-label">THREE PRESENTATION FAMILIES</div>
    <div class="col-arch-branch" aria-hidden="true"></div>
    <div class="col-family-grid">
-     <div class="col-family-arch"><div class="col-family-arch-head">Royal Family <small>Collectible, ceremonial expression</small></div><div class="col-arch-tiers"><a href="#royal-premium">Premium</a><a href="#royal-signatures">Signatures</a><a href="#royal-family">Standard</a></div></div>
+     <div class="col-family-arch"><div class="col-family-arch-head">Royal Family <small>Collectible, ceremonial expression</small></div><div class="col-arch-tiers"><a href="#royal-premium">Premium</a><a href="#royal-signatures">Signatures</a><a href="#royal-standard">Standard</a></div></div>
      <div class="col-family-arch"><div class="col-family-arch-head">Heritage Family <small>Distinctive heritage presentations</small></div><div class="col-arch-tiers"><a href="#heritage-family">Premium</a><a href="#heritage-family">Signatures</a><a href="#heritage-family">Standard</a></div></div>
      <div class="col-family-arch col-family-accessible"><div class="col-family-arch-head">Accessible Family <small>Considered everyday interpretations · proposed</small></div><div class="col-arch-tiers"><a href="#accessible-family">Premium</a><a href="#accessible-family">Signatures</a><a href="#accessible-family">Standard</a></div></div>
    </div>
@@ -1833,7 +1840,7 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
 
 <!-- 05 / catalogue -->
 <section class="col-section col-catalogue" id="catalogue" aria-labelledby="catalogue-title">
- <div class="col-wrap"><div class="col-section-heading"><div class="col-kicker centered">04 — THE PRODUCT CATALOGUE</div><h2 id="catalogue-title">Expressions of <em>Egyptian Volume I.</em></h2><p>Explore the proposed catalogue by family and tier. The Royal Premium case is the lead visual concept; content, formats, price and availability for other variants remain unconfirmed.</p></div>
+ <div class="col-wrap"><div class="col-section-heading"><div class="col-kicker centered">04 — THE PRODUCT CATALOGUE</div><h2 id="catalogue-title">Expressions of <em>Egyptian Volume I.</em></h2><p>Explore the proposed catalogue by family and tier. Explore the Royal Premium, Signature and Standard visual presentations; final production specifications, pricing and availability remain subject to validation.</p></div>
  <div class="col-family-intro" id="royal-family"><div class="col-family-title"><span class="col-family-index">FAMILY 01</span><h3>Royal <em>Family.</em></h3><p>The most ceremonial expression of the chapter, conceived around presentation, design richness and a sense of permanence.</p></div><span class="col-family-count">03 PROPOSED VARIANTS</span></div>
  <div class="col-product-grid">
    <article class="col-product-card col-feature-product col-gallery-product col-themed-product col-royal-theme col-royal-premium" id="royal-premium">
@@ -1864,7 +1871,21 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
        <span class="col-in-dev">Design under development</span>
      </div>
    </article>
-   <article class="col-product-card col-themed-product col-royal-theme col-royal-standard"><div class="col-prod-art col-prod-symbol"><span>◈</span><small>ILLUSTRATIVE PLACEHOLDER</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Standard</h4><p class="col-finish-note"><strong>SANDSTONE IVORY · SILVER</strong><span>Sandstone-ivory presentation with refined silver accents.</span></p><p>The proposed entry presentation in the Royal family, with final configuration subject to design and validation.</p><span class="col-in-dev">In the pipeline</span></div></article>
+   <article class="col-product-card col-gallery-product col-themed-product col-royal-theme col-royal-standard" id="royal-standard">
+     <button type="button" class="col-prod-art col-standard-art col-gallery-preview" data-collection-gallery-trigger="standard" aria-label="Open Royal Standard gallery, two images and one video">
+       <span class="col-art-caption">ROYAL STANDARD · THE TWO-RITUAL CASE</span>
+       <img data-gallery-preview="standard" src="/assets/mg/royal-standard-cover.png" alt="Royal Standard closed sandstone-ivory collectible book with silver clasp" loading="lazy" decoding="async">
+       <span class="col-gallery-preview-fallback" hidden>ROYAL STANDARD<br><small>Explore the presentation gallery</small></span>
+       <span class="col-gallery-visual-hint"><span aria-hidden="true">⊕</span> View 2 images + 1 film</span>
+     </button>
+     <div class="col-prod-copy">
+       <div class="col-prod-meta">EGYPTIAN VOLUME I · ROYAL</div><h4>Standard</h4>
+       <p class="col-finish-note"><strong>SANDSTONE IVORY · BRUSHED SILVER · BLACK</strong><span>Subtle sandstone-ivory leather, refined silver details and black lettering.</span></p>
+       <p>Two sacred aromatic rituals in a compact collectible book: The Awakening of Khepri and The Descent of Atum, each 7.5 ml, accompanied by a silver-and-black pelican pendant, diffuser disc, spiral ritual booklet and certificate of authenticity.</p>
+       <button class="col-gallery-launch" type="button" data-collection-gallery-trigger="standard">Explore Standard Gallery <span aria-hidden="true">↗</span></button>
+       <span class="col-in-dev">Design presentation · pre-launch</span>
+     </div>
+   </article>
  </div>
  <div class="col-family-intro col-heritage-intro" id="heritage-family"><div class="col-family-title"><span class="col-family-index">FAMILY 02</span><h3>Heritage <em>Family.</em></h3><p>A complementary expression of the Egyptian story, planned with its own presentation identity while retaining the House’s core values.</p></div><span class="col-family-count">03 PROPOSED VARIANTS</span></div>
  <div class="col-product-grid">
@@ -2039,7 +2060,12 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
    ['royal-signature-open-web','Signatures · Opening presentation film','video'],
    ['royal-signature-cover-web','Signatures · Cover presentation film','video']
  ].map(([name,label,type])=>({name,label,type,paths:['/assets/Royal%20Signature/','/assets/mg/','/bp/assets/Royal%20Signature/']}));
- const sets={premium:{title:'Royal Premium · Visual Gallery',items:premium},signatures:{title:'Royal Signatures · Visual Gallery',items:signatures}};
+ const standard=[
+   ['royal-standard-cover','Royal Standard · Closed collectible book','image'],
+   ['royal-standard-open','Royal Standard · Open two-ritual presentation','image'],
+   ['royal-standard-open-web','Royal Standard · Opening presentation film','video']
+ ].map(([name,label,type])=>({name,label,type,paths:['/assets/mg/','/bp/assets/mg/']}));
+ const sets={premium:{title:'Royal Premium · Visual Gallery',items:premium},signatures:{title:'Royal Signatures · Visual Gallery',items:signatures},standard:{title:'Royal Standard · Visual Gallery',items:standard}};
  let currentSet='premium',index=0,renderToken=0,lastOpener=null;
  const qs=(id)=>document.getElementById(id);
  function candidates(item){
