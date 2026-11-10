@@ -1687,6 +1687,21 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
 .mg-collection-dialog[data-tier="standard"] .mg-gallery-stage{background:#f7f2ea}
 @media(max-width:640px){.mg-gallery-media{height:calc(97dvh - 220px)}.mg-collection-dialog{width:calc(100vw - 8px)}}
 </style>
+<style>
+
+/* V25: viewport-bounded gallery; media cannot enlarge its parent. */
+#mgCollectionGallery{box-sizing:border-box!important;position:fixed!important;inset:0!important;margin:auto!important;width:95vw!important;max-width:1600px!important;height:94dvh!important;max-height:94dvh!important;padding:0!important;overflow:hidden!important;}
+#mgCollectionGallery .mg-collection-gallery{box-sizing:border-box;display:grid!important;grid-template-rows:auto minmax(0,1fr) auto!important;width:100%!important;height:100%!important;max-height:100%!important;min-width:0!important;overflow:hidden;}
+#mgCollectionGallery .mg-gallery-stage{box-sizing:border-box;display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:minmax(0,1fr)!important;width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;position:relative!important;padding:8px 48px!important;overflow:hidden!important;}
+#mgCollectionGallery #mgGalleryMedia{box-sizing:border-box;grid-area:1/1!important;display:grid!important;place-items:center!important;position:relative!important;width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;max-width:100%!important;max-height:100%!important;overflow:hidden!important;}
+#mgCollectionGallery #mgGalleryMedia img,#mgCollectionGallery #mgGalleryMedia video{position:absolute!important;inset:0!important;margin:auto!important;display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;min-width:0!important;min-height:0!important;object-fit:contain!important;object-position:center!important;transform:none!important;}
+#mgCollectionGallery .mg-gallery-top,#mgCollectionGallery .mg-gallery-bottom{box-sizing:border-box;width:100%;min-width:0;}
+#mgCollectionGallery .mg-gallery-bottom{text-align:center;max-height:30dvh;overflow:auto;}
+#mgCollectionGallery .mg-gallery-details{justify-content:center;flex-wrap:wrap;gap:8px;}
+#mgCollectionGallery .mg-gallery-thumbs{width:100%;justify-content:safe center;}
+@media(max-width:640px){#mgCollectionGallery{width:96vw!important;height:94dvh!important;}#mgCollectionGallery .mg-gallery-stage{padding:4px 35px!important;}#mgCollectionGallery .mg-gallery-stage button{width:28px;}#mgCollectionGallery .mg-gallery-bottom{max-height:34dvh;}}
+
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
