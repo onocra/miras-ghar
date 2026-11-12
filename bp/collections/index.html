@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- MG_COLLECTIONS_V10_COMPACT_SPACING_ACCESSIBLE_SIGNATURES_20261112 -->
 <!-- MG_INNER_PAGES_V21_APPROVED_HEADER_FOOTER_SYNC_20261104 -->
 <!-- MG_OTHER_PAGES_V6_20261103: verified V5 images and root-absolute paths (collections) -->
 <html lang="en">
@@ -1786,10 +1787,6 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
    Every ritual panel is fully contained (never cropped or transformed).
    On wide screens the artwork stays in view while the companion copy scrolls.
    ===================================================================== */
-.collections-page{
-  /* overflow:hidden on the legacy MAIN suppresses CSS sticky inside ritual stories. */
-  overflow-x:clip!important;overflow-y:visible!important;
-}
 .collections-page .col-heritage-premium-art{
   background:radial-gradient(ellipse at 50% 40%,#fcf6e8 2%,#dce8df 56%,#8ea798 100%)!important;
 }
@@ -1889,6 +1886,90 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
   .collections-page .col-ritual-story h3{font-size:34px}
   .collections-page .col-ritual-chapter{padding:15px 0 12px}
   .collections-page .col-ritual-chapter p{font-size:14px;line-height:1.68}
+}
+
+
+/* ================================================================
+   COLLECTIONS V10 — COMPACT LUXURY EDITORIAL POLISH · 12 NOV 2026
+   All rules are page-scoped, keeping the approved navigation / footer.
+   Reduced empty padding but preserved typographic breathing space.
+   All product artworks use contain; never cover / crop.
+   ================================================================ */
+.collections-page .col-opening{padding-top:clamp(19px,2.7vw,34px)}
+.collections-page .col-opening-grid{gap:clamp(15px,2.4vw,34px);padding-bottom:clamp(14px,2.1vw,28px)}
+.collections-page .col-hero-actions{gap:15px;margin-top:17px}
+.collections-page .col-hero-foot{margin-top:16px}
+.collections-page .col-film-controls{padding-top:8px}
+.collections-page .col-section{padding:clamp(30px,3.9vw,55px) 0}
+.collections-page .col-section-heading{margin-bottom:clamp(19px,2.25vw,29px)}
+.collections-page .col-section-heading .col-kicker{margin-bottom:8px}
+.collections-page .col-section-heading h2{margin-bottom:9px;line-height:1.12}
+.collections-page .col-section-heading>p{font-size:15px;line-height:1.64}
+.collections-page .col-kicker{margin-bottom:10px}
+.collections-page .col-domain-grid{gap:13px}
+.collections-page .col-domain-card{min-height:305px;padding:18px 18px 16px}
+.collections-page .col-domain-symbol{font-size:43px;margin:15px 0 10px}
+.collections-page .col-domain-card h3{margin-bottom:10px}
+.collections-page .col-domain-card p{line-height:1.63}
+.collections-page .col-tiny-note{margin-top:10px!important}
+.collections-page .col-editorial{gap:clamp(20px,3vw,40px);margin-bottom:21px}
+.collections-page .col-editorial-prose p{margin-bottom:9px;line-height:1.66}
+.collections-page .col-chapter-cards{gap:14px}
+.collections-page .col-chapter{min-height:280px;padding:22px 23px 19px}
+.collections-page .col-chapter h3{margin-top:17px;margin-bottom:8px}
+.collections-page .col-chapter-eyebrow{margin-top:15px}
+.collections-page .col-chapter-explore,.collections-page .col-chapter-label{padding-top:10px}
+.collections-page .col-egypt-banner{min-height:148px;padding:22px 31px;margin-bottom:33px}
+.collections-page .col-egypt-banner p{margin:7px 0}
+.collections-page .col-architecture{margin-top:19px}
+.collections-page .col-arch-stem{height:20px}
+.collections-page .col-arch-branch{margin-top:17px;height:25px}
+.collections-page .col-arch-node{padding:11px 24px}
+.collections-page .col-family-grid{gap:15px}
+.collections-page .col-family-arch-head{padding:14px 9px}
+.collections-page .col-arch-tiers a{padding:12px 3px}
+.collections-page .col-arch-caption{margin-top:18px}
+.collections-page .col-family-intro{margin:clamp(30px,3.5vw,47px) 0 13px;padding-bottom:12px}
+.collections-page .col-heritage-intro{margin-top:clamp(30px,3.5vw,47px)}
+.collections-page .col-family-intro h3{margin:5px 0 5px}
+.collections-page .col-product-grid{gap:14px}
+.collections-page .col-prod-copy{padding:17px 19px 18px}
+.collections-page .col-prod-copy h4{margin:4px 0 7px}
+.collections-page .col-prod-copy>p{flex:0 1 auto;margin:7px 0 11px;line-height:1.61}
+.collections-page .col-gallery-launch{margin:5px 0 12px;padding:10px 12px}
+.collections-page .col-in-dev{margin-top:auto}
+.collections-page .col-gallery-preview{height:255px;min-height:255px;padding:26px 14px 30px}
+.collections-page .col-gallery-preview img,
+.collections-page .col-gallery-preview:hover img{max-height:100%!important;max-width:100%!important;object-fit:contain!important;transform:none!important}
+.collections-page .col-accessible-signature-art{background:radial-gradient(ellipse at 50% 36%,#fffaf0,#efe7d8 61%,#d5d8c9 100%)!important}
+.collections-page #accessible-signatures{scroll-margin-top:135px}
+.collections-page .col-ritual-grid{gap:clamp(17px,2.2vw,28px)}
+.collections-page .col-ritual-editorial .col-ritual-panel-art{margin:clamp(11px,1.25vw,18px)!important;padding:clamp(7px,.9vw,12px)!important}
+.collections-page .col-ritual-story{padding:clamp(22px,2.2vw,32px)!important}
+.collections-page .col-ritual-story h3{margin:8px 0 7px;font-size:clamp(30px,2.65vw,40px)}
+.collections-page .col-ritual-story .col-ritual-intro{margin:0 0 14px}
+.collections-page .col-ritual-chapter{padding:12px 0 10px}
+.collections-page .col-ritual-chapter h4{margin-bottom:10px}
+.collections-page .col-ritual-chapter p{line-height:1.63;margin-bottom:9px}
+.collections-page .col-ritual-story .col-ritual-closing{margin-top:13px;padding-top:13px}
+@media(max-width:930px){
+ .collections-page .col-section{padding:30px 0}
+ .collections-page .col-domain-card{min-height:275px}
+ .collections-page .col-chapter{min-height:255px}
+}
+@media(max-width:640px){
+ .collections-page .col-section{padding:25px 0}
+ .collections-page .col-section-heading{margin-bottom:16px}
+ .collections-page .col-chapter{min-height:0;padding:20px}
+ .collections-page .col-egypt-banner{padding:18px 17px;margin-bottom:24px;min-height:0}
+ .collections-page .col-family-intro{margin:27px 0 13px}
+ .collections-page .col-product-grid{gap:12px}
+ .collections-page .col-prod-copy{padding:16px 17px 17px}
+ .collections-page .col-gallery-preview{height:auto!important;min-height:0!important;aspect-ratio:4/3;padding:20px 12px 27px}
+ .collections-page .col-ritual-grid{gap:18px}
+ .collections-page .col-ritual-editorial .col-ritual-panel-art{margin:9px!important;padding:7px!important}
+ .collections-page .col-ritual-story{padding:21px 17px!important}
+ .collections-page .col-ritual-chapter{padding:11px 0 9px}
 }
 </style>
 </head>
@@ -2051,7 +2132,7 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
    <div class="col-family-grid">
      <div class="col-family-arch"><div class="col-family-arch-head">Royal Family <small>Collectible, ceremonial expression</small></div><div class="col-arch-tiers"><a href="#royal-premium">Premium</a><a href="#royal-signatures">Signatures</a><a href="#royal-standard">Standard</a></div></div>
      <div class="col-family-arch"><div class="col-family-arch-head">Heritage Family <small>Distinctive heritage presentations</small></div><div class="col-arch-tiers"><a href="#heritage-premium">Premium</a><a href="#heritage-signatures">Signatures</a><a href="#heritage-standard">Standard</a></div></div>
-     <div class="col-family-arch col-family-accessible"><div class="col-family-arch-head">Accessible Family <small>Considered everyday interpretations</small></div><div class="col-arch-tiers"><a href="#accessible-premium">Premium</a><a href="#accessible-family">Signatures</a><a href="#accessible-family">Standard</a></div></div>
+     <div class="col-family-arch col-family-accessible"><div class="col-family-arch-head">Accessible Family <small>Considered everyday interpretations</small></div><div class="col-arch-tiers"><a href="#accessible-premium">Premium</a><a href="#accessible-signatures">Signatures</a><a href="#accessible-family">Standard</a></div></div>
    </div>
  </div>
  <p class="col-arch-caption">The House’s permanent architecture encompasses Royal, Heritage and Accessible families, each with Premium, Signatures and Standard tiers: nine intended catalogue positions per chapter and 27 across the Egyptian, Persian and Mughal volumes. Individual designs, specifications and commercial release dates are at different stages of development. Nothing shown is currently offered for sale.</p>
@@ -2060,7 +2141,7 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
 
 <!-- 05 / catalogue -->
 <section class="col-section col-catalogue" id="catalogue" aria-labelledby="catalogue-title">
- <div class="col-wrap"><div class="col-section-heading"><div class="col-kicker centered">04 — THE PRODUCT CATALOGUE</div><h2 id="catalogue-title">Expressions of <em>Egyptian Volume I.</em></h2><p>Explore the House’s nine catalogue positions by family and tier. Six presentation galleries now feature the Royal, Heritage and Accessible visual studies; final production specifications, pricing and availability remain subject to validation.</p></div>
+ <div class="col-wrap"><div class="col-section-heading"><div class="col-kicker centered">04 — THE PRODUCT CATALOGUE</div><h2 id="catalogue-title">Expressions of <em>Egyptian Volume I.</em></h2><p>Explore the House’s nine catalogue positions by family and tier. Eight presentation galleries now feature the Royal, Heritage and Accessible visual studies; final production specifications, pricing and availability remain subject to validation.</p></div>
  <div class="col-family-intro" id="royal-family"><div class="col-family-title"><span class="col-family-index">FAMILY 01</span><h3>Royal <em>Family.</em></h3><p>The most ceremonial expression of the chapter, conceived around presentation, design richness and a sense of permanence.</p></div><span class="col-family-count">03 PROPOSED VARIANTS</span></div>
  <div class="col-product-grid">
    <article class="col-product-card col-feature-product col-gallery-product col-themed-product col-royal-theme col-royal-premium" id="royal-premium">
@@ -2172,7 +2253,21 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
         <span class="col-in-dev">Concept presentation · pre-launch</span>
       </div>
     </article>
-    <article class="col-product-card col-themed-product col-accessible-theme col-accessible-signatures"><div class="col-prod-art col-prod-symbol col-prod-accessible"><span>❀</span><small>FUTURE DESIGN STUDY</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ACCESSIBLE</div><h4>Signatures</h4><p class="col-finish-note"><strong>PROPOSED · CREAM · COPPER</strong><span>Suggested palette: soft cream with muted olive lettering and warm copper accents.</span></p><p>A proposed compact interpretation of the ritual narrative, pending a defined concept, prototyping and validation.</p><span class="col-in-dev">In the pipeline</span></div></article>
+    <article class="col-product-card col-gallery-product col-themed-product col-accessible-theme col-accessible-signatures" id="accessible-signatures">
+      <button type="button" class="col-prod-art col-gallery-preview col-accessible-signature-art" data-collection-gallery-trigger="accessible-signatures" aria-label="Open Accessible Signatures gallery with three design images">
+        <span class="col-art-caption">ACCESSIBLE SIGNATURE · VISUAL STUDIES</span>
+        <img data-gallery-preview="accessible-signatures" alt="Accessible Signatures Egyptian Volume I design visual one" loading="lazy" decoding="async">
+        <span class="col-gallery-visual-hint"><span aria-hidden="true">⊕</span> View 3 images</span>
+        <span class="col-gallery-preview-fallback" hidden>ACCESSIBLE SIGNATURE<br><small>Three design studies</small></span>
+      </button>
+      <div class="col-prod-copy">
+        <div class="col-prod-meta">EGYPTIAN VOLUME I · ACCESSIBLE</div><h4>Signatures</h4>
+        <p class="col-finish-note"><strong>ACCESSIBLE SIGNATURE · DESIGN DIRECTION</strong><span>Three presentation visuals showing the emerging Accessible Signature concept; colours and materials remain subject to confirmation.</span></p>
+        <p>Explore the three original design studies in sequence. Each illustration is displayed in full without cropping; these concepts are not final production specifications or a sales listing.</p>
+        <button class="col-gallery-launch" type="button" data-collection-gallery-trigger="accessible-signatures">Explore Signature Gallery <span aria-hidden="true">↗</span></button>
+        <span class="col-in-dev">Design presentation · pre-launch</span>
+      </div>
+    </article>
     <article class="col-product-card col-themed-product col-accessible-theme col-accessible-standard"><div class="col-prod-art col-prod-symbol col-prod-accessible"><span>◇</span><small>FUTURE DESIGN STUDY</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ACCESSIBLE</div><h4>Standard</h4><p class="col-finish-note"><strong>PROPOSED · IVORY · PEWTER</strong><span>Suggested palette: simple ivory with forest-green type and refined pewter-silver accents.</span></p><p>An everyday-oriented presentation concept under consideration; no specifications or launch plans are confirmed.</p><span class="col-in-dev">In the pipeline</span></div></article>
   </div>
   </div>
@@ -2460,6 +2555,17 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
    ['accessible-premium-V2','Accessible Premium · Design visual 02'],
    ['accessible-premium-V3','Accessible Premium · Design visual 03']
  ].map(([name,label])=>({name,label,type:'image',paths:['/assets/mg/','/assets/Accessible%20Premium/','/bp/assets/mg/','/bp/assets/Accessible%20Premium/']}));
+ // Accessible Signature — three source images shown in the House's folder screenshot.
+ // Windows hides the extensions; search .png, .jpg, .jpeg and .webp without renaming them.
+ // Preferred upload folder: /assets/mg/
+ // /assets/mg/accessible-signature-v1.png
+ // /assets/mg/accessible-signature-v2.png
+ // /assets/mg/accessible-signature-v3.png
+ const accessibleSignatures=[
+   ['accessible-signature-v1','Accessible Signatures · Visual 01'],
+   ['accessible-signature-v2','Accessible Signatures · Visual 02'],
+   ['accessible-signature-v3','Accessible Signatures · Visual 03']
+ ].map(([name,label])=>({name,label,type:'image',paths:['/assets/mg/','/assets/Accessible%20Signature/','/bp/assets/mg/','/bp/assets/Accessible%20Signature/']}));
  const sets={
    premium:{title:'Royal Premium · Visual Gallery',items:premium},
    signatures:{title:'Royal Signatures · Visual Gallery',items:signatures},
@@ -2467,7 +2573,8 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
    'heritage-premium':{title:'Heritage Premium · Visual Gallery',items:heritagePremium},
    'heritage-signatures':{title:'Heritage Signatures · Visual Gallery',items:heritageSignatures},
    'heritage-standard':{title:'Heritage Standard · Visual Gallery',items:heritageStandard},
-   'accessible-premium':{title:'Accessible Premium · Visual Gallery',items:accessiblePremium}
+   'accessible-premium':{title:'Accessible Premium · Visual Gallery',items:accessiblePremium},
+   'accessible-signatures':{title:'Accessible Signatures · Visual Gallery',items:accessibleSignatures}
  };
  let currentSet='premium',index=0,renderToken=0,lastOpener=null;
  const qs=(id)=>document.getElementById(id);
