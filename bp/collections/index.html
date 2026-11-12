@@ -1716,6 +1716,70 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
  .collections-page #heritage-standard .col-gallery-preview,
  .collections-page #accessible-premium .col-gallery-preview{aspect-ratio:4/3;height:auto!important;min-height:0!important}
 }
+
+/* V8 — editorial Morning ritual narrative parallel to the approved full-size panel. */
+.collections-page .col-ritual-editorial{
+  grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);
+  align-items:start;
+  background:#f7f4e9;
+}
+.collections-page .col-ritual-editorial .col-ritual-panel-art{
+  height:auto!important;aspect-ratio:1672 / 941;
+  align-self:start;overflow:hidden;
+}
+.collections-page .col-ritual-editorial .col-ritual-panel-link{
+  display:block;width:100%;height:100%;
+}
+.collections-page .col-ritual-editorial .col-ritual-panel-link img{
+  display:block;width:100%!important;height:100%!important;
+  object-fit:contain!important;object-position:center!important;
+  transform:none!important;
+}
+.collections-page .col-ritual-story{
+  display:block;text-align:left;align-self:stretch;
+  padding:clamp(20px,2.65vw,39px);
+  background:linear-gradient(145deg,#fffaf0 5%,#e5ece2 100%);
+  color:#2a4837;
+}
+.collections-page .col-ritual-story .col-prod-meta{letter-spacing:.16em;color:#916b34}
+.collections-page .col-ritual-story h3{font-size:clamp(30px,2.75vw,42px);line-height:1.13;margin:11px 0 7px;color:#294837}
+.collections-page .col-ritual-story .col-ritual-tagline{margin:0 0 9px;color:#98713a;font:italic 18px/1.5 Georgia,serif}
+.collections-page .col-ritual-story .col-ritual-intro{margin:0 0 17px;color:#355743;font:italic 16px/1.5 Georgia,serif}
+.collections-page .col-ritual-chapter{margin:0;padding:14px 0 9px;border-top:1px solid #d8c5a0}
+.collections-page .col-ritual-chapter h4{margin:0 0 11px;font:normal clamp(19px,1.6vw,24px)/1.2 Georgia,serif;color:#254938}
+.collections-page .col-ritual-chapter h4>span{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;margin-right:6px;border:1px solid #a7834c;border-radius:50%;font:700 10px Arial,sans-serif;color:#8b6b36;vertical-align:2px}
+.collections-page .col-ritual-chapter h4 small{display:block;margin:5px 0 0 35px;font:italic 14px Georgia,serif;color:#9a783e}
+.collections-page .col-ritual-chapter p{
+  margin:0 0 8px;color:#3f5c4b;
+  font:14px/1.58 Arial,Helvetica,sans-serif;
+}
+.collections-page .col-ritual-chapter p strong{color:#234c3a;font-weight:700}
+.collections-page .col-ritual-chapter p em{color:inherit}
+.collections-page .col-ritual-story .col-ritual-closing{margin:10px 0 0;border-top:1px solid #c3ad7c;padding-top:16px;color:#7f602e;font:italic 17px/1.45 Georgia,serif}
+@media(max-width:920px){
+  .collections-page .col-ritual-editorial{grid-template-columns:1fr!important}
+  .collections-page .col-ritual-story{padding:24px}
+}
+@media(max-width:600px){
+  .collections-page .col-ritual-story{padding:22px 19px}
+  .collections-page .col-ritual-chapter p{font-size:14px;line-height:1.6}
+}
+
+/* Nightfall retains the House's dark-green / warm-gold presentation with accessible contrast. */
+.collections-page .col-ritual-night .col-ritual-story{background:linear-gradient(145deg,#223c31,#3b5647);color:#fff6e4}
+.collections-page .col-ritual-night .col-ritual-story .col-prod-meta{color:#e8c78b}
+.collections-page .col-ritual-night .col-ritual-story h3,
+.collections-page .col-ritual-night .col-ritual-chapter h4{color:#fff7e8!important}
+.collections-page .col-ritual-night .col-ritual-story .col-ritual-tagline,
+.collections-page .col-ritual-night .col-ritual-story .col-ritual-intro,
+.collections-page .col-ritual-night .col-ritual-chapter h4 small,
+.collections-page .col-ritual-night .col-ritual-story .col-ritual-closing{color:#e8c78b!important}
+.collections-page .col-ritual-night .col-ritual-chapter p,
+.collections-page .col-ritual-night .col-ritual-chapter p strong{color:#f6efe3!important}
+.collections-page .col-ritual-night .col-ritual-chapter{border-top-color:rgba(225,197,139,.46)}
+.collections-page .col-ritual-night .col-ritual-chapter h4>span{border-color:#e8c78b;color:#e8c78b}
+.collections-page .col-ritual-night .col-ritual-story .col-ritual-closing{border-top-color:rgba(225,197,139,.46)}
+/* Three independent stories, each beside its exact uncropped ritual panel on desktop. */
 </style>
 </head>
 <body>
@@ -1993,16 +2057,103 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
 <!-- 06 / exact ritual masters -->
 <section class="col-section col-rituals" id="rituals" aria-labelledby="rituals-title"><div class="col-wrap"><div class="col-section-heading"><div class="col-kicker centered">05 — THE THREE SACRED AROMATICS</div><h2 id="rituals-title">A day told in <em>three rituals.</em></h2><p>The three original sculptural vessels form the heart of Egyptian Volume I. Explore each complete illustrated ritual panel, from its ancient inspiration to its modern interpretation. Select an image to view the original artwork at full resolution.</p></div>
   <div class="col-ritual-grid">
-  <article class="col-ritual col-ritual-morning" id="khepri"><div class="col-ritual-art col-ritual-panel-art"><span class="col-time-mark">☼ · 01</span><a class="col-ritual-panel-link" href="/assets/mg/morning-ritual-panel.png" target="_blank" rel="noopener noreferrer" aria-label="View complete The Awakening of Khepri — complete illustrated Morning ritual heritage panel at original resolution"><img src="/assets/mg/morning-ritual-panel.png" data-panel-fallback="/assets/mg/morning-bottle-v5.png" alt="The Awakening of Khepri — complete illustrated Morning ritual heritage panel" loading="lazy" decoding="async"></a></div><div class="col-ritual-copy"><div class="col-prod-meta">MORNING RITUAL</div><h3>The Awakening<br>of Khepri</h3><p>Renewal · Clarity · Vitality</p><span>Gentle clarity for a fresh beginning.</span></div></article>
-  <article class="col-ritual col-ritual-noon" id="ra"><div class="col-ritual-art col-ritual-panel-art"><span class="col-time-mark">✺ · 02</span><a class="col-ritual-panel-link" href="/assets/mg/noon-ritual-panel.png" target="_blank" rel="noopener noreferrer" aria-label="View complete The Zenith of Ra — complete illustrated Noon ritual heritage panel at original resolution"><img src="/assets/mg/noon-ritual-panel.png" data-panel-fallback="/assets/mg/noon-bottle-v5.png" alt="The Zenith of Ra — complete illustrated Noon ritual heritage panel" loading="lazy" decoding="async"></a></div><div class="col-ritual-copy"><div class="col-prod-meta">NOON RITUAL</div><h3>The Zenith<br>of Ra</h3><p>Energy · Focus · Balance</p><span>A luminous expression of midday vitality.</span></div></article>
-  <article class="col-ritual col-ritual-night" id="atum"><div class="col-ritual-art col-ritual-panel-art"><span class="col-time-mark">☾ · 03</span><a class="col-ritual-panel-link" href="/assets/mg/night-ritual-panel.png" target="_blank" rel="noopener noreferrer" aria-label="View complete The Descent of Atum — complete illustrated Nightfall ritual heritage panel at original resolution"><img src="/assets/mg/night-ritual-panel.png" data-panel-fallback="/assets/mg/night-bottle-v5.png" alt="The Descent of Atum — complete illustrated Nightfall ritual heritage panel" loading="lazy" decoding="async"></a></div><div class="col-ritual-copy"><div class="col-prod-meta">NIGHTFALL RITUAL</div><h3>The Descent<br>of Atum</h3><p>Sacred Reverie</p><span>An invitation to reflection and stillness.</span></div></article>
+  <article class="col-ritual col-ritual-morning col-ritual-editorial" id="khepri">
+  <div class="col-ritual-art col-ritual-panel-art">
+    <a class="col-ritual-panel-link" href="/assets/mg/morning-ritual-panel.png" target="_blank" rel="noopener noreferrer" aria-label="Open the complete illustrated Morning ritual panel at original resolution">
+      <img src="/assets/mg/morning-ritual-panel.png" data-panel-fallback="/assets/mg/morning-bottle-v5.png" alt="The Awakening of Khepri — the complete Morning ritual presentation" loading="lazy" decoding="async">
+    </a>
+  </div>
+  <div class="col-ritual-copy col-ritual-story">
+    <div class="col-prod-meta">01 · MORNING RITUAL · EGYPTIAN VOLUME I</div>
+    <h3>The Awakening of Khepri</h3>
+    <p class="col-ritual-tagline">Renewal · Clarity · Vitality</p>
+    <p class="col-ritual-intro">An ancient symbol of rebirth. A modern invitation to begin anew.</p>
+
+    <section class="col-ritual-chapter" aria-labelledby="khepri-practice">
+      <h4 id="khepri-practice"><span>I</span> The Ancient Ritual <small>Honouring the Dawn</small></h4>
+      <p><strong>Greet the First Light.</strong> Khepri, the Egyptian deity associated with the rising sun, symbolised renewal and transformation. Inspired by ancient ceremonial traditions, the morning ritual marks the passage into a new day.</p>
+      <p><strong>Anoint with Purpose.</strong> Fragrant oils and resins formed part of ancient Egyptian religious and personal practices. Applying the aromatic oil is our contemporary interpretation of a deliberate moment of preparation.</p>
+      <p><strong>Set a Daily Intention.</strong> Pause, breathe in the aroma and choose a purpose for the day ahead. An ordinary gesture becomes a mindful beginning.</p>
+    </section>
+
+    <section class="col-ritual-chapter" aria-labelledby="khepri-experience">
+      <h4 id="khepri-experience"><span>II</span> The Modern Experience <small>How the Morning Feels</small></h4>
+      <p><strong>Renewal.</strong> Welcome the possibility of a fresh start, echoing Khepri’s symbolism of rebirth.</p>
+      <p><strong>Clarity.</strong> Enjoy an uplifting sensory moment before the demands of everyday life begin.</p>
+      <p><strong>Vitality.</strong> Let the fragrance accompany a sense of optimism and readiness for the hours ahead.</p>
+    </section>
+
+    <section class="col-ritual-chapter" aria-labelledby="khepri-wisdom">
+      <h4 id="khepri-wisdom"><span>III</span> Ancient Wisdom <small>For a Balanced Tomorrow</small></h4>
+      <p><strong>Honour Natural Rhythms.</strong> The Egyptian ideal of <em>Ma’at</em>—harmony, order and balance—inspires an intentional approach to the day.</p>
+      <p><strong>Turn Routine into Ritual.</strong> Even thirty seconds of mindful aromatic application can become a personal pause before stepping into the wider world.</p>
+    </section>
+    <p class="col-ritual-closing">Begin with renewal. Move with clarity. Embrace the day with purpose.</p>
+  </div>
+</article>
+  <article class="col-ritual col-ritual-noon col-ritual-editorial" id="ra">
+  <div class="col-ritual-art col-ritual-panel-art"><a class="col-ritual-panel-link" href="/assets/mg/noon-ritual-panel.png" target="_blank" rel="noopener noreferrer" aria-label="Open the complete illustrated Noon ritual panel at original resolution"><img src="/assets/mg/noon-ritual-panel.png" data-panel-fallback="/assets/mg/noon-bottle-v5.png" alt="The Zenith of Ra — the complete Noon ritual presentation" loading="lazy" decoding="async"></a></div>
+  <div class="col-ritual-copy col-ritual-story">
+    <div class="col-prod-meta">02 · NOON RITUAL · EGYPTIAN VOLUME I</div>
+    <h3>The Zenith of Ra</h3>
+    <p class="col-ritual-tagline">Energy · Focus · Balance</p>
+    <p class="col-ritual-intro">When daylight reaches its height, take a moment to find your own centre.</p>
+    <section class="col-ritual-chapter" aria-labelledby="ra-practice">
+      <h4 id="ra-practice"><span>I</span> The Ancient Inspiration <small>Honouring the High Sun</small></h4>
+      <p><strong>Recognise the Sun’s Power.</strong> Ra was a central Egyptian solar deity, associated with the sun’s daily journey. The midday ritual draws inspiration from that symbolism of radiance and continuity.</p>
+      <p><strong>Pause with Purpose.</strong> Fragrant oils and incense featured in ancient Egyptian ceremonial traditions. Our modern practice uses a deliberate aromatic pause rather than attempting to recreate a historic rite.</p>
+      <p><strong>Return to the Present.</strong> Breathe gently and bring attention back to what matters most during the busiest hours of the day.</p>
+    </section>
+    <section class="col-ritual-chapter" aria-labelledby="ra-experience">
+      <h4 id="ra-experience"><span>II</span> The Modern Experience <small>How Midday Feels</small></h4>
+      <p><strong>Energy.</strong> Welcome the bright, expressive character of the fragrance as a sensory accompaniment to your afternoon.</p>
+      <p><strong>Focus.</strong> Make room for an intentional moment of attention amid competing demands.</p>
+      <p><strong>Balance.</strong> Reconnect with a measured pace before returning to the day.</p>
+    </section>
+    <section class="col-ritual-chapter" aria-labelledby="ra-wisdom">
+      <h4 id="ra-wisdom"><span>III</span> Ancient Wisdom <small>For a Balanced Tomorrow</small></h4>
+      <p><strong>Honour the Day’s Rhythm.</strong> The movement of the sun offers a reminder that effort and renewal belong to the same natural cycle.</p>
+      <p><strong>Make Space for Stillness.</strong> A brief aromatic pause can turn the middle of the day into an occasion for composure and intention.</p>
+    </section>
+    <p class="col-ritual-closing">Stand in the light. Act with purpose. Return to balance.</p>
+  </div>
+</article>
+  <article class="col-ritual col-ritual-night col-ritual-editorial" id="atum">
+  <div class="col-ritual-art col-ritual-panel-art"><a class="col-ritual-panel-link" href="/assets/mg/night-ritual-panel.png" target="_blank" rel="noopener noreferrer" aria-label="Open the complete illustrated Nightfall ritual panel at original resolution"><img src="/assets/mg/night-ritual-panel.png" data-panel-fallback="/assets/mg/night-bottle-v5.png" alt="The Descent of Atum — the complete Nightfall ritual presentation" loading="lazy" decoding="async"></a></div>
+  <div class="col-ritual-copy col-ritual-story">
+    <div class="col-prod-meta">03 · NIGHTFALL RITUAL · EGYPTIAN VOLUME I</div>
+    <h3>The Descent of Atum</h3>
+    <p class="col-ritual-tagline">Sacred Reverie · Reflection · Inner Balance</p>
+    <p class="col-ritual-intro">The day draws to a close. Give its final moments a sense of meaning.</p>
+    <section class="col-ritual-chapter" aria-labelledby="atum-practice">
+      <h4 id="atum-practice"><span>I</span> The Ancient Inspiration <small>Welcoming the Evening</small></h4>
+      <p><strong>Honour the Setting Sun.</strong> Atum, a creator deity in ancient Egyptian belief, was also associated with the sun at day’s end. His symbolism inspires a transition from activity to reflection.</p>
+      <p><strong>Offer a Moment of Reverence.</strong> Incense and aromatic substances were part of Egyptian sacred life. Our nightfall practice interprets that heritage as a quiet personal gesture.</p>
+      <p><strong>Let the Day Settle.</strong> Apply the fragrance, breathe naturally and acknowledge the moments you wish to carry forward.</p>
+    </section>
+    <section class="col-ritual-chapter" aria-labelledby="atum-experience">
+      <h4 id="atum-experience"><span>II</span> The Modern Experience <small>How Nightfall Feels</small></h4>
+      <p><strong>Reflection.</strong> Allow the fragrance to mark a transition away from the day’s activity.</p>
+      <p><strong>Stillness.</strong> Enjoy a gentle sensory atmosphere for contemplation and quiet.</p>
+      <p><strong>Inner Balance.</strong> Create a moment of personal closure without asking the evening to be anything more.</p>
+    </section>
+    <section class="col-ritual-chapter" aria-labelledby="atum-wisdom">
+      <h4 id="atum-wisdom"><span>III</span> Ancient Wisdom <small>For a Balanced Tomorrow</small></h4>
+      <p><strong>Respect Life’s Cycles.</strong> Every beginning is accompanied by an ending; both have a place in a thoughtful day.</p>
+      <p><strong>Make Reflection a Ritual.</strong> A brief nightly aromatic practice can become a familiar invitation to gratitude and stillness.</p>
+    </section>
+    <p class="col-ritual-closing">Release the day. Welcome stillness. Begin again tomorrow.</p>
+  </div>
+</article>
   </div>
   <p class="col-ritual-note">The illustrated vessels, aromatic blends and accessories are development concepts. Packaging, performance, safety claims and commercialization depend on final prototypes and appropriate testing.</p>
 </div></section>
 
 <section class="col-last"><div class="col-wrap col-last-inner"><div class="col-last-icon" aria-hidden="true">❦</div><div class="col-kicker centered">THE HOUSE CONTINUES ITS JOURNEY</div><h2>Designed to be collected.<br><em>Created to be remembered.</em></h2><p>Follow the progress of the first Egyptian chapter as the House refines its collections, prototypes and presentation details.</p><div class="col-last-buttons"><a href="/bp/philosophy/" class="col-gold-button">Our Philosophy ↗</a><a href="/bp/contact/" class="col-lined-link">Contact the House</a></div></div></section>
 
-<!-- Collection galleries: exact external source files, no regenerated or cropped bottle art. -->
+<!-- Collection galleries: exact external source files, no regenerated or cropped bottle art.
+     Accessible Premium published images: /assets/mg/accessible-premium-V1.png,
+     /assets/mg/accessible-premium-V2.png, /assets/mg/accessible-premium-V3.png. -->
 <dialog id="mgCollectionGallery" class="mg-collection-dialog" aria-labelledby="mgGalleryTitle">
   <div class="mg-collection-gallery">
     <div class="mg-gallery-top"><div><p class="mg-gallery-eyebrow">MIRĀS GHĀR · THE EGYPTIAN VOLUME I</p><h2 class="mg-gallery-title" id="mgGalleryTitle">Royal Collection</h2></div><button class="mg-gallery-close" type="button" id="mgGalleryClose" aria-label="Close gallery">×</button></div>
@@ -2163,6 +2314,12 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
    ['heritage-standard-cover','Heritage Standard · Closed book presentation'],
    ['heritage-standard-open','Heritage Standard · Open book presentation']
  ].map(([name,label])=>({name,label,type:'image',paths:['/assets/mg/','/assets/Heritage%20Standard/','/bp/assets/mg/','/bp/assets/Heritage%20Standard/']}));
+  // Accessible Premium gallery — upload original approved images to:
+  // /assets/mg/accessible-premium-V1.png
+  // /assets/mg/accessible-premium-V2.png
+  // /assets/mg/accessible-premium-V3.png
+  // If your source images are .jpg/.jpeg/.webp, retain their extension;
+  // automatic candidates() searches each format. The shared viewer does not crop.
  const accessiblePremium=[
    ['accessible-premium-V1','Accessible Premium · Design visual 01'],
    ['accessible-premium-V2','Accessible Premium · Design visual 02'],
