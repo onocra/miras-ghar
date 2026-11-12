@@ -1701,6 +1701,21 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
 #mgCollectionGallery .mg-gallery-thumbs{width:100%;justify-content:safe center;}
 @media(max-width:640px){#mgCollectionGallery{width:96vw!important;height:94dvh!important;}#mgCollectionGallery .mg-gallery-stage{padding:4px 35px!important;}#mgCollectionGallery .mg-gallery-stage button{width:28px;}#mgCollectionGallery .mg-gallery-bottom{max-height:34dvh;}}
 
+
+/* V7 — Added Heritage and Accessible galleries. No fixed crop or image enlargement. */
+.collections-page .col-heritage-signature-art{background:radial-gradient(ellipse at 50% 40%,#e5e9df,#7e9ca0 68%,#456c78 100%)!important}
+.collections-page .col-heritage-standard-art{background:radial-gradient(ellipse at 50% 40%,#fbf5e7,#d7c8be 65%,#a9988f 100%)!important}
+.collections-page .col-accessible-premium-art{background:radial-gradient(ellipse at 50% 40%,#fffaf0,#eae5d7 68%,#cfbba3 100%)!important}
+.collections-page .col-gallery-preview img{object-fit:contain!important;object-position:center!important;transform:none!important}
+.collections-page .col-gallery-preview:hover img{transform:none!important}
+.collections-page #heritage-signatures,.collections-page #heritage-standard,.collections-page #accessible-premium{scroll-margin-top:130px}
+/* Improve focus visibility and gallery controls on narrow screens without changing artwork. */
+#mgCollectionGallery .mg-gallery-thumb:focus-visible{outline:3px solid #b89350;outline-offset:2px}
+@media(max-width:640px){
+ .collections-page #heritage-signatures .col-gallery-preview,
+ .collections-page #heritage-standard .col-gallery-preview,
+ .collections-page #accessible-premium .col-gallery-preview{aspect-ratio:4/3;height:auto!important;min-height:0!important}
+}
 </style>
 </head>
 <body>
@@ -1861,17 +1876,17 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
    <div class="col-arch-branch" aria-hidden="true"></div>
    <div class="col-family-grid">
      <div class="col-family-arch"><div class="col-family-arch-head">Royal Family <small>Collectible, ceremonial expression</small></div><div class="col-arch-tiers"><a href="#royal-premium">Premium</a><a href="#royal-signatures">Signatures</a><a href="#royal-standard">Standard</a></div></div>
-     <div class="col-family-arch"><div class="col-family-arch-head">Heritage Family <small>Distinctive heritage presentations</small></div><div class="col-arch-tiers"><a href="#heritage-family">Premium</a><a href="#heritage-family">Signatures</a><a href="#heritage-family">Standard</a></div></div>
-     <div class="col-family-arch col-family-accessible"><div class="col-family-arch-head">Accessible Family <small>Considered everyday interpretations · proposed</small></div><div class="col-arch-tiers"><a href="#accessible-family">Premium</a><a href="#accessible-family">Signatures</a><a href="#accessible-family">Standard</a></div></div>
+     <div class="col-family-arch"><div class="col-family-arch-head">Heritage Family <small>Distinctive heritage presentations</small></div><div class="col-arch-tiers"><a href="#heritage-family">Premium</a><a href="#heritage-signatures">Signatures</a><a href="#heritage-standard">Standard</a></div></div>
+     <div class="col-family-arch col-family-accessible"><div class="col-family-arch-head">Accessible Family <small>Considered everyday interpretations</small></div><div class="col-arch-tiers"><a href="#accessible-premium">Premium</a><a href="#accessible-family">Signatures</a><a href="#accessible-family">Standard</a></div></div>
    </div>
  </div>
- <p class="col-arch-caption">The original Royal and Heritage framework retains six proposed variants in Egyptian Volume I. The new Accessible branch adds three provisional positions (3 families × 3 tiers = 9 potential variants for this chapter). This is an editorial planning extension, not a revision to the House’s approved 18-SKU financial master; the Accessible range and any wider rollout remain subject to approval and development. Nothing shown is currently offered for sale.</p>
+ <p class="col-arch-caption">The House’s permanent architecture encompasses Royal, Heritage and Accessible families, each with Premium, Signatures and Standard tiers: nine intended catalogue positions per chapter and 27 across the Egyptian, Persian and Mughal volumes. Individual designs, specifications and commercial release dates are at different stages of development. Nothing shown is currently offered for sale.</p>
  </div>
 </section>
 
 <!-- 05 / catalogue -->
 <section class="col-section col-catalogue" id="catalogue" aria-labelledby="catalogue-title">
- <div class="col-wrap"><div class="col-section-heading"><div class="col-kicker centered">04 — THE PRODUCT CATALOGUE</div><h2 id="catalogue-title">Expressions of <em>Egyptian Volume I.</em></h2><p>Explore the proposed catalogue by family and tier. Explore the Royal Premium, Signature and Standard visual presentations; final production specifications, pricing and availability remain subject to validation.</p></div>
+ <div class="col-wrap"><div class="col-section-heading"><div class="col-kicker centered">04 — THE PRODUCT CATALOGUE</div><h2 id="catalogue-title">Expressions of <em>Egyptian Volume I.</em></h2><p>Explore the House’s nine catalogue positions by family and tier. Six presentation galleries now feature the Royal, Heritage and Accessible visual studies; final production specifications, pricing and availability remain subject to validation.</p></div>
  <div class="col-family-intro" id="royal-family"><div class="col-family-title"><span class="col-family-index">FAMILY 01</span><h3>Royal <em>Family.</em></h3><p>The most ceremonial expression of the chapter, conceived around presentation, design richness and a sense of permanence.</p></div><span class="col-family-count">03 PROPOSED VARIANTS</span></div>
  <div class="col-product-grid">
    <article class="col-product-card col-feature-product col-gallery-product col-themed-product col-royal-theme col-royal-premium" id="royal-premium">
@@ -1918,15 +1933,57 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
      </div>
    </article>
  </div>
- <div class="col-family-intro col-heritage-intro" id="heritage-family"><div class="col-family-title"><span class="col-family-index">FAMILY 02</span><h3>Heritage <em>Family.</em></h3><p>A complementary expression of the Egyptian story, planned with its own presentation identity while retaining the House’s core values.</p></div><span class="col-family-count">03 PROPOSED VARIANTS</span></div>
+ <div class="col-family-intro col-heritage-intro" id="heritage-family"><div class="col-family-title"><span class="col-family-index">FAMILY 02</span><h3>Heritage <em>Family.</em></h3><p>A distinct expression of the Egyptian story, with its own collectible presentation identity while retaining the House’s core values.</p></div><span class="col-family-count">03 PROPOSED VARIANTS</span></div>
  <div class="col-product-grid">
    <article class="col-product-card col-themed-product col-heritage-theme col-heritage-premium"><div class="col-prod-art col-prod-symbol col-prod-heritage"><span>❖</span><small>PRESENTATION IN DEVELOPMENT</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · HERITAGE</div><h4>Premium</h4><p class="col-finish-note"><strong>PROPOSED · HERITAGE FOREST · GOLD</strong><span>Suggested palette: heritage forest-green with ivory and soft antique-gold accents.</span></p><p>A premium-level presentation in the Heritage family; final case, accessories and specifications remain to be confirmed.</p><span class="col-in-dev">In the pipeline</span></div></article>
-   <article class="col-product-card col-themed-product col-heritage-theme col-heritage-signatures"><div class="col-prod-art col-prod-symbol col-prod-heritage"><span>✺</span><small>PRESENTATION IN DEVELOPMENT</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · HERITAGE</div><h4>Signatures</h4><p class="col-finish-note"><strong>PROPOSED · WARM PARCHMENT · BRONZE</strong><span>Suggested palette: warm parchment with botanical-green lettering and bronze accents.</span></p><p>A future Heritage variant to interpret the chapter with a different balance of presentation and ritual storytelling.</p><span class="col-in-dev">In the pipeline</span></div></article>
-   <article class="col-product-card col-themed-product col-heritage-theme col-heritage-standard"><div class="col-prod-art col-prod-symbol col-prod-heritage"><span>✦</span><small>PRESENTATION IN DEVELOPMENT</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · HERITAGE</div><h4>Standard</h4><p class="col-finish-note"><strong>PROPOSED · LINEN · SILVER</strong><span>Suggested palette: linen ivory with sage-green detailing and brushed-silver accents.</span></p><p>A proposed standard presentation in the Heritage family; detailed product information will follow development.</p><span class="col-in-dev">In the pipeline</span></div></article>
+   <article class="col-product-card col-gallery-product col-themed-product col-heritage-theme col-heritage-signatures" id="heritage-signatures">
+     <button type="button" class="col-prod-art col-gallery-preview col-heritage-signature-art" data-collection-gallery-trigger="heritage-signatures" aria-label="Open Heritage Signature gallery, two approved images">
+       <span class="col-art-caption">HERITAGE SIGNATURE · PRESENTATION</span>
+       <img data-gallery-preview="heritage-signatures" alt="Heritage Signature approved closed presentation book" loading="lazy" decoding="async">
+       <span class="col-gallery-visual-hint"><span aria-hidden="true">⊕</span> View 2 images</span>
+       <span class="col-gallery-preview-fallback" hidden>HERITAGE SIGNATURE<br><small>Cover and open presentation</small></span>
+     </button>
+     <div class="col-prod-copy">
+       <div class="col-prod-meta">EGYPTIAN VOLUME I · HERITAGE</div><h4>Signatures</h4>
+       <p class="col-finish-note"><strong>TEAL-BLUE LEATHER · IVORY · ANTIQUE GOLD</strong><span>Approved teal-blue textured leather presentation with restrained heritage artwork and refined gold accents.</span></p>
+       <p>Discover the Heritage Signature closed cover and the corresponding open presentation as complete, uncropped images. This remains a design-stage visual catalogue, not a sales listing.</p>
+       <button class="col-gallery-launch" type="button" data-collection-gallery-trigger="heritage-signatures">Explore Signature Gallery <span aria-hidden="true">↗</span></button>
+       <span class="col-in-dev">Design presentation · pre-launch</span>
+     </div>
+   </article>
+   <article class="col-product-card col-gallery-product col-themed-product col-heritage-theme col-heritage-standard" id="heritage-standard">
+     <button type="button" class="col-prod-art col-gallery-preview col-heritage-standard-art" data-collection-gallery-trigger="heritage-standard" aria-label="Open Heritage Standard gallery, two approved images">
+       <span class="col-art-caption">HERITAGE STANDARD · PRESENTATION</span>
+       <img data-gallery-preview="heritage-standard" alt="Heritage Standard approved closed presentation book" loading="lazy" decoding="async">
+       <span class="col-gallery-visual-hint"><span aria-hidden="true">⊕</span> View 2 images</span>
+       <span class="col-gallery-preview-fallback" hidden>HERITAGE STANDARD<br><small>Cover and open presentation</small></span>
+     </button>
+     <div class="col-prod-copy">
+       <div class="col-prod-meta">EGYPTIAN VOLUME I · HERITAGE</div><h4>Standard</h4>
+       <p class="col-finish-note"><strong>SMOKED TAUPE · IVORY · ANTIQUE GOLD</strong><span>Lighter smoked-taupe textured presentation with antique-gold details and understated Egyptian artwork.</span></p>
+       <p>Explore the closed case and its opened ritual arrangement, including the Morning and Night concepts and supporting accessories. Illustrative specifications remain subject to prototype approval.</p>
+       <button class="col-gallery-launch" type="button" data-collection-gallery-trigger="heritage-standard">Explore Standard Gallery <span aria-hidden="true">↗</span></button>
+       <span class="col-in-dev">Design presentation · pre-launch</span>
+     </div>
+   </article>
   </div>
-  <div class="col-family-intro col-accessible-intro" id="accessible-family"><div class="col-family-title"><span class="col-family-index">FAMILY 03 · PROPOSED</span><h3>Accessible <em>Family.</em></h3><p>A carefully considered future expression of Egyptian Volume I, intended to make the heritage narrative approachable through simplified presentation without compromising the identity of the House. Configurations and pricing remain undecided.</p></div><span class="col-family-count">03 PROVISIONAL VARIANTS</span></div>
+  <div class="col-family-intro col-accessible-intro" id="accessible-family"><div class="col-family-title"><span class="col-family-index">FAMILY 03</span><h3>Accessible <em>Family.</em></h3><p>An enduring third family of Egyptian Volume I, designed to make heritage rituals approachable through simpler packaging and scalable presentation without surrendering the House identity. Final configurations and prices are still being developed.</p></div><span class="col-family-count">03 INTENDED TIERS</span></div>
   <div class="col-product-grid col-accessible-grid">
-    <article class="col-product-card col-themed-product col-accessible-theme col-accessible-premium"><div class="col-prod-art col-prod-symbol col-prod-accessible"><span>✧</span><small>FUTURE DESIGN STUDY</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ACCESSIBLE</div><h4>Premium</h4><p class="col-finish-note"><strong>PROPOSED · MIST SAGE · GOLD</strong><span>Suggested palette: light mist sage with deep-green lettering and restrained gold accents.</span></p><p>Provisional accessible-family presentation tier. Contents, materials and positioning are to be determined.</p><span class="col-in-dev">In the pipeline</span></div></article>
+     <article class="col-product-card col-gallery-product col-themed-product col-accessible-theme col-accessible-premium" id="accessible-premium">
+      <button type="button" class="col-prod-art col-gallery-preview col-accessible-premium-art" data-collection-gallery-trigger="accessible-premium" aria-label="Open Accessible Premium gallery, three concept images">
+        <span class="col-art-caption">ACCESSIBLE PREMIUM · DESIGN STUDIES</span>
+        <img data-gallery-preview="accessible-premium" alt="Accessible Premium Egyptian Volume I concept study one" loading="lazy" decoding="async">
+        <span class="col-gallery-visual-hint"><span aria-hidden="true">⊕</span> View 3 images</span>
+        <span class="col-gallery-preview-fallback" hidden>ACCESSIBLE PREMIUM<br><small>Three design studies</small></span>
+      </button>
+      <div class="col-prod-copy">
+        <div class="col-prod-meta">EGYPTIAN VOLUME I · ACCESSIBLE</div><h4>Premium</h4>
+        <p class="col-finish-note"><strong>ACCESSIBLE FAMILY · COMPACT PRESENTATION</strong><span>A considered interpretation using three smaller, ordinary stock-glass 5 ml ritual bottles, as envisioned for Accessible Premium.</span></p>
+        <p>View three proposed presentation studies (V1–V3). These are approved references for design exploration, not verified production packaging, pricing or availability.</p>
+        <button class="col-gallery-launch" type="button" data-collection-gallery-trigger="accessible-premium">Explore Premium Gallery <span aria-hidden="true">↗</span></button>
+        <span class="col-in-dev">Concept presentation · pre-launch</span>
+      </div>
+    </article>
     <article class="col-product-card col-themed-product col-accessible-theme col-accessible-signatures"><div class="col-prod-art col-prod-symbol col-prod-accessible"><span>❀</span><small>FUTURE DESIGN STUDY</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ACCESSIBLE</div><h4>Signatures</h4><p class="col-finish-note"><strong>PROPOSED · CREAM · COPPER</strong><span>Suggested palette: soft cream with muted olive lettering and warm copper accents.</span></p><p>A proposed compact interpretation of the ritual narrative, pending a defined concept, prototyping and validation.</p><span class="col-in-dev">In the pipeline</span></div></article>
     <article class="col-product-card col-themed-product col-accessible-theme col-accessible-standard"><div class="col-prod-art col-prod-symbol col-prod-accessible"><span>◇</span><small>FUTURE DESIGN STUDY</small></div><div class="col-prod-copy"><div class="col-prod-meta">EGYPTIAN VOLUME I · ACCESSIBLE</div><h4>Standard</h4><p class="col-finish-note"><strong>PROPOSED · IVORY · PEWTER</strong><span>Suggested palette: simple ivory with forest-green type and refined pewter-silver accents.</span></p><p>An everyday-oriented presentation concept under consideration; no specifications or launch plans are confirmed.</p><span class="col-in-dev">In the pipeline</span></div></article>
   </div>
@@ -1945,7 +2002,7 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
 
 <section class="col-last"><div class="col-wrap col-last-inner"><div class="col-last-icon" aria-hidden="true">❦</div><div class="col-kicker centered">THE HOUSE CONTINUES ITS JOURNEY</div><h2>Designed to be collected.<br><em>Created to be remembered.</em></h2><p>Follow the progress of the first Egyptian chapter as the House refines its collections, prototypes and presentation details.</p><div class="col-last-buttons"><a href="/bp/philosophy/" class="col-gold-button">Our Philosophy ↗</a><a href="/bp/contact/" class="col-lined-link">Contact the House</a></div></div></section>
 
-<!-- Collection galleries: exact approved sources, no regenerated or cropped bottle art. -->
+<!-- Collection galleries: exact external source files, no regenerated or cropped bottle art. -->
 <dialog id="mgCollectionGallery" class="mg-collection-dialog" aria-labelledby="mgGalleryTitle">
   <div class="mg-collection-gallery">
     <div class="mg-gallery-top"><div><p class="mg-gallery-eyebrow">MIRĀS GHĀR · THE EGYPTIAN VOLUME I</p><h2 class="mg-gallery-title" id="mgGalleryTitle">Royal Collection</h2></div><button class="mg-gallery-close" type="button" id="mgGalleryClose" aria-label="Close gallery">×</button></div>
@@ -2059,7 +2116,7 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
 </script>
 
 <script>
-/* V4 Royal product visual galleries. Uses files as supplied, not re-generated art.
+/* V7 Royal, Heritage and Accessible galleries. Uses files as supplied, not re-generated art.
    Signature images are named from the user's folder screenshot (extensions hidden).
    Fallback resolution supports /assets/Royal Signature/ and /assets/mg/ and .png/.jpg/.webp.
    Missing media displays an informative placeholder rather than a broken picture. */
@@ -2096,7 +2153,29 @@ body[data-theme="dark"] .collections-page .col-family-intro .col-family-title p{
    ['royal-standard-open','Royal Standard · Open two-ritual presentation','image'],
    ['royal-standard-open-web','Royal Standard · Opening presentation film','video']
  ].map(([name,label,type])=>({name,label,type,paths:['/assets/mg/','/bp/assets/mg/']}));
- const sets={premium:{title:'Royal Premium · Visual Gallery',items:premium},signatures:{title:'Royal Signatures · Visual Gallery',items:signatures},standard:{title:'Royal Standard · Visual Gallery',items:standard}};
+ // Original artwork files remain external; the gallery never recreates or crops them.
+ // Preferred publishing location for NEW files: /assets/mg/ (also supports optional family folders).
+ const heritageSignatures=[
+   ['heritage-signature-cover','Heritage Signature · Closed book presentation'],
+   ['heritage-signature-open','Heritage Signature · Open book presentation']
+ ].map(([name,label])=>({name,label,type:'image',paths:['/assets/mg/','/assets/Heritage%20Signature/','/bp/assets/mg/','/bp/assets/Heritage%20Signature/']}));
+ const heritageStandard=[
+   ['heritage-standard-cover','Heritage Standard · Closed book presentation'],
+   ['heritage-standard-open','Heritage Standard · Open book presentation']
+ ].map(([name,label])=>({name,label,type:'image',paths:['/assets/mg/','/assets/Heritage%20Standard/','/bp/assets/mg/','/bp/assets/Heritage%20Standard/']}));
+ const accessiblePremium=[
+   ['accessible-premium-V1','Accessible Premium · Design visual 01'],
+   ['accessible-premium-V2','Accessible Premium · Design visual 02'],
+   ['accessible-premium-V3','Accessible Premium · Design visual 03']
+ ].map(([name,label])=>({name,label,type:'image',paths:['/assets/mg/','/assets/Accessible%20Premium/','/bp/assets/mg/','/bp/assets/Accessible%20Premium/']}));
+ const sets={
+   premium:{title:'Royal Premium · Visual Gallery',items:premium},
+   signatures:{title:'Royal Signatures · Visual Gallery',items:signatures},
+   standard:{title:'Royal Standard · Visual Gallery',items:standard},
+   'heritage-signatures':{title:'Heritage Signatures · Visual Gallery',items:heritageSignatures},
+   'heritage-standard':{title:'Heritage Standard · Visual Gallery',items:heritageStandard},
+   'accessible-premium':{title:'Accessible Premium · Visual Gallery',items:accessiblePremium}
+ };
  let currentSet='premium',index=0,renderToken=0,lastOpener=null;
  const qs=(id)=>document.getElementById(id);
  function candidates(item){
